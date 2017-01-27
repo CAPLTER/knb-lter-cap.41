@@ -1,6 +1,26 @@
 
 # README ----
 
+# version 12 is the first update to these data using REML and the first update
+# addressed by SRE (version 11 by D. Julian). Additions include a sites table to
+# pull out and feature additional information about the sampling locations that
+# were not included in earlier publications - a trend to normalization but,
+# hopefully, an appropriate one.
+
+# Specifically regarding the spatial data, unlike birds and herpetofauna,
+# arthropod sampling locations will not move but rather are will come on- and
+# off-line. As a result, a dedicated table/resource to track the movement of
+# sites is not required. However, the position of sites and the timing of their
+# existence throughout the project is required, and those details can simply be
+# added to the sites table. As with other programs, spatial information can be
+# stored in the database and pulled as needed rather than managing separate
+# geospatial files. This workflow draws on spatial information and some details
+# about the start and end dates of select sites from the PO10_AllSites.shp
+# shapefile (see arthropods_locationDetails_database.R in this directory)
+
+# Eyal Schohat, Mark Hostetler, Nancy McIntyre, and Stan Faeth added as
+# associated parties.
+
 # reml slots ----
 getSlots("dataset")
   getSlots("distribution")
@@ -33,19 +53,20 @@ library("tools")
 library("readr")
 library("readxl")
 
-# functions and working dir ----
+# reml-helper-functions ----
 source('~/Dropbox (ASU)/localRepos/reml-helper-tools/writeAttributesFn.R')
 source('~/Dropbox (ASU)/localRepos/reml-helper-tools/createKMLFn.R')
-source('~/Dropbox (ASU)/localRepos/reml-helper-tools/createdataTableFn.R')
+# source('~/Dropbox (ASU)/localRepos/reml-helper-tools/createdataTableFn.R')
 source('~/Dropbox (ASU)/localRepos/reml-helper-tools/createDataTableFromFileFn.R')
 source('~/Dropbox (ASU)/localRepos/reml-helper-tools/address_publisher_contact_language_rights.R')
 source('~/Dropbox (ASU)/localRepos/reml-helper-tools/createOtherEntityFn.R')
+source('~/Dropbox (ASU)/localRepos/reml-helper-tools/createPeople.R')
 
 # DB connections ----
 con <- dbConnect(MySQL(),
                  user='srearl',
                  password=.rs.askForPassword("Enter password:"),
-                 dbname='',
+                 dbname='lter10_arthropods_production',
                  host='stegosaurus.gios.asu.edu')
 
 prod <- dbConnect(MySQL(),
@@ -69,7 +90,7 @@ prod <- dbConnect(MySQL(),
 # dataset details to set first ----
 projectid <- 41
 packageIdent <- 'knb-lter-cap.41.12'
-pubDate <- '2017-01-27'
+pubDate <- '2017-01-26'
 
 # data entity ----
 
@@ -113,7 +134,7 @@ core_arthropods <- core_arthropods %>%
   mutate(unsized = as.numeric(unsized))
 
 writeAttributes(core_arthropods) # write data frame attributes to a csv in current dir to edit metadata
-core_arthropods_desc <- "Denormalized tabular file detailing key data from the CAP LTER's long-term monitoring of ground-dwelling arthropods. This data entity includes sample event details, taxonomic details and the number of collected organisms, sizes of organisms where noted in the early stages of the project, and general notes and details regarding the gathering of specimen data."
+core_arthropods_desc <- "Tabular file detailing key data from the CAP LTER's long-term monitoring of ground-dwelling arthropods. This data entity includes sample event details, taxonomic details and the number of collected organisms, sizes of organisms where noted in the early stages of the project, and general notes and details regarding the gathering of specimen data."
 
 # create data table based on metadata provided in the companion csv
 # use createdataTableFn() if attributes and classes are to be passed directly
@@ -121,91 +142,82 @@ core_arthropods_DT <- createDTFF(dfname = core_arthropods,
                                  # factors = meter_factors,
                                  description = core_arthropods_desc)
 
+
 # CORE_ARTHROPOD_SITES 
+core_arthropod_sites <- dbGetQuery(con, "
+SELECT
+  site_code,
+  location,
+  lat,
+  `long`,
+  gps_date,
+  start_date,
+  end_date,
+  num_traps,
+  trap_arrange,
+  comments
+FROM lter10_arthropods_production.sites;")
 
+core_arthropod_sites <- core_arthropod_sites %>% 
+  mutate(num_traps = as.numeric(num_traps)) %>% 
+  mutate(start_date = as.Date(start_date)) %>% 
+  mutate(end_date = as.Date(end_date)) %>% 
+  mutate(gps_date = as.Date(gps_date))
 
-
-
-# address factors if needed
-reach <- c(Tonto = "Salt River, Tonto National Forest, near Usery Road",
-           Priest = "Salt River flood channel, east of Priest Drive and west of Tempe Town Lake dam",
-           Price = "Salt River, by Price Drain, northeast of the loop 101 and loop 202 intersection",
-           Rio = "Salt River at Rio Salado; Central Ave, north of Broadway Rd",
-           Ave35 = "Salt River at 35th Ave north of Broadway Rd",
-           Ave67 = "Salt River at 67th Ave north of Southern Ave",
-           BM = "Baseline and Meridian Wildlife Area; Salt River at 115th Ave northeast of Phoenix International Raceway")
-urbanized <- c(urban = "in urban area",
-               NonUrban = "outside urban area")
-restored <- c(Restored = "site received active restoration",
-              NotRestored = "site has not been restored")
-
-meter_factors <- rbind(
-  data.frame(
-    attributeName = "reach",
-    code = names(reach),
-    definition = unname(reach)
-  ),
-  data.frame(
-    attributeName = "urbanized",
-    code = names(urbanized),
-    definition = unname(urbanized)
-  )
-)
+writeAttributes(core_arthropod_sites) # write data frame attributes to a csv in current dir to edit metadata
+core_arthropod_sites_desc <- "Tabular file providing detailed characteristics of arthropod sampling locations, including a general description of the location (typically nearest cross streets), latitude and longitude, sampling start and end dates (if applicable), specifics as to the number and arrangment of pitfall traps, and general comments regarding the sampling location."
 
 # create data table based on metadata provided in the companion csv
 # use createdataTableFn() if attributes and classes are to be passed directly
-dataframe_DT <- createDTFF(dfname = dataframe,
+core_arthropod_sites_DT <- createDTFF(dfname = core_arthropod_sites,
                           # factors = meter_factors,
-                          description = dataframe_desc)
+                          description = core_arthropod_sites_desc)
+
+
+# CORE_ARTHROPOD_KML
+
+# convert tabular data to kml
+library("sp")
+library("rgdal")
+
+core_arthropod_locations <- core_arthropod_sites %>%  
+  filter(!is.na(lat))
+  
+coordinates(core_arthropod_locations) <- c("long", "lat")
+proj4string(core_arthropod_locations) <- CRS("+init=epsg:4326")
+# core_bird_locations <- spTransform(core_bird_locations, CRS("+proj=longlat +datum=WGS84")) 
+# spTransform not required here as already in WGS 84
+writeOGR(core_arthropod_locations, "core_arthropod_locations.kml", layer = "core_arthropod_locations", driver = "KML")
+
+kml_desc <- "Geospatial file (KML) detailing the locations of CAP LTER ground-dwelling arthropod sampling. Points are approximately the center point of the set of traps at a given sampling location."
+core_arthropod_locations <- createKML(kmlobject = 'core_arthropod_locations.kml',
+                                      description = kml_desc)
 
 
 # title and abstract ----
-title <- 'Tempe Town Lake water-quality monitoring, ongoing since 2005'
-abstract <- 'Constructed in 1997, the Tempe Town Lake is a small man-made reservoir that transforms a section of the typically-dry Salt River bed into a 224-acre lake in the heart of Tempe, Arizona. To accommodate the river when it flows, the lake features hydraulically-operated steel gates that allow water to pass through the system unimpeded. The lake has been a remarkable success as a community amenity and as a driver of economic growth in the area around the lake. The lake provides an ideal model system for the many artificial lakes constructed in arid-land cities owing to management decisions, such as draining, that affect their operation and ecology. At the same time, dramatic shifts in hydrology and chemistry when the lake is transformed to a flowing river and back into a lake during and after floods, provide opportunities to study the system’s dynamic evolution to new limnological steady states. The CAP LTER has been measuring water quality, including temperature, pH, conductivity, and dissolved oxygen, dissolved organic carbon (DOC), and total dissolved nitrogen (TDN), in the lake since 2005.'
+title <- 'Long-term monitoring of ground-dwelling arthropods in central Arizona–Phoenix, ongoing since 1998'
+abstract <- "The Central Arizona–Phoenix Long-Term Ecological Research (CAP LTER) program has been monitoring ground-dwelling arthropods (e.g., insects, ararchnids) at locations throughout the greater Phoenix metropolitan area (GPMA) and surrounding Sonoran desert region since 1998. Monitoring locations span a diversity of habitat types, including mesic and xeric residential yards, commercial areas, agricultural fields, desert locations within the GPMA (desert remnant), and undisturbed desert locations. Organisms are collected quarterly using unbaited pitfall traps, typically ten per location but with some variation, exposed for approximately seventy-two hours. Organisms are identified to the lowest practical taxonomic level and enumerated. Many of the sampling locations established at the beginning of the monitoring project were relocated in 2001-2002 to overlap with the CAP LTER's Ecological Survey of Central Arizona (ESCA; formerly named Survey200) long-term monitoring sites, although within the same general landscape categories."
 
 
 # people ----
 
-ASU <- "Arizona State University"
+nancyGrimm <- addCreator('n', 'grimm')
+danChilders <- addCreator('d', 'childers')
+stanFaeth <- addAssocParty('s', 'faeth', 'Former Associate of Study')
+markHostetler <- addAssocParty('m', 'hostetler', 'Former Associate of Study')
+nancyMcintyre <- addAssocParty('n', 'mcintyre', 'Former Associate of Study')
+eyalShochat <- addAssocParty('e', 'shochat', 'Former Associate of Study')
+stevanEarl <- addMetadataProvider('s', 'earl')
 
-heh_name <- new('individualName',
-                givenName = 'Hilairy',
-                surName = 'Hartnett')
+creators <- c(as(nancyGrimm, 'creator'),
+              as(danChilders, 'creator'))
 
-heh_orcid <- new('userId',
-                 'http://orcid.org/0000-0003-0736-7844',
-                 directory = 'orcid.org')
+metadataProvider <-c(as(stevanEarl, 'metadataProvider'))
 
-hilairyHartnett <- new('creator',
-                       individualName = heh_name,
-                       organizationName = ASU,
-                       electronicMailAddress = "h.hartnett@asu.edu",
-                       userId = heh_orcid)
-
-nbg_name <- new('individualName',
-                givenName = "Nancy",
-                surName = "Grimm")
-
-nbg_orcid <- new("userId",
-                 "http://orcid.org/0000-0001-9374-660X",
-                 directory = "orcid.org")
-
-nancyGrimm  <- new('creator',
-                   individualName = nbg_name,
-                   organizationName = ASU,
-                   electronicMailAddress = "nbgrimm@asu.edu",
-                   userId = nbg_orcid)
-
-creators <- c(as(hilairyHartnett, 'creator'),
-              as(nancyGrimm, 'creator'))
-
-hilairyHartnett <- new('metadataProvider',
-                       individualName = heh_name,
-                       organizationName = ASU,
-                       electronicMailAddress = "h.hartnett@asu.edu",
-                       userId = heh_orcid)
-
-metadataProvider <-c(as(hilairyHartnett, 'metadataProvider'))
+associatedParty <- c(as(stanFaeth, 'associatedParty'),
+                     as(markHostetler, 'associatedParty'),
+                     as(nancyMcintyre, 'associatedParty'),
+                     as(eyalShochat, 'associatedParty'))
 
 
 # keywords ----
@@ -213,16 +225,23 @@ keywordSet <-
   c(new("keywordSet",
         keywordThesaurus = "LTER controlled vocabulary",
         keyword =  c("urban",
-                     "dissolved organic carbon",
-                     "total dissolved nitrogen")),
+                     "arthropods",
+                     "insects",
+                     "invertebrates",
+                     "pitfall traps",
+                     "long term monitoring",
+                     "agriculture",
+                     "community composition")),
     new("keywordSet",
         keywordThesaurus = "LTER core areas",
         keyword =  c("disturbance patterns",
-                     "movement of inorganic matter")),
+                     "populations studies",
+                     "land use and land cover change",
+                     "adapting to city life")),
     new("keywordSet",
         keywordThesaurus = "Creator Defined Keyword Set",
-        keyword =  c("unlisted stuff",
-                     "unlisted stuff")),
+        keyword =  c("sonoran desert",
+                     "residential yards")),
     new("keywordSet",
         keywordThesaurus = "CAPLTER Keyword Set List",
         keyword =  c("cap lter",
@@ -235,18 +254,19 @@ keywordSet <-
     )
 
 # methods and coverages ----
-methods <- set_methods("ref a file")
+methods <- set_methods("./pitfall_trap_methods/pitfall_trapping_protocol_modified_from_v_sept2016.md")
 
-begindate <- "2005-11-05"
-enddate <- "2015-12-15"
+begindate <- "1998-04-23"
+enddate <- "2016-10-15"
 geographicDescription <- "CAP LTER study area"
 coverage <- set_coverage(begin = begindate,
                          end = enddate,
-                         sci_names = c("Salix spp",
-                                       "Ambrosia deltoidea"),
+                         # sci_names = c("Salix spp",
+                         #               "Ambrosia deltoidea"),
                          geographicDescription = geographicDescription,
-                         west = -111.949, east = -111.910,
-                         north = +33.437, south = +33.430)
+                         west = -112.577118210717, east = -111.61479515834,
+                         north = +33.8204250130355, south = +33.3028279145498)
+
 
 # construct the dataset ----
 
@@ -262,9 +282,10 @@ metadata_dist <- new("distribution",
 # DATASET
 dataset <- new("dataset",
                title = title,
-               creator = creators,
                pubDate = pubDate,
+               creator = creators,
                metadataProvider = metadataProvider,
+               associatedParty = associatedParty,
                intellectualRights = rights,
                abstract = abstract,
                keywordSet = keywordSet,
@@ -272,8 +293,9 @@ dataset <- new("dataset",
                contact = contact,
                methods = methods,
                distribution = metadata_dist,
-               dataTable = c(first_DT,
-                             second_DT))
+               dataTable = c(core_arthropods_DT,
+                             core_arthropod_sites_DT),
+               otherEntity = c(core_arthropod_locations))
 
 # construct the eml ----
 
@@ -291,30 +313,12 @@ lter_access <- new("access",
                    allow = c(allow_cap,
                              allow_public))
 
-# CUSTOM UNITS
-# standardUnits <- get_unitList()
-# unique(standardUnits$unitTypes$id) # unique unit types
-
-custom_units <- rbind(
-  data.frame(id = "microsiemenPerCentimeter",
-             unitType = "conductance",
-             parentSI = "siemen",
-             multiplierToSI = 0.000001,
-             description = "electric conductance of lake water in the units of microsiemenPerCentimeter"),
-data.frame(id = "nephelometricTurbidityUnit",
-           unitType = "unknown",
-           parentSI = "unknown",
-           multiplierToSI = 1,
-           description = "(NTU) ratio of the amount of light transmitted straight through a water sample with the amount scattered at an angle of 90 degrees to one side"))
-unitList <- set_unitList(custom_units)
-
 eml <- new("eml",
            packageId = packageIdent,
            scope = "system",
            system = "knb",
            access = lter_access,
-           dataset = dataset,
-           additionalMetadata = as(unitList, "additionalMetadata"))
+           dataset = dataset)
 
 # write the xml to file ----
-write_eml(eml, "out.xml")
+write_eml(eml, "knb-lter-cap.41.12.xml")
