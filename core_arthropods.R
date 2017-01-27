@@ -7,16 +7,21 @@
 # were not included in earlier publications - a trend to normalization but,
 # hopefully, an appropriate one.
 
-# Specifically regarding the spatial data, unlike birds and herpetofauna,
-# arthropod sampling locations will not move but rather are will come on- and
-# off-line. As a result, a dedicated table/resource to track the movement of
-# sites is not required. However, the position of sites and the timing of their
-# existence throughout the project is required, and those details can simply be
-# added to the sites table. As with other programs, spatial information can be
-# stored in the database and pulled as needed rather than managing separate
-# geospatial files. This workflow draws on spatial information and some details
-# about the start and end dates of select sites from the PO10_AllSites.shp
-# shapefile (see arthropods_locationDetails_database.R in this directory)
+# Specifically regarding the spatial data, unlike birds and herpetofauna, 
+# arthropod sampling locations will not move but rather will come on- and 
+# off-line. As such, a dedicated table/resource to track the movement of sites
+# is not required. However, the position of sites and the timing of their 
+# existence throughout the project is required, and those details can simply be 
+# added to the sites table. As with other programs, spatial information can be 
+# stored in the database and pulled as needed rather than managing separate 
+# geospatial files. This workflow draws on spatial information and some details 
+# about the start and end dates of select sites from the PO10_AllSites.shp 
+# shapefile (see arthropods_locationDetails_database.R in this directory for the
+# workflow). To sum, the lat/long data in the sites table draws on the best
+# available spatial information, any gis files can generally be dismissed, and
+# the locations of new sites can simply be added to the sites table, which is
+# now the authoritative source of information for the location of sampling
+# sites.
 
 # Eyal Schohat, Mark Hostetler, Nancy McIntyre, and Stan Faeth added as
 # associated parties.
