@@ -1,11 +1,31 @@
 
 # README ----
 
-# version 12 is the first update to these data using REML and the first update
-# addressed by SRE (version 11 by D. Julian). Additions include a sites table to
-# pull out and feature additional information about the sampling locations that
-# were not included in earlier publications - a trend to normalization but,
-# hopefully, an appropriate one.
+# version 13 
+
+# when addressing the McDowell arthropods for the first time, shortly after this
+# version 12 was published, it became apparant that not including the trap count
+# was a glaring ommission that, though leaving it out was not technically
+# incorrect, could compromise the interpretation of these data. The McDowell
+# arthropods data has a complicated SQL statement that has a critical LEFT join
+# of trap_trap_sampling_events onto the specimen data (taxa, counts, etc.). That
+# worked fine for McDowell with ~5K results, but was overwhelming for the core
+# data with >100K results. As a workaround, I created a View
+# (lter10_arthropods_production.specimens_data) to include with the Core data
+# query that makes the load more manageable. Will likely have to go this route
+# for the McDowell data as well if that project continues. The only change from
+# version 12 to this version 13 is the updated query that includes the trap
+# count data. As a result, only the XML corresponding to the core_arthropods_DT
+# was generated and that was simply copied and pasted into the bulk of the
+# version 12 XML file.
+
+# version 12 
+
+# is the first update to these data using REML and the first update addressed by
+# SRE (version 11 by D. Julian). Additions include a sites table to pull out and
+# feature additional information about the sampling locations that were not
+# included in earlier publications - a trend to normalization but, hopefully, an
+# appropriate one.
 
 # Specifically regarding the spatial data, unlike birds and herpetofauna, 
 # arthropod sampling locations will not move but rather will come on- and 
@@ -94,8 +114,8 @@ prod <- dbConnect(MySQL(),
 
 # dataset details to set first ----
 projectid <- 41
-packageIdent <- 'knb-lter-cap.41.12'
-pubDate <- '2017-01-26'
+packageIdent <- 'knb-lter-cap.41.13'
+pubDate <- '2017-02-20'
 
 # data entity ----
 
@@ -105,28 +125,44 @@ core_arthropods <- dbGetQuery(con, "
 SELECT  
   s.site_code,
   se.sample_date,
-  people.observer,
+  coalesce(specimens_data.observer, outer_join_people.observer) AS observer,
   t.trap_name,
   tse.comments AS trap_sampling_events_comments,
-  tax.arth_Class,
-  tax.arth_order,
-  tax.arth_family,
-  tax.arth_genus_subgenus,
-  tax.display_name,
-  ts.lt2mm,
-  ts._2_5mm,
-  ts._5_10mm,
-  ts.gt10mm,
-  ts.unsized
-FROM lter10_arthropods_production.trap_specimens ts
-JOIN lter10_arthropods_production.arthropod_taxonomies tax ON (tax.arthropod_taxon_id = ts.arthropod_taxon_id)
-JOIN lter10_arthropods_production.trap_sampling_events tse ON (tse.trap_sampling_event_id = ts.trap_sampling_event_id)
+  tse.flags AS trap_sampling_events_flags,
+  count_data.trap_count,
+  specimens_data.arth_class,
+  specimens_data.arth_order,
+  specimens_data.arth_family,
+  specimens_data.arth_genus_subgenus,
+  specimens_data.display_name,
+  specimens_data.lt2mm,
+  specimens_data._2_5mm,
+  specimens_data._5_10mm,
+  specimens_data.gt10mm,
+  specimens_data.unsized
+FROM lter10_arthropods_production.trap_sampling_events tse
 JOIN lter10_arthropods_production.sampling_events se ON (se.sampling_event_id = tse.sampling_event_id)
-JOIN lter10_arthropods_production.people ON (people.person_id = ts.person_id) # se.default_person_for_trap_samples not required
 JOIN lter10_arthropods_production.sites s ON (s.site_id = se.site_id)
 JOIN lter10_arthropods_production.traps t ON (tse.trap_id = t.trap_id)
-ORDER BY sample_date, site_code, trap_name, arth_class, arth_order, arth_family, arth_genus_subgenus, display_name, unsized
-LIMIT 1000000;")
+LEFT JOIN lter10_arthropods_production.people outer_join_people ON (outer_join_people.person_id = se.default_person_for_trap_samples)
+LEFT JOIN lter10_arthropods_production.specimens_data ON (specimens_data.trap_sampling_event_id = tse.trap_sampling_event_id)
+JOIN
+(
+  SELECT
+  trap_sampling_events.sampling_event_id,
+  COUNT(DISTINCT trap_sampling_events.trap_sampling_event_id) AS trap_count
+  FROM lter10_arthropods_production.trap_sampling_events
+  WHERE NOT 
+  (
+    trap_sampling_events.flags LIKE 'trap not collected' OR 
+    trap_sampling_events.flags LIKE 'NotCollected' OR
+    trap_sampling_events.flags LIKE 'missing'
+  )  OR 
+    trap_sampling_events.flags IS NULL OR
+    trap_sampling_events.flags = ''
+  GROUP BY sampling_event_id
+) AS count_data ON (count_data.sampling_event_id = tse.sampling_event_id)
+ORDER BY se.sample_date, s.site_code;")
 
 core_arthropods[core_arthropods == ''] <- NA
 
@@ -326,4 +362,5 @@ eml <- new("eml",
            dataset = dataset)
 
 # write the xml to file ----
-write_eml(eml, "knb-lter-cap.41.12.xml")
+# write_eml(eml, "knb-lter-cap.41.12.xml")
+write_eml(core_arthropods_DT, "core_arthropods.xml")
