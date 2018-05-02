@@ -1,0 +1,38 @@
+---
+title: "database-change-log"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## May 2018
+
+## set end dates to discontinued sites
+
+```{sql connection=}
+
+UPDATE lter10_arthropods_production.sites
+JOIN 
+(
+	SELECT
+	  sites.site_id,
+	  sites.site_code,
+	  maxdates.enddate
+	FROM lter10_arthropods_production.sites
+	INNER JOIN 
+	(
+	SELECT 
+	  site_id,
+	  max(sample_date) AS enddate
+	FROM lter10_arthropods_production.sampling_events
+	GROUP BY site_id
+	) AS maxdates ON (sites.site_id = maxdates.site_id)
+	WHERE 
+	sites.site_code REGEXP 'W.17|ADODAM|V.16|AA.17|AC.16|M.16|P.18|Q.16|S.17|L.7|Q.7|W.6|AC.20|ALFPOW|NDV'
+) AS subquery ON (sites.site_id = subquery.site_id)
+SET sites.end_date = subquery.enddate;
+
+```
+
