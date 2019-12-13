@@ -5,9 +5,15 @@ date: "March 14, 2018"
 output: html_document
 editor_options: 
   chunk_output_type: console
-params:
-  version: 14
 ---
+
+## 2019-12-13 (knb-lter-cap.41.15)
+
+Version was primarily a data refresh. Notes:
+- template was updated to use newer capeml functions
+- Rmd is still not sourceable as I had to manually add roles for associated parties (need to fix in gioseml)
+- Greatly simplified the methods to remove lists and formatting (revise when markdown support is available)
+- Taxonomy not yet addressed with annotations
 
 ## version 14
 
@@ -62,6 +68,10 @@ associated parties.
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r eml-2.1.1, include=FALSE}
+emld::eml_version("eml-2.2.0")
+```
+
 ```{r libraries}
 library(EML)
 library(RPostgreSQL)
@@ -71,23 +81,31 @@ library(tools)
 library(readxl)
 library(aws.s3)
 library(capeml)
+library(gioseml)
 ```
 
 ```{r dataset_details}
 projectid <- 41
-packageIdent <- paste0('knb-lter-cap.41.', params$version)
+packageIdent <- 'knb-lter-cap.41.15'
 pubDate <- as.character(Sys.Date())
 ```
- 
+
 ```{r helper_functions}
-source('~/localRepos/reml-helper-tools/writeAttributesFn.R')
-source('~/localRepos/reml-helper-tools/createDataTableFromFileFn.R')
-source('~/localRepos/reml-helper-tools/createKMLFn.R')
-source('~/localRepos/reml-helper-tools/address_publisher_contact_language_rights.R')
-source('~/localRepos/reml-helper-tools/createOtherEntityFn.R')
-source('~/localRepos/reml-helper-tools/createPeople.R')
-source('~/localRepos/reml-helper-tools/createFactorsDataframe.R')
 source('~/localRepos/reml-helper-tools/amazon_file_upload.R')
+```
+
+```{r connections::amazon}
+source('~/Documents/localSettings/aws.s3')
+```
+
+```{r connections::postgres::local, eval=FALSE}
+source('~/Documents/localSettings/pg_local.R')
+pg <- pg_local
+```
+
+```{r connections::postgres::prod, eval=T }
+source('~/Documents/localSettings/pg_prod.R')
+pg <- pg_prod
 ```
 
 ```{r connections::amazon}
@@ -105,8 +123,8 @@ pg <- pg_prod
 ```
 
 ```{r connections::mysql::prod, eval=TRUE}
-source('~/Documents/localSettings/mysql_rds_prod.R')
-mysql <- mysql_rds_connect('lter10_arthropods_production')
+source('~/Documents/localSettings/mysql_prod.R')
+mysql <- mysql_prod_connect('lter10_arthropods_production')
 ```
 
 ```{r core_arthropods}
@@ -164,18 +182,14 @@ core_arthropods <- core_arthropods %>%
   mutate(gt10mm = as.numeric(gt10mm)) %>% 
   mutate(unsized = as.numeric(unsized))
 
-# writeAttributes(core_arthropods) # write data frame attributes to a csv in current dir to edit metadata
-
-# data_element_factors <- factorsToFrame(data_element)
+write_attributes(core_arthropods)
+# write_factors(core_arthropods) # factors not present
 
 core_arthropods_desc <- "Tabular file detailing key data from the CAP LTER's long-term monitoring of ground-dwelling arthropods. This data entity includes sample event details, taxonomic details and the number of collected organisms, sizes of organisms where noted in the early stages of the project, and general notes and details regarding the gathering of specimen data."
 
-# create data table based on metadata provided in the companion csv
-# use createdataTableFn() if attributes and classes are to be passed directly
-core_arthropods_DT <- createDTFF(dfname = core_arthropods,
-                                 # factors = meter_factors,
-                                 description = core_arthropods_desc,
-                                 dateRangeField = 'sample_date')
+core_arthropods_DT <- create_dataTable(dfname = core_arthropods,
+                                       description = core_arthropods_desc,
+                                       dateRangeField = 'sample_date')
 
 ```
 
@@ -201,130 +215,108 @@ core_arthropod_sites <- core_arthropod_sites %>%
   mutate(end_date = as.Date(end_date)) %>% 
   mutate(gps_date = as.Date(gps_date))
 
-# writeAttributes(core_arthropod_sites) # write data frame attributes to a csv in current dir to edit metadata
-
-# data_element_factors <- factorsToFrame(data_element)
+write_attributes(core_arthropod_sites) # write data frame attributes to a csv in current dir to edit metadata
+# write_factors(core_arthropod_sites) # factors not present
 
 core_arthropod_sites_desc <- "Tabular file providing detailed characteristics of arthropod sampling locations, including a general description of the location (typically nearest cross streets), latitude and longitude, sampling start and end dates (if applicable), specifics as to the number and arrangment of pitfall traps, and general comments regarding the sampling location."
 
-# create data table based on metadata provided in the companion csv
-# use createdataTableFn() if attributes and classes are to be passed directly
-core_arthropod_sites_DT <- createDTFF(dfname = core_arthropod_sites,
-                                      # factors = meter_factors,
-                                      description = core_arthropod_sites_desc)
+core_arthropod_sites_DT <- create_dataTable(dfname = core_arthropod_sites,
+                                            description = core_arthropod_sites_desc,
+                                            dateRangeField = 'start_date')
 
 ```
 
 ```{r core_arthropods_kml}
 
-# convert tabular data to kml
-library(sp)
-library(rgdal)
+library(sf)
 
 core_arthropod_locations <- core_arthropod_sites %>%  
   filter(!is.na(lat))
-  
-coordinates(core_arthropod_locations) <- c("long", "lat")
-proj4string(core_arthropod_locations) <- CRS("+init=epsg:4326")
-# core_bird_locations <- spTransform(core_bird_locations, CRS("+proj=longlat +datum=WGS84")) 
-# spTransform not required here as already in WGS 84
 
-if(!file.exists('core_arthropod_locations.kml')){
-  writeOGR(core_arthropod_locations, "core_arthropod_locations.kml", layer = "core_arthropod_locations", driver = "KML") } else {
-    "file already exists"
-  }
+core_arthropod_locations <- st_as_sf(x = core_arthropod_locations,
+                                     coords = c("long", "lat"),
+                                     crs = 4326)
 
-kml_desc <- "Geospatial file (KML) detailing the locations of CAP LTER ground-dwelling arthropod sampling sites. Locations are approximately the center point of the set of traps at a given sampling site."
+# assign Name to the column that is the site identifier; drop geometry and empty
+# columns to write attributes
+core_arthropod_locations <- core_arthropod_locations %>% 
+  mutate(Name = site_code) %>% 
+  st_drop_geometry()
 
-core_arthropod_locations <- createKML(kmlobject = 'core_arthropod_locations.kml',
-                                      description = kml_desc)
+write_attributes(core_arthropod_locations)
+
+# with attributes table written, repeat the process sans dropping the geometry
+core_arthropod_locations <- core_arthropod_sites %>%  
+  filter(!is.na(lat))
+
+core_arthropod_locations <- st_as_sf(x = core_arthropod_locations,
+                                     coords = c("long", "lat"),
+                                     crs = 4326)
+
+core_arthropod_locations <- core_arthropod_locations %>% 
+  mutate(Name = site_code)
+
+core_arthropod_locations_desc <- "Geospatial file (KML) detailing the locations of CAP LTER ground-dwelling arthropod sampling sites. Locations are approximately the center point of the set of traps at a given sampling site."
+
+core_arthropod_locations_SV <- create_spatialVector(svname = core_arthropod_locations,
+                                                    description = core_arthropod_locations_desc,
+                                                    projectNaming = TRUE)
 
 ```
 
 ```{r title}
-title <- 'Long-term monitoring of ground-dwelling arthropods in central Arizona–Phoenix, ongoing since 1998'
+title <- 'Long-term monitoring of ground-dwelling arthropods in central Arizona-Phoenix, ongoing since 1998'
 ```
 
 ```{r abstract}
 
-# abstract from file or directly as text
-abstract <- as(set_TextType("abstract.md"), "abstract") 
-# abstract <- 'abstract text'
+abstract <- set_TextType("abstract.md")
 ```
 
 ```{r people}
 
-mysql_prod <- mysql_rds_connect('gios2_production')
+# see gioseml for examples of creating people resources from scratch
 
-# creators
-nancyGrimm <- addCreator('n', 'grimm')
-danChilders <- addCreator('d', 'childers')
+mysql_prod <- mysql_prod_connect()
 
-creators <- c(as(nancyGrimm, 'creator'),
-              as(danChilders, 'creator'))
+nancyGrimm <- create_role(firstName = "n", lastName = "grimm", roleType = "creator")
+danChilders <- create_role(firstName = "d", lastName = "childers", roleType = "creator")
 
-# metadata providers
-stevanEarl <- addMetadataProvider('s', 'earl')
-sallyWittlinger <- addMetadataProvider('s', 'wittlinger')
+creators <- list(nancyGrimm,
+                 danChilders)
 
-metadataProvider <-c(as(stevanEarl, 'metadataProvider'),
-                     as(sallyWittlinger, 'metadataProvider'))
+stevanEarl <- create_role(firstName = "s", lastName = "earl", roleType = "metadata")
+sallyWittlinger <- create_role(firstName = "s", lastName = "wittling", roleType = "metadata")
+
+metadataProvider <- list(stevanEarl,
+                         sallyWittlinger)
 
 # associated parties
-markHostetler <- addAssocParty('m', 'hostetler', 'Former Associate of Study')
-nancyMcintyre <- addAssocParty('nan', 'mcintyre', 'Former Associate of Study')
-eyalShochat <- addAssocParty('e', 'shochat', 'Former Associate of Study')
-stanFaeth <- addAssocParty('s', 'faeth', 'Former Associate of Study')
+markHostetler <- create_role(giosPersonId = 132)
+nancyMcintyre <- create_role(giosPersonId = 150)
+eyalShochat <- create_role(giosPersonId = 57)
+stanFaeth <- create_role(giosPersonId = 184)
 
-associatedParty <- c(as(stanFaeth, 'associatedParty'),
-                     as(markHostetler, 'associatedParty'),
-                     as(nancyMcintyre, 'associatedParty'),
-                     as(eyalShochat, 'associatedParty'))
+associatedParty <- list(stanFaeth,
+                        markHostetler,
+                        nancyMcintyre,
+                        eyalShochat)
 
 ```
 
 ```{r keywords}
 
-# CAP IRTs for reference: https://sustainability.asu.edu/caplter/research/
-# be sure to include these as appropriate
+# CAP IRTs for reference (be sure to include these as appropriate):
+# https://sustainability.asu.edu/caplter/research/
 
-keywordSet <-
-  c(new("keywordSet",
-        keywordThesaurus = "LTER controlled vocabulary",
-        keyword =  c("urban",
-                     "arthropods",
-                     "insects",
-                     "invertebrates",
-                     "pitfall traps",
-                     "long term monitoring",
-                     "agriculture",
-                     "community composition")),
-    new("keywordSet",
-        keywordThesaurus = "LTER core areas",
-        keyword =  c("disturbance patterns",
-                     "populations studies",
-                     "land use and land cover change",
-                     "adapting to city life")),
-    new("keywordSet",
-        keywordThesaurus = "Creator Defined Keyword Set",
-        keyword =  c("sonoran desert",
-                     "residential yards")),
-    new("keywordSet",
-        keywordThesaurus = "CAPLTER Keyword Set List",
-        keyword =  c("cap lter",
-                     "cap",
-                     "caplter",
-                     "central arizona phoenix long term ecological research",
-                     "arizona",
-                     "az",
-                     "arid land"))
-    )
+write_keywords()
+keywords <- create_keywordSet('keywords.csv')
 
 ```
 
 ```{r methods}
 
-methods <- set_methods("./pitfall_trap_methods/pitfall_trapping_protocol_modified_from_v_sept2016.md")
+methods <- set_methods("pitfall_trap_methods/pitfall_trapping_protocol_modified_from_v_sept2016.md")
 ```
 
 ```{r coverages}
@@ -339,69 +331,175 @@ coverage <- set_coverage(begin = begindate,
                          north = +33.8204250130355, south = +33.3028279145498)
 ```
 
-```{r set_taxonomic_coverage}
+New approach for taxonomy is to use taxonomyCleanr to build the
+taxonomicCoverage. Note that at the time of this writing and building,
+taxonomyCleanr had not been ported to rOpenSci EML v2. Using
+caplter::taxonomyCleanr/taxonomy-rEML2 until Colin adapts taxonmyCleanr to
+ropensci EML v2.
 
-# this workflow in the arthropods_taxonomic_coverage.R file owing to its length & complexity
-# CAUTION: this takes a long time
-source('arthropods_taxonomic_coverage.R')
+*Note* that the `taxa_map.csv` built with the `create_taxa_map()` function and
+resolving taxonomic IDs (i.e., `resolve_comm_taxa()`) only needs to be run once
+per version/session -- the taxonomicCoverage can be built as many times as
+needed with `resolve_comm_taxa()` once the `taxa_map.csv` has been generated and
+the taxonomic IDs resolved.
+
+```{r taxonomyCleanr, eval=TRUE}
+
+devtools::load_all('~/localRepos/taxonomyCleanr/')
+library(taxonomyCleanr)
+
+my_path <- getwd() # taxonomyCleanr requires a path (to build the taxa_map)
+
+arthropodTaxa <- core_arthropods %>% 
+  mutate(
+    display_name = str_replace(display_name, "\\(immature\\)", ""),
+    display_name = str_replace(display_name, "\\(adult\\)", ""),
+    display_name = str_replace(display_name, "\\(winged\\)", ""),
+    display_name = str_replace(display_name, "\\(nymph\\)", ""),
+    display_name = str_replace(display_name, "\\(larvae\\)", ""),
+    display_name = str_replace(display_name, "\\(imm\\.\\)", ""),
+    display_name = str_replace(display_name, "\\>10mm", ""),
+    display_name = str_trim(display_name, side = c("both"))
+  ) %>% 
+  distinct(display_name) %>% 
+  filter(!is.na(display_name))
+
+# create or update map. A taxa_map.csv is the heart of taxonomyCleanr. This
+# function will build the taxa_map.csv and put it in the path identified with
+# my_path.
+create_taxa_map(path = my_path, x = arthropodTaxa, col = "display_name") 
+
+# resolve taxa by attempting to match the taxon's In this case, data.source 3 is
+# ITIS (which, by the way, is the only authority taxonomyCleanr will allow for
+# common names).
+# resolve_comm_taxa(path = my_path, data.sources = 3) # in this case, 3 is ITIS
+resolve_sci_taxa(path = my_path, data.sources = 3) # in this case, 3 is ITIS
+
+# build the EML taxonomomic coverage
+taxaCoverage <- make_taxonomicCoverage(path = my_path)
+
+# add taxonomic to other coverages
+coverage$taxonomicCoverage <- taxaCoverage
 ```
 
 ```{r construct_dataset}
 
-# from sourced file:
-  # address
-  # publisher
-  # contact
-  # rights
-  # distribution
-
-# generate a list of EML dataTables
-listOfDataTables <- lapply(ls(pattern = "_DT"), function(DT) { get(DT) } )
-
-# print list as a safety step
-print(ls(pattern= "_DT"))
+# from capeml package:
+# address
+# publisher
+# contact
+# rights
+# distribution
 
 # DATASET
-dataset <- new("dataset",
-               title = title,
-               creator = creators,
-               pubDate = pubDate,
-               metadataProvider = metadataProvider,
-               associatedParty = associatedParty,
-               intellectualRights = rights,
-               abstract = abstract,
-               keywordSet = keywordSet,
-               coverage = coverage,
-               contact = contact,
-               methods = methods,
-               distribution = metadata_dist,
-               dataTable = listOfDataTables,
-               otherEntity = c(core_arthropod_locations)) # if other entity is relevant
+dataset <- EML::eml$dataset(
+  title = title,
+  creator = creators,
+  pubDate = pubDate,
+  metadataProvider = metadataProvider,
+  intellectualRights = capRights,
+  abstract = abstract,
+  keywordSet = keywords,
+  coverage = coverage,
+  contact = capContact, # cap contact
+  publisher = capPublisher, # cap pub
+  # contact = giosContact, # gios contact
+  # publisher = giosPublisher, # gios pub
+  methods = methods,
+  project = capProject, # cap project
+  distribution = create_distribution(packageIdent))
 
-               # dataTable = c(first_DT,
-               #               second_DT))
+# add associatedParty if relevant
+# dataset$associatedParty <- list() 
+dataset$associatedParty <- associatedParty
 
 ```
 
-```{r construct_eml}
+```{r dataSet$dataTable}
+
+# add dataTables if relevant
+
+print(ls(pattern = "_DT"))
+
+if (length(ls(pattern = "_DT")) > 0) {
+  
+  listOfDataTables <- lapply(ls(pattern = "_DT"), function(DT) { get(DT) } )
+  
+  dataset$dataTable  <- listOfDataTables  
+  
+}
+
+# or add manually
+# dataset$dataTable <- list(dataTableOne, dataTableTwo)
+
+```
+
+```{r dataSet$otherEntity}
+
+# add other entities if relevant
+
+print(ls(pattern = "_OE"))
+
+if (length(ls(pattern = "_OE")) > 0) {
+  
+  listOfOtherEntities <- lapply(ls(pattern = "_OE"), function(OE) { get(OE) } )
+  
+  dataset$otherEntity <- listOfOtherEntities 
+  
+}
+
+# or add manually
+# dataset$otherEntity <- list(otherEntityOne, otherEntityTwo)
+
+```
+
+```{r dataSet$spatialVector}
+
+# add spatial vectors if relevant
+
+print(ls(pattern = "_SV"))
+
+if (length(ls(pattern = "_SV")) > 0) {
+  
+  listOfSpatialVectors <- lapply(ls(pattern = "_SV"), function(SV) { get(SV) } )
+  
+  dataset$spatialVector  <- listOfSpatialVectors  
+  
+}
+
+# or add manually
+# dataset$spatialVector <- list(spatialVectorOne, spatialVectorTwo)
+
+```
+
+```{r literature cited, eval=FALSE}
+
+# add literature cited if relevant
+# dataset$literatureCited <- citationsAll 
+```
+
+```{r construct_eml, eval=TRUE}
 
 if(exists('unitList')) {
-  eml <- new("eml",
-             schemaLocation = "eml://ecoinformatics.org/eml-2.1.1  http://nis.lternet.edu/schemas/EML/eml-2.1.1/eml.xsd",
-             packageId = packageIdent,
-             scope = "system",
-             system = "knb",
-             access = lter_access,
-             dataset = dataset,
-             additionalMetadata = as(unitList, "additionalMetadata"))
+  
+  eml <- EML::eml$eml(
+    access = lterAccess,
+    dataset = dataset,
+    additionalMetadata = unitList,
+    packageId = packageIdent,
+    system = "knb",
+    scope = "system"
+  )
+  
 } else {
-  eml <- new("eml",
-             schemaLocation = "eml://ecoinformatics.org/eml-2.1.1  http://nis.lternet.edu/schemas/EML/eml-2.1.1/eml.xsd",
-             packageId = packageIdent,
-             scope = "system",
-             system = "knb",
-             access = lter_access,
-             dataset = dataset)
+  
+  eml <- EML::eml$eml(
+    access = lterAccess,
+    dataset = dataset,
+    packageId = packageIdent,
+    system = "knb",
+    scope = "system"
+  )
 }
 
 ```
@@ -436,10 +534,20 @@ if(length(list.files(pattern = "*.xml")) == 1) {
     print("more than one xml file found")
   }
 
-# EML to cap-data/cap-data-eml and remove file from project
-if(length(list.files(pattern = "*.xml")) == 1) {
-  file.copy(list.files(pattern = "*.xml"), "/home/srearl/localRepos/cap-data/cap-data-eml")
-  file.remove(list.files(pattern = "*.xml")) } else {
-    print("more than one xml file found")
-  }
+# EML to cap-data-eml and remove file from project
+tryCatch({
+  
+  if(length(list.files(pattern = "*.xml")) == 1) {
+    file.copy(list.files(pattern = "*.xml"), "/home/srearl/localRepos/cap-metadata/cap-data-eml/")
+    file.remove(list.files(pattern = "*.xml")) } else {
+      print("more than one xml file found")
+    }
+},
+warning = function(warn) {
+  print(paste("WARNING: ", warn))
+},
+error = function(err) {
+  print(paste("ERROR: ", err))
+  
+}) # close try catch
 ```

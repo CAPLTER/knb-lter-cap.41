@@ -1,0 +1,10 @@
+attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,minimum,maximum
+site_code,,,,survey location identifier,survey location identifier,character,,
+location,,,,street address or general description of sampling location,street address or general description of sampling location,character,,
+gps_date,,,,kml default metadata,kml default metadata,character,,
+start_date,,,,kml default metadata,kml default metadata,character,,
+end_date,,,,kml default metadata,kml default metadata,character,,
+num_traps,,number,natural,,number of traps installed at the sampling location,numeric,10,22
+trap_arrange,,,,"general description of arrangement of the traps, especially if the arrangement was something other than a line","general description of arrangement of the traps, especially if the arrangement was something other than a line",character,,
+comments,,,,general comments regarding the sampling location,general comments regarding the sampling location,character,,
+Name,,,,survey location identifier,survey location identifier,character,,
