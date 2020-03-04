@@ -7,6 +7,16 @@ editor_options:
   chunk_output_type: console
 ---
 
+## 2020-03-04 (knb-lter-cap.41.16)
+
+- template was updated to use newer capeml functions
+- Rmd is still not sourceable as I had to manually add roles for associated parties (need to fix in gioseml) - not tested this version
+- Greatly simplified the methods to remove lists and formatting (revise when markdown support is available) - not changed
+- Taxonomy not yet addressed with annotations
+- added sampling event id
+- updated discontinued sites end dates
+- removed reference to cap count from sites since this is not tracked through time and thus could be misleading
+
 ## 2019-12-13 (knb-lter-cap.41.15)
 
 Version was primarily a data refresh. Notes:
@@ -86,7 +96,7 @@ library(gioseml)
 
 ```{r dataset_details}
 projectid <- 41
-packageIdent <- 'knb-lter-cap.41.15'
+packageIdent <- 'knb-lter-cap.41.16'
 pubDate <- as.character(Sys.Date())
 ```
 
@@ -131,6 +141,7 @@ mysql <- mysql_prod_connect('lter10_arthropods_production')
 
 core_arthropods <- dbGetQuery(mysql, "
 SELECT  
+  se.sampling_event_id,
   s.site_code,
   se.sample_date,
   coalesce(specimens_data.observer, outer_join_people.observer) AS observer,
@@ -175,17 +186,20 @@ ORDER BY se.sample_date, s.site_code;")
 core_arthropods[core_arthropods == ''] <- NA
 
 core_arthropods <- core_arthropods %>% 
-  mutate(sample_date = as.Date(sample_date)) %>% 
-  mutate(lt2mm = as.numeric(lt2mm)) %>% 
-  mutate(`_2_5mm` = as.numeric(`_2_5mm`)) %>% 
-  mutate(`_5_10mm` = as.numeric(`_5_10mm`)) %>% 
-  mutate(gt10mm = as.numeric(gt10mm)) %>% 
-  mutate(unsized = as.numeric(unsized))
+  mutate(
+    sample_date = as.Date(sample_date),
+    lt2mm = as.numeric(lt2mm),
+    `_2_5mm` = as.numeric(`_2_5mm`),
+    `_5_10mm` = as.numeric(`_5_10mm`),
+    gt10mm = as.numeric(gt10mm),
+    unsized = as.numeric(unsized),
+    sampling_event_id = as.character(sampling_event_id)
+  )
 
 write_attributes(core_arthropods)
 # write_factors(core_arthropods) # factors not present
 
-core_arthropods_desc <- "Tabular file detailing key data from the CAP LTER's long-term monitoring of ground-dwelling arthropods. This data entity includes sample event details, taxonomic details and the number of collected organisms, sizes of organisms where noted in the early stages of the project, and general notes and details regarding the gathering of specimen data."
+core_arthropods_desc <- "Tabular file detailing key data from the CAP LTER's long-term monitoring of ground-dwelling arthropods. This data entity includes sample event details, taxonomic details and the number of organisms collected, sizes of organisms where noted (in the early stages of the project), and general notes and details regarding the gathering, identifiction, or enumeration of specimens."
 
 core_arthropods_DT <- create_dataTable(dfname = core_arthropods,
                                        description = core_arthropods_desc,
@@ -204,21 +218,23 @@ SELECT
   gps_date,
   start_date,
   end_date,
-  num_traps,
+  # num_traps,
   trap_arrange,
   comments
 FROM lter10_arthropods_production.sites;")
 
 core_arthropod_sites <- core_arthropod_sites %>% 
-  mutate(num_traps = as.numeric(num_traps)) %>% 
-  mutate(start_date = as.Date(start_date)) %>% 
-  mutate(end_date = as.Date(end_date)) %>% 
-  mutate(gps_date = as.Date(gps_date))
+  # mutate(num_traps = as.numeric(num_traps)) %>% 
+  mutate(
+    start_date = as.Date(start_date),
+    end_date = as.Date(end_date),
+    gps_date = as.Date(gps_date)
+  )
 
 write_attributes(core_arthropod_sites) # write data frame attributes to a csv in current dir to edit metadata
 # write_factors(core_arthropod_sites) # factors not present
 
-core_arthropod_sites_desc <- "Tabular file providing detailed characteristics of arthropod sampling locations, including a general description of the location (typically nearest cross streets), latitude and longitude, sampling start and end dates (if applicable), specifics as to the number and arrangment of pitfall traps, and general comments regarding the sampling location."
+core_arthropod_sites_desc <- "Tabular file providing detailed characteristics of arthropod sampling locations, including a general description of the location (typically nearest cross streets), latitude and longitude, sampling start and end dates (if applicable), arrangment of pitfall traps, and general comments regarding the sampling location."
 
 core_arthropod_sites_DT <- create_dataTable(dfname = core_arthropod_sites,
                                             description = core_arthropod_sites_desc,
@@ -332,10 +348,7 @@ coverage <- set_coverage(begin = begindate,
 ```
 
 New approach for taxonomy is to use taxonomyCleanr to build the
-taxonomicCoverage. Note that at the time of this writing and building,
-taxonomyCleanr had not been ported to rOpenSci EML v2. Using
-caplter::taxonomyCleanr/taxonomy-rEML2 until Colin adapts taxonmyCleanr to
-ropensci EML v2.
+taxonomicCoverage. 
 
 *Note* that the `taxa_map.csv` built with the `create_taxa_map()` function and
 resolving taxonomic IDs (i.e., `resolve_comm_taxa()`) only needs to be run once
@@ -345,7 +358,6 @@ the taxonomic IDs resolved.
 
 ```{r taxonomyCleanr, eval=TRUE}
 
-devtools::load_all('~/localRepos/taxonomyCleanr/')
 library(taxonomyCleanr)
 
 my_path <- getwd() # taxonomyCleanr requires a path (to build the taxa_map)
@@ -376,7 +388,7 @@ create_taxa_map(path = my_path, x = arthropodTaxa, col = "display_name")
 resolve_sci_taxa(path = my_path, data.sources = 3) # in this case, 3 is ITIS
 
 # build the EML taxonomomic coverage
-taxaCoverage <- make_taxonomicCoverage(path = my_path)
+taxaCoverage <- make_taxonomicCoverage(path = my_path, write.file = FALSE)
 
 # add taxonomic to other coverages
 coverage$taxonomicCoverage <- taxaCoverage

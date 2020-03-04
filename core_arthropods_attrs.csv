@@ -1,18 +1,19 @@
 attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,minimum,maximum
+sampling_event_id,,,,identifier indicating unique sampling event where a sampling event is a discrete collection event at a site and date,identifier indicating unique sampling event where a sampling event is a discrete collection event at a site and date,character,,
 site_code,,,,survey location identifier,survey location identifier,character,,
 sample_date,YYYY-MM-DD,,,,date of sample collection,Date,,
 observer,,,,"identifier (typically initials) of person primarily responsible for processing (sorting, identifying) collected samples","identifier (typically initials) of person primarily responsible for processing (sorting, identifying) collected samples",character,,
 trap_name,,,,identifier of individual collecting trap,identifier of individual collecting trap,character,,
 trap_sampling_events_comments,,,,comments regarding field data collection or lab sample processing,comments regarding field data collection or lab sample processing,character,,
 trap_sampling_events_flags,,,,quality control flags (comments) regarding field data collection or lab sample processing,quality control flags (comments) regarding field data collection or lab sample processing,character,,
-trap_count,,number,real,,"total number of traps collected and processed for this collection event (i.e., specific site_code and sample_date)",numeric,,
+trap_count,,number,natural,,"total number of traps collected and processed for this collection event (i.e., specific site_code and sample_date)",numeric,1,22
 arth_class,,,,organism classification: class,organism classification: class,character,,
 arth_order,,,,organism classification: order,organism classification: order,character,,
 arth_family,,,,organism classification: family,organism classification: family,character,,
 arth_genus_subgenus,,,,organism classification: genus or subgenus,organism classification: genus or subgenus,character,,
 display_name,,,,"organism classification for descriptive purposes, typically finest taxonomic resolution","organism classification for descriptive purposes, typically finest taxonomic resolution",character,,
-lt2mm,,number,real,,number of specimens less than 2 mm in length,numeric,,
-_2_5mm,,number,real,,number of specimens 2 to 5 mm in length,numeric,,
-_5_10mm,,number,real,,number of specimens 5 to 10 mm in length,numeric,,
-gt10mm,,number,real,,number of specimens greater than 10 mm in length,numeric,,
-unsized,,number,real,,number of specimens not distinguished by size/length,numeric,,
+lt2mm,,number,whole,,number of specimens less than 2 mm in length,numeric,0,4912
+_2_5mm,,number,whole,,number of specimens 2 to 5 mm in length,numeric,0,704
+_5_10mm,,number,whole,,number of specimens 5 to 10 mm in length,numeric,0,132
+gt10mm,,number,whole,,number of specimens greater than 10 mm in length,numeric,0,26
+unsized,,number,whole,,number of specimens not distinguished by size/length,numeric,0,42496
