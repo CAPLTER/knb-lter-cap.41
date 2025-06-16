@@ -1,0 +1,311 @@
+---
+title: knb-lter-cap.41
+author: CAP LTER
+---
+
+## pitfalls: query
+
+*careful to omit `traps.trap_name::INTEGER` for core sites as some have non-numeric trap names*
+
+```{r}
+#| label: pitfalls-query
+#| eval: true
+
+mcdowell_pitfall_arthropods <- DBI::dbGetQuery(
+  conn      = pg,
+  statement = "
+  WITH trap_counts AS (
+    SELECT
+      trap_sampling_events.sampling_event_id,
+      COUNT(DISTINCT trap_sampling_events.id) AS trap_count
+    FROM arthropods.trap_sampling_events
+    WHERE trap_sampling_events.flags IS DISTINCT FROM 'trap_not_collected'
+    GROUP BY trap_sampling_events.sampling_event_id
+  )
+  SELECT
+    sites.site_code,
+    sampling_events.sample_date,
+    trap_sampling_events.comments,
+    trap_sampling_events.flags,
+    arthropod_taxonomy.display_name,
+    trap_specimens.\"count\",
+    trap_specimens.immature,
+    trap_specimens.winged,
+    size_classes.description AS size,
+    observers.observer_name AS observer,
+    traps.trap_name,
+    trap_counts.trap_count
+  FROM arthropods.sampling_events
+  JOIN arthropods.sites
+    ON arthropods.sampling_events.site_id = arthropods.sites.id
+  JOIN arthropods.trap_sampling_events
+    ON arthropods.trap_sampling_events.sampling_event_id = arthropods.sampling_events.id
+  LEFT JOIN arthropods.trap_specimens
+    ON arthropods.trap_specimens.trap_sampling_event_id = arthropods.trap_sampling_events.id
+  LEFT JOIN arthropods.size_classes
+    ON arthropods.trap_specimens.size_class_id = arthropods.size_classes.id
+  LEFT JOIN arthropods.observers
+    ON arthropods.observers.id = arthropods.trap_specimens.person_id
+  LEFT JOIN arthropods.arthropod_taxonomy
+    ON arthropods.arthropod_taxonomy.id = arthropods.trap_specimens.arthropod_taxon_id
+  LEFT JOIN arthropods.traps
+    ON arthropods.traps.id = arthropods.trap_sampling_events.trap_id
+  LEFT JOIN trap_counts
+  ON trap_counts.sampling_event_id = trap_sampling_events.sampling_event_id
+  WHERE arthropods.sites.site_code IN (
+    'TomThumb',
+    'Gateway',
+    'Bell',
+    'Sunrise',
+    'LoneMtn',
+    'Paraiso',
+    'Dixileta',
+    'Rincon',
+    'Mine',
+    'Prospector'
+  )
+  ORDER BY
+    sites.site_code,
+    sampling_events.sample_date,
+    arthropod_taxonomy.display_name
+  ;
+  "
+)
+
+```
+
+Convert observer names to first two letters of each name, including a middle
+name if provided. This approach provides anonymity yet distinctly identifies
+each observer if needed as a covariate. Pulling this code out separately owing
+to its verbosity for a singular purpose: getting the first two letters of the
+first and last names of each observers, and presenting those instead of the full
+name.
+
+## pitfalls: observers
+
+```{r}
+#| eval: TRUE
+#| label: pitfalls-observers
+
+mcdowell_pitfall_arthropods <- mcdowell_pitfall_arthropods |>
+  tidyr::separate_wider_delim(
+    cols        = observer,
+    names       = c("name1", "name2"),
+    delim       = " ",
+    cols_remove = FALSE
+    ) |>
+  dplyr::mutate(
+    namePart1 = tools::toTitleCase(stringr::str_extract(name1, "\\b\\w{2}")),
+    namePart2 = tools::toTitleCase(stringr::str_extract(name2, "\\b\\w{2}")),
+    observer  = dplyr::if_else(
+      is.na(namePart1) | is.na(namePart2),
+      NA_character_,
+      paste0(namePart1, namePart2)
+    )
+  ) |>
+  dplyr::select(
+    -name1,
+    -name2,
+    -tidyselect::contains("namePart")
+  )
+
+```
+
+## pitfalls: conversions
+
+```{r}
+#| eval: TRUE
+#| label: pitfalls-conversions
+
+mcdowell_pitfall_arthropods <- mcdowell_pitfall_arthropods |>
+  dplyr::mutate(
+    site_code = as.factor(site_code),
+    flags     = as.factor(flags),
+    immature  = as.factor(immature),
+    winged    = as.factor(winged),
+    size      = as.factor(size)
+  )
+
+```
+
+## pitfalls: dataTable
+
+There are few numeric variables that are likely to change (meaningfully) so
+`update_attributes` should generally not be required.
+
+```{r}
+#| eval: TRUE
+#| label: pitfalls-DT
+
+# capeml::update_attributes(mcdowell_pitfall_arthropods)
+
+try({
+  capeml::write_attributes(mcdowell_pitfall_arthropods, overwrite = FALSE)
+  capeml::write_factors(mcdowell_pitfall_arthropods, overwrite = FALSE)
+})
+
+```
+
+## sites: core sites metadata
+
+```{r}
+#| label: core-arthropod-sites
+#| eval: TRUE
+
+mcdowell_arthropod_sites <- DBI::dbGetQuery(
+  conn      = pg,
+  statement = "
+  SELECT
+    site_code,
+    site_type,
+    num_traps,
+    trap_arrange,
+    start_date,
+    end_date,
+    comments
+  FROM arthropods.sites
+    WHERE sites.site_code IN (
+    'TomThumb',
+    'Gateway',
+    'Bell',
+    'Sunrise',
+    'LoneMtn',
+    'Paraiso',
+    'Dixileta',
+    'Rincon',
+    'Mine',
+    'Prospector'
+  )
+  ;
+  "
+)
+
+mcdowell_arthropod_sites <- mcdowell_arthropod_sites |>
+  dplyr::mutate(site_type = as.factor(site_type))
+
+try({
+  capeml::write_attributes(mcdowell_arthropod_sites, overwrite = FALSE)
+  capeml::write_factors(mcdowell_arthropod_sites, overwrite = FALSE)
+})
+
+```
+
+## sites: core sites locations
+
+As it is undesirable to acknowledge the precise location of the pitfall traps in
+the McDowell Sonoran Preserve, the approach taken here is to create bounding
+boxes around each of the paired sites: Brown's Ranch, Tom's Thumb, Gateway,
+Dixie Mine, and Lost Dog. These spatial data are reflected in the file
+`core_arthropod_locations.geojson`, which can be reconstructed from
+`mcdowell_sites_polygons.R` if needed.
+
+```{r}
+#| label: core-arthropod-locations
+#| eval: TRUE
+
+core_arthropod_locations <- sf::st_read("core_arthropod_locations.geojson")
+
+try({capeml::write_attributes(core_arthropod_locations, overwrite = FALSE)})
+
+core_arthropod_locations_desc <- "Geospatial file detailing the locations of ground-dwelling arthropod sampling sites in the McDowell Sonoran Preserve, Scottsdale, Arizona. Polygons reflect the bounding box (minimum and maximum extents) of paired (boundary-interior) sampling locations. Precise sampling locations are available upon request to the CAP LTER Information Manager."
+
+core_arthropod_locations_SV <- capemlGIS::create_vector(
+  vector_name = core_arthropod_locations,
+  description = core_arthropod_locations_desc,
+  driver      = "GeoJSON"
+)
+
+```
+
+
+## coverages
+
+```{r}
+#| eval: TRUE
+#| label: coverages
+
+coverage <- EML::set_coverage(
+  begin                 = as.character(as.Date(min(mcdowell_pitfall_arthropods$sample_date))),
+  end                   = as.character(as.Date(max(mcdowell_pitfall_arthropods$sample_date))),
+  geographicDescription = capeml::read_package_configuration()[["geographic_description"]],
+  west                  = as.numeric(sf::st_bbox(core_arthropod_locations)$xmin),
+  east                  = as.numeric(sf::st_bbox(core_arthropod_locations)$xmax),
+  north                 = as.numeric(sf::st_bbox(core_arthropod_locations)$ymax),
+  south                 = as.numeric(sf::st_bbox(core_arthropod_locations)$ymin)
+)
+
+```
+
+## taxonomic coverage
+
+```{r}
+#| label: taxonomyCleanr
+#| eval: TRUE
+
+my_path <- getwd()
+
+taxa <- dplyr::bind_rows(
+  mcdowell_pitfall_arthropods |>
+    dplyr::select(display_name),
+  mcdowell_vegetation_arthropods |>
+    dplyr::select(display_name),
+  mcdowell_vegetation_arthropods |>
+    dplyr::select(display_name = plant_scientific_name)
+) |>
+  dplyr::mutate(display_name = gsub("^([A-Za-z]+) \\(.*\\)$", "\\1", display_name)) |>
+  dplyr::distinct(display_name) |>
+  as.data.frame()
+
+taxonomyCleanr::create_taxa_map(
+  path = my_path,
+  x    = taxa,
+  col  = "display_name"
+)
+
+taxonomyCleanr::resolve_sci_taxa(
+  path         = my_path,
+  data.sources = c(3, 11)
+)
+
+taxaCoverage <- taxonomyCleanr::make_taxonomicCoverage(path = my_path)
+
+coverage$taxonomicCoverage <- taxaCoverage
+
+```
+
+```{r}
+#| eval: TRUE
+#| label: build
+
+dataset <- capeml::create_dataset()
+eml     <- capeml::create_eml()
+
+EML::eml_validate(eml)
+capeml::write_cap_eml()
+
+source("~/Documents/localSettings/aws.s3")
+
+lapply(
+  X   = list.files(pattern = "41_"),
+  FUN = capeml::data_to_amz
+)
+
+source("~/Documents/localSettings/edi.R")
+capeml::get_package_evaluation(full_report = FALSE)
+
+report <- capeml::get_package_evaluation(full_report = TRUE)
+xml2::write_xml(report, "/tmp/report.xml")
+
+capeml::create_package(environment = "production")
+
+EDIutils::logout()
+```
+
+```{r}
+#| eval: TRUE
+#| label: clean
+
+file.remove(c(list.files(pattern = "^41.+csv$")))
+capeml::eml_to_amz(list.files(pattern = "knb.+xml"))
+file.copy(list.files(pattern = "knb.+xml"), "/home/srearl/localRepos/cap-metadata/cap-data-eml/")
+```
