@@ -1,0 +1,110 @@
+|
+  site_code:
+    attributeName: site_code
+    attributeDefinition: 'survey location identifier'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: factor
+  sample_date:
+    attributeName: sample_date
+    attributeDefinition: 'date of sample collection'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: Date
+    formatString: YYYY-MM-DD
+  comments:
+    attributeName: comments
+    attributeDefinition: 'comments regarding field data collection or lab sample processing'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  flags:
+    attributeName: flags
+    attributeDefinition: 'quality control flags (comments) regarding field data collection or lab sample processing'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: factor
+  display_name:
+    attributeName: display_name
+    attributeDefinition: 'organism classification for descriptive purposes typically the finest taxonomic resolution'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  count:
+    attributeName: count
+    attributeDefinition: 'total number of organisms of this type collected and processed in this trap'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    unit: ''
+    numberType: integer
+    minimum: -1
+    maximum: 42496
+    columnClasses: numeric
+  immature:
+    attributeName: immature
+    attributeDefinition: 'flag indicating if the organism is an immature'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: factor
+  winged:
+    attributeName: winged
+    attributeDefinition: 'flag indicating if the organism has wings'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: factor
+  size:
+    attributeName: size
+    attributeDefinition: '(if measured) size class of the organism'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: factor
+  observer:
+    attributeName: observer
+    attributeDefinition: 'initials or first two letters each of the first and last name of the entomologist responsible for organism identification'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  trap_name:
+    attributeName: trap_name
+    attributeDefinition: 'collection trap identifier'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  trap_count:
+    attributeName: trap_count
+    attributeDefinition: 'total number of traps collected and processed for this collection event (site_code and sample_date); this is an estimated value that depends on accurate and consistent noting by technical staff when traps that do not contain organisms were in fact collected'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    unit: ''
+    numberType: natural
+    minimum: 1.0
+    maximum: 22.0
+    columnClasses: numeric

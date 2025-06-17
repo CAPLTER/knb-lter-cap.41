@@ -5,13 +5,13 @@ author: CAP LTER
 
 ## pitfalls: query
 
-*careful to omit `traps.trap_name::INTEGER` for core sites as some have non-numeric trap names*
+*careful to avoid `traps.trap_name::INTEGER` for core sites as some have non-numeric trap names*
 
 ```{r}
 #| label: pitfalls-query
 #| eval: true
 
-mcdowell_pitfall_arthropods <- DBI::dbGetQuery(
+core_arthropods <- DBI::dbGetQuery(
   conn      = pg,
   statement = "
   WITH trap_counts AS (
@@ -52,7 +52,7 @@ mcdowell_pitfall_arthropods <- DBI::dbGetQuery(
     ON arthropods.traps.id = arthropods.trap_sampling_events.trap_id
   LEFT JOIN trap_counts
   ON trap_counts.sampling_event_id = trap_sampling_events.sampling_event_id
-  WHERE arthropods.sites.site_code IN (
+  WHERE arthropods.sites.site_code NOT IN (
     'TomThumb',
     'Gateway',
     'Bell',
@@ -87,27 +87,38 @@ name.
 #| eval: TRUE
 #| label: pitfalls-observers
 
-mcdowell_pitfall_arthropods <- mcdowell_pitfall_arthropods |>
-  tidyr::separate_wider_delim(
-    cols        = observer,
-    names       = c("name1", "name2"),
-    delim       = " ",
-    cols_remove = FALSE
-    ) |>
-  dplyr::mutate(
-    namePart1 = tools::toTitleCase(stringr::str_extract(name1, "\\b\\w{2}")),
-    namePart2 = tools::toTitleCase(stringr::str_extract(name2, "\\b\\w{2}")),
-    observer  = dplyr::if_else(
-      is.na(namePart1) | is.na(namePart2),
-      NA_character_,
-      paste0(namePart1, namePart2)
+derive_observer_id <- function(name) {
+  if (base::is.na(name) || name == "" || base::tolower(name) == "na" || stringr::str_to_lower(name) == "unknown") {
+    return(NA_character_)
+  }
+  name <- stringr::str_trim(name)
+  # preserve "Ceh" and "MarissaB" (exact match)
+  if (name %in% c("Ceh", "MarissaB")) {
+    return(name)
+  }
+  if (stringr::str_detect(name, "^[A-Z]{2,4}$")) {
+    return(name)
+  }
+  parts <- stringr::str_extract_all(name, "\\b\\w+\\b")[[1]]
+  if (base::length(parts) >= 2) {
+    return(
+      base::paste0(
+        stringr::str_to_upper(stringr::str_sub(parts[1], 1, 2)),
+        stringr::str_to_upper(stringr::str_sub(parts[base::length(parts)], 1, 2))
+      )
     )
-  ) |>
-  dplyr::select(
-    -name1,
-    -name2,
-    -tidyselect::contains("namePart")
-  )
+  } else if (base::length(parts) == 1) {
+    return(stringr::str_to_upper(stringr::str_sub(parts[1], 1, 2)))
+  } else {
+    return(NA_character_)
+  }
+}
+
+core_arthropods <- core_arthropods |>
+  dplyr::mutate(observer = purrr::map_chr(
+    .x = core_arthropods$observer,
+    .f = derive_observer_id
+  ))
 
 ```
 
@@ -117,7 +128,7 @@ mcdowell_pitfall_arthropods <- mcdowell_pitfall_arthropods |>
 #| eval: TRUE
 #| label: pitfalls-conversions
 
-mcdowell_pitfall_arthropods <- mcdowell_pitfall_arthropods |>
+core_arthropods <- core_arthropods |>
   dplyr::mutate(
     site_code = as.factor(site_code),
     flags     = as.factor(flags),
@@ -137,11 +148,11 @@ There are few numeric variables that are likely to change (meaningfully) so
 #| eval: TRUE
 #| label: pitfalls-DT
 
-# capeml::update_attributes(mcdowell_pitfall_arthropods)
+# capeml::update_attributes(core_arthropods)
 
 try({
-  capeml::write_attributes(mcdowell_pitfall_arthropods, overwrite = FALSE)
-  capeml::write_factors(mcdowell_pitfall_arthropods, overwrite = FALSE)
+  capeml::write_attributes(core_arthropods, overwrite = FALSE)
+  capeml::write_factors(core_arthropods, overwrite = FALSE)
 })
 
 ```
@@ -152,7 +163,7 @@ try({
 #| label: core-arthropod-sites
 #| eval: TRUE
 
-mcdowell_arthropod_sites <- DBI::dbGetQuery(
+core_arthropods_sites <- DBI::dbGetQuery(
   conn      = pg,
   statement = "
   SELECT
@@ -164,7 +175,7 @@ mcdowell_arthropod_sites <- DBI::dbGetQuery(
     end_date,
     comments
   FROM arthropods.sites
-    WHERE sites.site_code IN (
+    WHERE sites.site_code NOT IN (
     'TomThumb',
     'Gateway',
     'Bell',
@@ -180,38 +191,102 @@ mcdowell_arthropod_sites <- DBI::dbGetQuery(
   "
 )
 
-mcdowell_arthropod_sites <- mcdowell_arthropod_sites |>
+core_arthropods_sites <- core_arthropods_sites |>
   dplyr::mutate(site_type = as.factor(site_type))
 
 try({
-  capeml::write_attributes(mcdowell_arthropod_sites, overwrite = FALSE)
-  capeml::write_factors(mcdowell_arthropod_sites, overwrite = FALSE)
+  capeml::write_attributes(core_arthropods_sites, overwrite = FALSE)
+  capeml::write_factors(core_arthropods_sites, overwrite = FALSE)
 })
 
 ```
 
 ## sites: core sites locations
 
-As it is undesirable to acknowledge the precise location of the pitfall traps in
-the McDowell Sonoran Preserve, the approach taken here is to create bounding
-boxes around each of the paired sites: Brown's Ranch, Tom's Thumb, Gateway,
-Dixie Mine, and Lost Dog. These spatial data are reflected in the file
-`core_arthropod_locations.geojson`, which can be reconstructed from
-`mcdowell_sites_polygons.R` if needed.
-
 ```{r}
 #| label: core-arthropod-locations
 #| eval: TRUE
 
-core_arthropod_locations <- sf::st_read("core_arthropod_locations.geojson")
+mcdowell_sites <- c(
+  "TomThumb",
+  "Gateway",
+  "Bell",
+  "Sunrise",
+  "LoneMtn",
+  "Paraiso",
+  "Dixileta",
+  "Rincon",
+  "Mine",
+  "Prospector"
+)
 
-try({capeml::write_attributes(core_arthropod_locations, overwrite = FALSE)})
+core_locations_query <- glue::glue_sql(
+  "
+  SELECT
+    id,
+    site_code,
+    lat,
+    long
+  FROM arthropods.sites
+  WHERE site_code NOT IN ({ mcdowell_sites* })
+",
+  .con = ANSI()
+)
 
-core_arthropod_locations_desc <- "Geospatial file detailing the locations of ground-dwelling arthropod sampling sites in the McDowell Sonoran Preserve, Scottsdale, Arizona. Polygons reflect the bounding box (minimum and maximum extents) of paired (boundary-interior) sampling locations. Precise sampling locations are available upon request to the CAP LTER Information Manager."
+core_arthropods_locations <- DBI::dbGetQuery(
+  conn      = pg,
+  statement = core_locations_query
+) |>
+  sf::st_as_sf(
+    coords = c("long", "lat"),
+    crs    = 4326
+  ) |>
+  sf::st_transform(crs = 32612)
 
-core_arthropod_locations_SV <- capemlGIS::create_vector(
-  vector_name = core_arthropod_locations,
-  description = core_arthropod_locations_desc,
+# function to create a square buffer (as an sfg polygon) around a point
+generate_buffer <- function(geom, dist) {
+
+  # extract coordinates from the point geometry
+  coords <- sf::st_coordinates(geom)
+  x <- coords[1]
+  y <- coords[2]
+  
+  # define the square corners (clockwise or counterclockwise)
+  square_coords <- matrix(
+    c(
+      x - dist, y - dist,
+      x - dist, y + dist,
+      x + dist, y + dist,
+      x + dist, y - dist,
+      x - dist, y - dist  # close the polygon
+    ),
+    ncol = 2,
+    byrow = TRUE
+  )
+  
+  # create an sfg polygon object
+  square <- sf::st_polygon(list(square_coords))
+  return(square)
+
+}
+
+site_buffers <- sf::st_sfc(
+  purrr::map(sf::st_geometry(core_arthropods_locations), generate_buffer, dist = 50),
+  crs = sf::st_crs(sites_df)
+)
+
+core_arthropods_locations$geometry <- site_buffers
+
+core_arthropods_locations <- core_arthropods_locations
+  sf::st_transform(crs = 4326)
+
+try({capeml::write_attributes(core_arthropods_locations, overwrite = FALSE)})
+
+core_arthropods_locations_desc <- "Geospatial file detailing the locations of ground-dwelling arthropod sampling sites in the CAP LTER study area encompassing the greater Phoenix metropolitan area and immediately surrounding Sonoran desert region. Polygons reflect the approximate (within 50 meters) location of sampling sites. Precise sampling locations are available upon request to the CAP LTER Information Manager."
+
+core_arthropods_locations_SV <- capemlGIS::create_vector(
+  vector_name = core_arthropods_locations,
+  description = core_arthropods_locations_desc,
   driver      = "GeoJSON"
 )
 
@@ -225,8 +300,8 @@ core_arthropod_locations_SV <- capemlGIS::create_vector(
 #| label: coverages
 
 coverage <- EML::set_coverage(
-  begin                 = as.character(as.Date(min(mcdowell_pitfall_arthropods$sample_date))),
-  end                   = as.character(as.Date(max(mcdowell_pitfall_arthropods$sample_date))),
+  begin                 = as.character(as.Date(min(core_arthropods$sample_date))),
+  end                   = as.character(as.Date(max(core_arthropods$sample_date))),
   geographicDescription = capeml::read_package_configuration()[["geographic_description"]],
   west                  = as.numeric(sf::st_bbox(core_arthropod_locations)$xmin),
   east                  = as.numeric(sf::st_bbox(core_arthropod_locations)$xmax),
@@ -244,14 +319,7 @@ coverage <- EML::set_coverage(
 
 my_path <- getwd()
 
-taxa <- dplyr::bind_rows(
-  mcdowell_pitfall_arthropods |>
-    dplyr::select(display_name),
-  mcdowell_vegetation_arthropods |>
-    dplyr::select(display_name),
-  mcdowell_vegetation_arthropods |>
-    dplyr::select(display_name = plant_scientific_name)
-) |>
+taxa <- core_arthropods |>
   dplyr::mutate(display_name = gsub("^([A-Za-z]+) \\(.*\\)$", "\\1", display_name)) |>
   dplyr::distinct(display_name) |>
   as.data.frame()

@@ -1,0 +1,156 @@
+|
+  - attribute:
+      attributeName: site_code
+      levels:
+      - code: AA-17
+        definition: metadata_not_provided
+      - code: AB-19
+        definition: metadata_not_provided
+      - code: AC-16
+        definition: metadata_not_provided
+      - code: AC-20
+        definition: metadata_not_provided
+      - code: AD-10
+        definition: metadata_not_provided
+      - code: ADODAM
+        definition: metadata_not_provided
+      - code: AF-12
+        definition: metadata_not_provided
+      - code: ALF202
+        definition: metadata_not_provided
+      - code: ALF91
+        definition: metadata_not_provided
+      - code: ALFCHA
+        definition: metadata_not_provided
+      - code: ALFPOW
+        definition: metadata_not_provided
+      - code: BD
+        definition: metadata_not_provided
+      - code: BM
+        definition: metadata_not_provided
+      - code: CINWES
+        definition: metadata_not_provided
+      - code: CONSTO
+        definition: metadata_not_provided
+      - code: COTPEO
+        definition: metadata_not_provided
+      - code: DBG
+        definition: metadata_not_provided
+      - code: DREAMY
+        definition: metadata_not_provided
+      - code: DUNCAN
+        definition: metadata_not_provided
+      - code: ESTREL
+        definition: metadata_not_provided
+      - code: HONEY
+        definition: metadata_not_provided
+      - code: I-17
+        definition: metadata_not_provided
+      - code: INSIGH
+        definition: metadata_not_provided
+      - code: JOHNIC
+        definition: metadata_not_provided
+      - code: L-7
+        definition: metadata_not_provided
+      - code: M-16
+        definition: metadata_not_provided
+      - code: MCDOW
+        definition: metadata_not_provided
+      - code: MORR-2
+        definition: metadata_not_provided
+      - code: MVLH2
+        definition: metadata_not_provided
+      - code: MW
+        definition: metadata_not_provided
+      - code: NDV-C
+        definition: metadata_not_provided
+      - code: NDV-M
+        definition: metadata_not_provided
+      - code: NDV-N
+        definition: metadata_not_provided
+      - code: NDV-O
+        definition: metadata_not_provided
+      - code: NDV-X
+        definition: metadata_not_provided
+      - code: NL
+        definition: metadata_not_provided
+      - code: NM
+        definition: metadata_not_provided
+      - code: O-9
+        definition: metadata_not_provided
+      - code: OCOTIL
+        definition: metadata_not_provided
+      - code: P-18
+        definition: metadata_not_provided
+      - code: Q-16
+        definition: metadata_not_provided
+      - code: Q-7
+        definition: metadata_not_provided
+      - code: ROBWEL
+        definition: metadata_not_provided
+      - code: ROTHE
+        definition: metadata_not_provided
+      - code: S-17
+        definition: metadata_not_provided
+      - code: SM2
+        definition: metadata_not_provided
+      - code: STHMTN
+        definition: metadata_not_provided
+      - code: T-11
+        definition: metadata_not_provided
+      - code: U-12
+        definition: metadata_not_provided
+      - code: USERY
+        definition: metadata_not_provided
+      - code: V-14
+        definition: metadata_not_provided
+      - code: V-16
+        definition: metadata_not_provided
+      - code: VALLUT
+        definition: metadata_not_provided
+      - code: W-15
+        definition: metadata_not_provided
+      - code: W-17
+        definition: metadata_not_provided
+      - code: W-6
+        definition: metadata_not_provided
+      - code: Y-19
+        definition: metadata_not_provided
+  - attribute:
+      attributeName: flags
+      levels:
+      - code: empty_sampling_event
+        definition: metadata_not_provided
+      - code: empty_trap
+        definition: metadata_not_provided
+      - code: miscoded
+        definition: metadata_not_provided
+      - code: trap_not_collected
+        definition: metadata_not_provided
+  - attribute:
+      attributeName: immature
+      levels:
+      - code: 'FALSE'
+        definition: metadata_not_provided
+      - code: 'TRUE'
+        definition: metadata_not_provided
+  - attribute:
+      attributeName: winged
+      levels:
+      - code: 'FALSE'
+        definition: metadata_not_provided
+      - code: 'TRUE'
+        definition: metadata_not_provided
+  - attribute:
+      attributeName: size
+      levels:
+      - code: between 2 and 5 mm
+        definition: metadata_not_provided
+      - code: between 5 and 10 mm
+        definition: metadata_not_provided
+      - code: greater than 10 mm
+        definition: metadata_not_provided
+      - code: less than 2 mm
+        definition: metadata_not_provided
+      - code: not measured
+        definition: metadata_not_provided
