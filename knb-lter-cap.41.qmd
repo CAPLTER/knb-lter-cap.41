@@ -168,7 +168,6 @@ core_arthropods_sites <- DBI::dbGetQuery(
   statement = "
   SELECT
     site_code,
-    site_type,
     num_traps,
     trap_arrange,
     start_date,
@@ -194,10 +193,7 @@ core_arthropods_sites <- DBI::dbGetQuery(
 core_arthropods_sites <- core_arthropods_sites |>
   dplyr::mutate(site_type = as.factor(site_type))
 
-try({
-  capeml::write_attributes(core_arthropods_sites, overwrite = FALSE)
-  capeml::write_factors(core_arthropods_sites, overwrite = FALSE)
-})
+try({capeml::write_attributes(core_arthropods_sites, overwrite = FALSE)})
 
 ```
 
@@ -223,7 +219,6 @@ mcdowell_sites <- c(
 core_locations_query <- glue::glue_sql(
   "
   SELECT
-    id,
     site_code,
     lat,
     long
@@ -272,7 +267,7 @@ generate_buffer <- function(geom, dist) {
 
 site_buffers <- sf::st_sfc(
   purrr::map(sf::st_geometry(core_arthropods_locations), generate_buffer, dist = 50),
-  crs = sf::st_crs(sites_df)
+  crs = sf::st_crs(core_arthropods_locations)
 )
 
 core_arthropods_locations$geometry <- site_buffers

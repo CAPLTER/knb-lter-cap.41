@@ -1,4 +1,4 @@
-Overview:
+## Overview:
 
 Traps are set (opened) on day 1 and collected (closed) on day 4 quarterly. It
 does not matter in what order the pitfall sites are visited but the sites are
@@ -15,7 +15,7 @@ is flush with the ground. A 16-ounce plastic cup is placed in the pipe and
 traps are covered with a cut piece of sewer pipe lid when not in use (lids are
 spray painted green for traps located in lawns). At agricultural sites, there
 are no pipes in the ground. For each visit, a fresh trap line is dug into the
-dirt.  
+dirt.
 
 For non-agricultural sites, take a few extra place-holding pipes into the field
 each time. Sometimes the pipes get dug out of the ground by animals or humans
@@ -37,7 +37,7 @@ be reset or disregarded for that collection cycle. During a given collection
 cycle, a maximum of two agricultural sites can be disregarded if the collection
 is not successful (due to irrigation, tilling, or whatever).
 
-Field Procedure
+## Field Procedure
 
 Day 1: Setting the traps
 
@@ -79,9 +79,9 @@ At agricultural sites, remove the cups and bring back to the lab.
 
 Enter appropriate information for each site on the field data sheet (including
 type of crop at agricultural sites) and return with the specimen jars to the
-entomology laboratory at ASU (LSA 302).
+entomology laboratory at ASU.
 
-Laboratory procedure:
+## Laboratory procedure:
 
 Organisms are sorted to the lowest practical taxonomic unit, and enumerated.
 

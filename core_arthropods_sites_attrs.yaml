@@ -1,0 +1,58 @@
+|
+  site_code:
+    attributeName: site_code
+    attributeDefinition: 'survey location identifier'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  num_traps:
+    attributeName: num_traps
+    attributeDefinition: 'number of traps installed at the sampling location'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    unit: ''
+    numberType: natural
+    minimum: 10
+    maximum: 22
+    columnClasses: numeric
+  trap_arrange:
+    attributeName: trap_arrange
+    attributeDefinition: 'general description of arrangement of the traps (especially if the arrangement was something other than a line)'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  start_date:
+    attributeName: start_date
+    attributeDefinition: 'date of first sampling at the location'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: Date
+    formatString: YYYY-MM-DD
+  end_date:
+    attributeName: end_date
+    attributeDefinition: 'date of final sampling or date of decision to cease sampling at the location'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: Date
+    formatString: YYYY-MM-DD
+  comments:
+    attributeName: comments
+    attributeDefinition: 'general comments regarding the sampling location'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''

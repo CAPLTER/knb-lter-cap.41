@@ -3,154 +3,154 @@
       attributeName: site_code
       levels:
       - code: AA-17
-        definition: metadata_not_provided
+        definition: AA-17 
       - code: AB-19
-        definition: metadata_not_provided
+        definition: AB-19 
       - code: AC-16
-        definition: metadata_not_provided
+        definition: AC-16 
       - code: AC-20
-        definition: metadata_not_provided
+        definition: AC-20 
       - code: AD-10
-        definition: metadata_not_provided
+        definition: AD-10 
       - code: ADODAM
-        definition: metadata_not_provided
+        definition: ADODAM 
       - code: AF-12
-        definition: metadata_not_provided
+        definition: AF-12 
       - code: ALF202
-        definition: metadata_not_provided
+        definition: ALF202 
       - code: ALF91
-        definition: metadata_not_provided
+        definition: ALF91 
       - code: ALFCHA
-        definition: metadata_not_provided
+        definition: ALFCHA 
       - code: ALFPOW
-        definition: metadata_not_provided
+        definition: ALFPOW 
       - code: BD
-        definition: metadata_not_provided
+        definition: BD 
       - code: BM
-        definition: metadata_not_provided
+        definition: BM 
       - code: CINWES
-        definition: metadata_not_provided
+        definition: CINWES 
       - code: CONSTO
-        definition: metadata_not_provided
+        definition: CONSTO 
       - code: COTPEO
-        definition: metadata_not_provided
+        definition: COTPEO 
       - code: DBG
-        definition: metadata_not_provided
+        definition: DBG 
       - code: DREAMY
-        definition: metadata_not_provided
+        definition: DREAMY 
       - code: DUNCAN
-        definition: metadata_not_provided
+        definition: DUNCAN 
       - code: ESTREL
-        definition: metadata_not_provided
+        definition: ESTREL 
       - code: HONEY
-        definition: metadata_not_provided
+        definition: HONEY 
       - code: I-17
-        definition: metadata_not_provided
+        definition: I-17 
       - code: INSIGH
-        definition: metadata_not_provided
+        definition: INSIGH 
       - code: JOHNIC
-        definition: metadata_not_provided
+        definition: JOHNIC 
       - code: L-7
-        definition: metadata_not_provided
+        definition: L-7 
       - code: M-16
-        definition: metadata_not_provided
+        definition: M-16 
       - code: MCDOW
-        definition: metadata_not_provided
+        definition: MCDOW 
       - code: MORR-2
-        definition: metadata_not_provided
+        definition: MORR-2 
       - code: MVLH2
-        definition: metadata_not_provided
+        definition: MVLH2 
       - code: MW
-        definition: metadata_not_provided
+        definition: MW 
       - code: NDV-C
-        definition: metadata_not_provided
+        definition: 'North Desert Village - control'
       - code: NDV-M
-        definition: metadata_not_provided
+        definition: 'North Desert Village - mesic'
       - code: NDV-N
-        definition: metadata_not_provided
+        definition: 'North Desert Village - native'
       - code: NDV-O
-        definition: metadata_not_provided
+        definition: 'North Desert Village - oasis'
       - code: NDV-X
-        definition: metadata_not_provided
+        definition: 'North Desert Village - xeric'
       - code: NL
-        definition: metadata_not_provided
+        definition: NL 
       - code: NM
-        definition: metadata_not_provided
+        definition: NM 
       - code: O-9
-        definition: metadata_not_provided
+        definition: O-9 
       - code: OCOTIL
-        definition: metadata_not_provided
+        definition: OCOTIL 
       - code: P-18
-        definition: metadata_not_provided
+        definition: P-18 
       - code: Q-16
-        definition: metadata_not_provided
+        definition: Q-16 
       - code: Q-7
-        definition: metadata_not_provided
+        definition: Q-7 
       - code: ROBWEL
-        definition: metadata_not_provided
+        definition: ROBWEL 
       - code: ROTHE
-        definition: metadata_not_provided
+        definition: ROTHE 
       - code: S-17
-        definition: metadata_not_provided
+        definition: S-17 
       - code: SM2
-        definition: metadata_not_provided
+        definition: SM2 
       - code: STHMTN
-        definition: metadata_not_provided
+        definition: STHMTN 
       - code: T-11
-        definition: metadata_not_provided
+        definition: T-11 
       - code: U-12
-        definition: metadata_not_provided
+        definition: U-12 
       - code: USERY
-        definition: metadata_not_provided
+        definition: USERY 
       - code: V-14
-        definition: metadata_not_provided
+        definition: V-14 
       - code: V-16
-        definition: metadata_not_provided
+        definition: V-16 
       - code: VALLUT
-        definition: metadata_not_provided
+        definition: VALLUT 
       - code: W-15
-        definition: metadata_not_provided
+        definition: W-15 
       - code: W-17
-        definition: metadata_not_provided
+        definition: W-17 
       - code: W-6
-        definition: metadata_not_provided
+        definition: W-6 
       - code: Y-19
-        definition: metadata_not_provided
+        definition: Y-19 
   - attribute:
       attributeName: flags
       levels:
       - code: empty_sampling_event
-        definition: metadata_not_provided
+        definition: 'Indicates that there were not any organisms recorded for the entire sampling event (site and date). It cannot be known from the documentation whether organisms were not recorded because the traps were not set and-or collected or if the sampling was executed but none of the traps contained organisms. This is a cousin of the site_not_sampled flag applied to sampling events where a combination of organisms not recorded and technician comments suggest clearly that the sampling did not occur whereas the empty_sampling_event flag also denotes an empty sampling event but lacks the corresponding technician comments that provide additional evidence that the work was not conducted.'
       - code: empty_trap
-        definition: metadata_not_provided
+        definition: 'indicates that a trap was set and collected but that the trap did not contain any organisms'
       - code: miscoded
-        definition: metadata_not_provided
+        definition: 'indicates that the technician comments suggests that the sample was not collected and or did not contain organisms but for which organisms are recorded'
       - code: trap_not_collected
-        definition: metadata_not_provided
+        definition: 'indicates that the particular trap was not set or collected or otherwise not surveyed'
   - attribute:
       attributeName: immature
       levels:
       - code: 'FALSE'
-        definition: metadata_not_provided
+        definition: 'organism is an adult or othewise not an immature'
       - code: 'TRUE'
-        definition: metadata_not_provided
+        definition: 'organism is an immature'
   - attribute:
       attributeName: winged
       levels:
       - code: 'FALSE'
-        definition: metadata_not_provided
+        definition: 'organism does not have wings'
       - code: 'TRUE'
-        definition: metadata_not_provided
+        definition: 'organism does have wings'
   - attribute:
       attributeName: size
       levels:
       - code: between 2 and 5 mm
-        definition: metadata_not_provided
+        definition: 'the size of the organism is between 2 and 5 millimeters'
       - code: between 5 and 10 mm
-        definition: metadata_not_provided
+        definition: 'the size of the organism is between 5 and 10 millimeters'
       - code: greater than 10 mm
-        definition: metadata_not_provided
+        definition: 'the size of the organism is greater than 10 millimeters'
       - code: less than 2 mm
-        definition: metadata_not_provided
+        definition: 'the size of the organism is less than 2 millimeters'
       - code: not measured
-        definition: metadata_not_provided
+        definition: 'the size of the organism was not measured'
