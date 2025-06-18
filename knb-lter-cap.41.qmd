@@ -272,7 +272,7 @@ site_buffers <- sf::st_sfc(
 
 core_arthropods_locations$geometry <- site_buffers
 
-core_arthropods_locations <- core_arthropods_locations
+core_arthropods_locations <- core_arthropods_locations |>
   sf::st_transform(crs = 4326)
 
 try({capeml::write_attributes(core_arthropods_locations, overwrite = FALSE)})
@@ -298,10 +298,10 @@ coverage <- EML::set_coverage(
   begin                 = as.character(as.Date(min(core_arthropods$sample_date))),
   end                   = as.character(as.Date(max(core_arthropods$sample_date))),
   geographicDescription = capeml::read_package_configuration()[["geographic_description"]],
-  west                  = as.numeric(sf::st_bbox(core_arthropod_locations)$xmin),
-  east                  = as.numeric(sf::st_bbox(core_arthropod_locations)$xmax),
-  north                 = as.numeric(sf::st_bbox(core_arthropod_locations)$ymax),
-  south                 = as.numeric(sf::st_bbox(core_arthropod_locations)$ymin)
+  west                  = as.numeric(sf::st_bbox(core_arthropods_locations)$xmin),
+  east                  = as.numeric(sf::st_bbox(core_arthropods_locations)$xmax),
+  north                 = as.numeric(sf::st_bbox(core_arthropods_locations)$ymax),
+  south                 = as.numeric(sf::st_bbox(core_arthropods_locations)$ymin)
 )
 
 ```
