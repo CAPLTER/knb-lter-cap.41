@@ -15,7 +15,7 @@
     propertyLabel: ''
     valueURI: ''
     valueLabel: ''
-    unit: ''
+    unit: 'NUM'
     numberType: natural
     minimum: 10
     maximum: 22

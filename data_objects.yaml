@@ -1,0 +1,19 @@
+core_arthropods:
+  type: table
+  dfname: core_arthropods
+  description: "Tabular file detailing key data from the CAP LTER long-term monitoring of ground-dwelling arthropods. This data entity includes details of sampling events and organisms collected. Organisms were sized in earlier years of the project."
+  dateRangeField: "sample_date"
+  overwrite: TRUE
+  projectNaming: TRUE
+  missingValueCode: ~
+  additional_information: ~
+core_arthropods_sites:
+  type: table
+  dfname: core_arthropods_sites
+  description: "Tabular file providing detailed characteristics of arthropod sampling locations."
+  dateRangeField: "~"
+  overwrite: TRUE
+  projectNaming: TRUE
+  missingValueCode: ~
+  additional_information: ~
+

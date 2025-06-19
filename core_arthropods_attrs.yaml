@@ -49,7 +49,7 @@
     propertyLabel: ''
     valueURI: ''
     valueLabel: ''
-    unit: ''
+    unit: 'NUM'
     numberType: integer
     minimum: -1
     maximum: 42496
@@ -103,7 +103,7 @@
     propertyLabel: ''
     valueURI: ''
     valueLabel: ''
-    unit: ''
+    unit: 'NUM'
     numberType: natural
     minimum: 1.0
     maximum: 22.0
