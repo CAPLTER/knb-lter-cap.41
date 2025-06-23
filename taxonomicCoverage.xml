@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="e2c0bab6-f7f0-4643-804e-45805b1dcfa4" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="21917a4c-e283-449e-9bfc-50d44fd4efee" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
   <taxonomicClassification>
     <taxonRankName>subclass</taxonRankName>
     <taxonRankValue>Acari</taxonRankValue>
@@ -24738,7 +24738,6 @@
     <taxonomicClassification>
       <taxonRankName>subkingdom</taxonRankName>
       <taxonRankValue>Bilateria</taxonRankValue>
-      <commonName>triploblasts</commonName>
       <taxonId provider="https://itis.gov">914154</taxonId>
       <taxonomicClassification>
         <taxonRankName>infrakingdom</taxonRankName>
@@ -24751,27 +24750,22 @@
           <taxonomicClassification>
             <taxonRankName>phylum</taxonRankName>
             <taxonRankValue>Arthropoda</taxonRankValue>
-            <commonName>arthropods</commonName>
             <taxonId provider="https://itis.gov">82696</taxonId>
             <taxonomicClassification>
               <taxonRankName>subphylum</taxonRankName>
               <taxonRankValue>Hexapoda</taxonRankValue>
-              <commonName>hexapods</commonName>
               <taxonId provider="https://itis.gov">563886</taxonId>
               <taxonomicClassification>
                 <taxonRankName>class</taxonRankName>
                 <taxonRankValue>Insecta</taxonRankValue>
-                <commonName>insects</commonName>
                 <taxonId provider="https://itis.gov">99208</taxonId>
                 <taxonomicClassification>
                   <taxonRankName>subclass</taxonRankName>
                   <taxonRankValue>Pterygota</taxonRankValue>
-                  <commonName>winged insects</commonName>
                   <taxonId provider="https://itis.gov">100500</taxonId>
                   <taxonomicClassification>
                     <taxonRankName>infraclass</taxonRankName>
                     <taxonRankValue>Neoptera</taxonRankValue>
-                    <commonName>modern, wing-folding insects</commonName>
                     <taxonId provider="https://itis.gov">563890</taxonId>
                     <taxonomicClassification>
                       <taxonRankName>superorder</taxonRankName>
@@ -24780,17 +24774,10 @@
                       <taxonomicClassification>
                         <taxonRankName>order</taxonRankName>
                         <taxonRankValue>Diptera</taxonRankValue>
-                        <commonName>gnats</commonName>
-                        <commonName>mosquitoes</commonName>
-                        <commonName>true flies</commonName>
-                        <commonName>hoverflies</commonName>
                         <taxonId provider="https://itis.gov">118831</taxonId>
                         <taxonomicClassification>
                           <taxonRankName>suborder</taxonRankName>
                           <taxonRankValue>Brachycera</taxonRankValue>
-                          <commonName>circular-seamed flies</commonName>
-                          <commonName>muscoid flies</commonName>
-                          <commonName>short-horned flies</commonName>
                           <taxonId provider="https://itis.gov">130052</taxonId>
                           <taxonomicClassification>
                             <taxonRankName>infraorder</taxonRankName>
@@ -24817,12 +24804,10 @@
   <taxonomicClassification>
     <taxonRankName>kingdom</taxonRankName>
     <taxonRankValue>Animalia</taxonRankValue>
-    <commonName>animals</commonName>
     <taxonId provider="https://itis.gov">202423</taxonId>
     <taxonomicClassification>
       <taxonRankName>subkingdom</taxonRankName>
       <taxonRankValue>Bilateria</taxonRankValue>
-      <commonName>triploblasts</commonName>
       <taxonId provider="https://itis.gov">914154</taxonId>
       <taxonomicClassification>
         <taxonRankName>infrakingdom</taxonRankName>
@@ -24835,27 +24820,22 @@
           <taxonomicClassification>
             <taxonRankName>phylum</taxonRankName>
             <taxonRankValue>Arthropoda</taxonRankValue>
-            <commonName>arthropods</commonName>
             <taxonId provider="https://itis.gov">82696</taxonId>
             <taxonomicClassification>
               <taxonRankName>subphylum</taxonRankName>
               <taxonRankValue>Hexapoda</taxonRankValue>
-              <commonName>hexapods</commonName>
               <taxonId provider="https://itis.gov">563886</taxonId>
               <taxonomicClassification>
                 <taxonRankName>class</taxonRankName>
                 <taxonRankValue>Insecta</taxonRankValue>
-                <commonName>insects</commonName>
                 <taxonId provider="https://itis.gov">99208</taxonId>
                 <taxonomicClassification>
                   <taxonRankName>subclass</taxonRankName>
                   <taxonRankValue>Pterygota</taxonRankValue>
-                  <commonName>winged insects</commonName>
                   <taxonId provider="https://itis.gov">100500</taxonId>
                   <taxonomicClassification>
                     <taxonRankName>infraclass</taxonRankName>
                     <taxonRankValue>Neoptera</taxonRankValue>
-                    <commonName>modern, wing-folding insects</commonName>
                     <taxonId provider="https://itis.gov">563890</taxonId>
                     <taxonomicClassification>
                       <taxonRankName>superorder</taxonRankName>
@@ -24864,17 +24844,10 @@
                       <taxonomicClassification>
                         <taxonRankName>order</taxonRankName>
                         <taxonRankValue>Diptera</taxonRankValue>
-                        <commonName>gnats</commonName>
-                        <commonName>mosquitoes</commonName>
-                        <commonName>true flies</commonName>
-                        <commonName>hoverflies</commonName>
                         <taxonId provider="https://itis.gov">118831</taxonId>
                         <taxonomicClassification>
                           <taxonRankName>suborder</taxonRankName>
                           <taxonRankValue>Brachycera</taxonRankValue>
-                          <commonName>circular-seamed flies</commonName>
-                          <commonName>muscoid flies</commonName>
-                          <commonName>short-horned flies</commonName>
                           <taxonId provider="https://itis.gov">130052</taxonId>
                           <taxonomicClassification>
                             <taxonRankName>infraorder</taxonRankName>
@@ -24901,12 +24874,10 @@
   <taxonomicClassification>
     <taxonRankName>kingdom</taxonRankName>
     <taxonRankValue>Animalia</taxonRankValue>
-    <commonName>animals</commonName>
     <taxonId provider="https://itis.gov">202423</taxonId>
     <taxonomicClassification>
       <taxonRankName>subkingdom</taxonRankName>
       <taxonRankValue>Bilateria</taxonRankValue>
-      <commonName>triploblasts</commonName>
       <taxonId provider="https://itis.gov">914154</taxonId>
       <taxonomicClassification>
         <taxonRankName>infrakingdom</taxonRankName>
@@ -24919,27 +24890,22 @@
           <taxonomicClassification>
             <taxonRankName>phylum</taxonRankName>
             <taxonRankValue>Arthropoda</taxonRankValue>
-            <commonName>arthropods</commonName>
             <taxonId provider="https://itis.gov">82696</taxonId>
             <taxonomicClassification>
               <taxonRankName>subphylum</taxonRankName>
               <taxonRankValue>Hexapoda</taxonRankValue>
-              <commonName>hexapods</commonName>
               <taxonId provider="https://itis.gov">563886</taxonId>
               <taxonomicClassification>
                 <taxonRankName>class</taxonRankName>
                 <taxonRankValue>Insecta</taxonRankValue>
-                <commonName>insects</commonName>
                 <taxonId provider="https://itis.gov">99208</taxonId>
                 <taxonomicClassification>
                   <taxonRankName>subclass</taxonRankName>
                   <taxonRankValue>Pterygota</taxonRankValue>
-                  <commonName>winged insects</commonName>
                   <taxonId provider="https://itis.gov">100500</taxonId>
                   <taxonomicClassification>
                     <taxonRankName>infraclass</taxonRankName>
                     <taxonRankValue>Neoptera</taxonRankValue>
-                    <commonName>modern, wing-folding insects</commonName>
                     <taxonId provider="https://itis.gov">563890</taxonId>
                     <taxonomicClassification>
                       <taxonRankName>superorder</taxonRankName>
@@ -24948,17 +24914,10 @@
                       <taxonomicClassification>
                         <taxonRankName>order</taxonRankName>
                         <taxonRankValue>Hymenoptera</taxonRankValue>
-                        <commonName>ants</commonName>
-                        <commonName>bees</commonName>
-                        <commonName>wasps</commonName>
                         <taxonId provider="https://itis.gov">152741</taxonId>
                         <taxonomicClassification>
                           <taxonRankName>suborder</taxonRankName>
                           <taxonRankValue>Apocrita</taxonRankValue>
-                          <commonName>narrow-waisted hymenopterans</commonName>
-                          <commonName>ants</commonName>
-                          <commonName>bees</commonName>
-                          <commonName>true wasps</commonName>
                           <taxonId provider="https://itis.gov">152864</taxonId>
                           <taxonomicClassification>
                             <taxonRankName>infraorder</taxonRankName>
@@ -24971,7 +24930,6 @@
                               <taxonomicClassification>
                                 <taxonRankName>family</taxonRankName>
                                 <taxonRankValue>Chrysididae</taxonRankValue>
-                                <commonName>cuckoo wasps</commonName>
                                 <taxonId provider="https://itis.gov">154152</taxonId>
                               </taxonomicClassification>
                             </taxonomicClassification>
@@ -24991,12 +24949,10 @@
   <taxonomicClassification>
     <taxonRankName>kingdom</taxonRankName>
     <taxonRankValue>Animalia</taxonRankValue>
-    <commonName>animals</commonName>
     <taxonId provider="https://itis.gov">202423</taxonId>
     <taxonomicClassification>
       <taxonRankName>subkingdom</taxonRankName>
       <taxonRankValue>Bilateria</taxonRankValue>
-      <commonName>triploblasts</commonName>
       <taxonId provider="https://itis.gov">914154</taxonId>
       <taxonomicClassification>
         <taxonRankName>infrakingdom</taxonRankName>
