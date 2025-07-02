@@ -3,6 +3,28 @@ title: knb-lter-cap.41
 author: CAP LTER
 ---
 
+## identify McDowell sites
+
+```{r}
+#| label: identify-mcdowell-sites 
+#| eval: TRUE
+
+mcdowell_sites <- c(
+  "TomThumb",
+  "Gateway",
+  "Bell",
+  "Sunrise",
+  "LoneMtn",
+  "Paraiso",
+  "Dixileta",
+  "Rincon",
+  "Mine",
+  "Prospector"
+)
+
+```
+
+
 ## pitfalls: query
 
 *careful to avoid `traps.trap_name::INTEGER` for core sites as some have non-numeric trap names*
@@ -11,9 +33,7 @@ author: CAP LTER
 #| label: pitfalls-query
 #| eval: true
 
-core_arthropods <- DBI::dbGetQuery(
-  conn      = pg,
-  statement = "
+core_arthropods_query <- glue::glue_sql("
   WITH trap_counts AS (
     SELECT
       trap_sampling_events.sampling_event_id,
@@ -28,6 +48,8 @@ core_arthropods <- DBI::dbGetQuery(
     trap_sampling_events.comments,
     trap_sampling_events.flags,
     arthropod_taxonomy.display_name,
+    arthropod_taxonomy.authority,
+    arthropod_taxonomy.authority_id,
     trap_specimens.\"count\",
     trap_specimens.immature,
     trap_specimens.winged,
@@ -52,24 +74,19 @@ core_arthropods <- DBI::dbGetQuery(
     ON arthropods.traps.id = arthropods.trap_sampling_events.trap_id
   LEFT JOIN trap_counts
   ON trap_counts.sampling_event_id = trap_sampling_events.sampling_event_id
-  WHERE arthropods.sites.site_code NOT IN (
-    'TomThumb',
-    'Gateway',
-    'Bell',
-    'Sunrise',
-    'LoneMtn',
-    'Paraiso',
-    'Dixileta',
-    'Rincon',
-    'Mine',
-    'Prospector'
-  )
+  WHERE sites.site_code NOT IN ({ mcdowell_sites* })
   ORDER BY
     sites.site_code,
     sampling_events.sample_date,
     arthropod_taxonomy.display_name
   ;
-  "
+  ",
+  .con = ANSI()
+)
+
+core_arthropods <- DBI::dbGetQuery(
+  conn      = pg,
+  statement = core_arthropods_query 
 )
 
 ```
@@ -130,11 +147,13 @@ core_arthropods <- core_arthropods |>
 
 core_arthropods <- core_arthropods |>
   dplyr::mutate(
-    site_code = as.factor(site_code),
-    flags     = as.factor(flags),
-    immature  = as.factor(immature),
-    winged    = as.factor(winged),
-    size      = as.factor(size)
+    site_code    = as.factor(site_code),
+    flags        = as.factor(flags),
+    immature     = as.factor(immature),
+    winged       = as.factor(winged),
+    size         = as.factor(size),
+    authority    = as.factor(authority),
+    authority_id = as.character(authority_id)
   )
 
 ```
@@ -163,7 +182,7 @@ try({
 #| label: core-arthropod-sites
 #| eval: TRUE
 
-core_arthropods_sites <- DBI::dbGetQuery(
+core_arthropods_sites_query <- glue::glue_sql(
   conn      = pg,
   statement = "
   SELECT
@@ -174,23 +193,16 @@ core_arthropods_sites <- DBI::dbGetQuery(
     end_date,
     comments
   FROM arthropods.sites
-    WHERE sites.site_code NOT IN (
-    'TomThumb',
-    'Gateway',
-    'Bell',
-    'Sunrise',
-    'LoneMtn',
-    'Paraiso',
-    'Dixileta',
-    'Rincon',
-    'Mine',
-    'Prospector'
-  )
+  WHERE sites.site_code NOT IN ({ mcdowell_sites* })
   ;
-  "
+  ",
+  .con = ANSI()
 )
 
-core_arthropods_sites <- core_arthropods_sites |>
+core_arthropods_sites <- DBI::dbGetQuery(
+  conn      = pg,
+  statement = core_arthropods_sites_query 
+) |>
   dplyr::mutate(site_type = as.factor(site_type))
 
 try({capeml::write_attributes(core_arthropods_sites, overwrite = FALSE)})
@@ -203,28 +215,14 @@ try({capeml::write_attributes(core_arthropods_sites, overwrite = FALSE)})
 #| label: core-arthropod-locations
 #| eval: TRUE
 
-mcdowell_sites <- c(
-  "TomThumb",
-  "Gateway",
-  "Bell",
-  "Sunrise",
-  "LoneMtn",
-  "Paraiso",
-  "Dixileta",
-  "Rincon",
-  "Mine",
-  "Prospector"
-)
-
-core_locations_query <- glue::glue_sql(
-  "
+core_locations_query <- glue::glue_sql("
   SELECT
     site_code,
     lat,
     long
   FROM arthropods.sites
-  WHERE site_code NOT IN ({ mcdowell_sites* })
-",
+  WHERE sites.site_code NOT IN ({ mcdowell_sites* })
+  ",
   .con = ANSI()
 )
 
@@ -372,4 +370,5 @@ EDIutils::logout()
 file.remove(c(list.files(pattern = "^41.+csv$")))
 capeml::eml_to_amz(list.files(pattern = "knb.+xml"))
 file.copy(list.files(pattern = "knb.+xml"), "/home/srearl/localRepos/cap-metadata/cap-data-eml/")
+
 ```
