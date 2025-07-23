@@ -152,7 +152,7 @@ core_arthropods <- core_arthropods |>
     immature     = as.factor(immature),
     winged       = as.factor(winged),
     size         = as.factor(size),
-    authority    = as.factor(authority),
+    authority    = as.character(authority),
     authority_id = as.character(authority_id)
   )
 
@@ -350,7 +350,7 @@ capeml::get_package_evaluation(full_report = FALSE)
 report <- capeml::get_package_evaluation(full_report = TRUE)
 xml2::write_xml(report, "/tmp/report.xml")
 
-capeml::create_package(environment = "development")
+capeml::create_package(environment = "production")
 
 EDIutils::logout()
 
@@ -362,7 +362,7 @@ EDIutils::logout()
 #| eval: TRUE
 #| label: clean
 
-file.remove(c(list.files(pattern = "^41.+csv$")))
+file.remove(c(list.files(pattern = "^41_")))
 capeml::eml_to_amz(list.files(pattern = "knb.+xml"))
 file.copy(list.files(pattern = "knb.+xml"), "/home/srearl/localRepos/cap-metadata/cap-data-eml/")
 
