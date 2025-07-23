@@ -39,5 +39,3 @@ rsconnect/
 # project specific
 knb-lter-cap\.41\.\d\.xml
 ^41_.*
-annotations.yaml
-custom_units.yaml

@@ -1,14 +1,17 @@
-# knb-lter-cap.41
+## knb-lter-cap.41
 
 ## dataset publishing: core arthropod monitoring
 
-### knb-lter-cap.41.17 2025-06-xx
+### knb-lter-cap.41.17 2025-07-23
 
+- refreshes data through 2023 (most recent available)
 - reflects the first data refresh since the database, taxonomy, and data-entry
 [application](https://gitlab.com/caplter/arthropods-shiny) were revised
 - documented schema design issue (see reference
 [here](https://github.com/CAPLTER/knb-lter-cap.643/blob/knb-lter-cap.643.5/sampling_events_traps_site_id_conflict.md)
 in knb-lter-cap.643)
+- uses [capeml](https://github.com/CAPLTER/capeml) tools for generating EML
+taxonomy
 
 ### knb-lter-cap.41.16 2020-03-04
 

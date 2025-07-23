@@ -1,0 +1,156 @@
+|
+  - attribute:
+      attributeName: site_code
+      levels:
+      - code: AA-17
+        definition: AA-17 
+      - code: AB-19
+        definition: AB-19 
+      - code: AC-16
+        definition: AC-16 
+      - code: AC-20
+        definition: AC-20 
+      - code: AD-10
+        definition: AD-10 
+      - code: ADODAM
+        definition: ADODAM 
+      - code: AF-12
+        definition: AF-12 
+      - code: ALF202
+        definition: ALF202 
+      - code: ALF91
+        definition: ALF91 
+      - code: ALFCHA
+        definition: ALFCHA 
+      - code: ALFPOW
+        definition: ALFPOW 
+      - code: BD
+        definition: BD 
+      - code: BM
+        definition: BM 
+      - code: CINWES
+        definition: CINWES 
+      - code: CONSTO
+        definition: CONSTO 
+      - code: COTPEO
+        definition: COTPEO 
+      - code: DBG
+        definition: DBG 
+      - code: DREAMY
+        definition: DREAMY 
+      - code: DUNCAN
+        definition: DUNCAN 
+      - code: ESTREL
+        definition: ESTREL 
+      - code: HONEY
+        definition: HONEY 
+      - code: I-17
+        definition: I-17 
+      - code: INSIGH
+        definition: INSIGH 
+      - code: JOHNIC
+        definition: JOHNIC 
+      - code: L-7
+        definition: L-7 
+      - code: M-16
+        definition: M-16 
+      - code: MCDOW
+        definition: MCDOW 
+      - code: MORR-2
+        definition: MORR-2 
+      - code: MVLH2
+        definition: MVLH2 
+      - code: MW
+        definition: MW 
+      - code: NDV-C
+        definition: 'North Desert Village - control'
+      - code: NDV-M
+        definition: 'North Desert Village - mesic'
+      - code: NDV-N
+        definition: 'North Desert Village - native'
+      - code: NDV-O
+        definition: 'North Desert Village - oasis'
+      - code: NDV-X
+        definition: 'North Desert Village - xeric'
+      - code: NL
+        definition: NL 
+      - code: NM
+        definition: NM 
+      - code: O-9
+        definition: O-9 
+      - code: OCOTIL
+        definition: OCOTIL 
+      - code: P-18
+        definition: P-18 
+      - code: Q-16
+        definition: Q-16 
+      - code: Q-7
+        definition: Q-7 
+      - code: ROBWEL
+        definition: ROBWEL 
+      - code: ROTHE
+        definition: ROTHE 
+      - code: S-17
+        definition: S-17 
+      - code: SM2
+        definition: SM2 
+      - code: STHMTN
+        definition: STHMTN 
+      - code: T-11
+        definition: T-11 
+      - code: U-12
+        definition: U-12 
+      - code: USERY
+        definition: USERY 
+      - code: V-14
+        definition: V-14 
+      - code: V-16
+        definition: V-16 
+      - code: VALLUT
+        definition: VALLUT 
+      - code: W-15
+        definition: W-15 
+      - code: W-17
+        definition: W-17 
+      - code: W-6
+        definition: W-6 
+      - code: Y-19
+        definition: Y-19 
+  - attribute:
+      attributeName: flags
+      levels:
+      - code: empty_sampling_event
+        definition: 'Indicates that there were not any organisms recorded for the entire sampling event (site and date). It cannot be known from the documentation whether organisms were not recorded because the traps were not set and-or collected or if the sampling was executed but none of the traps contained organisms. This is a cousin of the site_not_sampled flag applied to sampling events where a combination of organisms not recorded and technician comments suggest clearly that the sampling did not occur whereas the empty_sampling_event flag also denotes an empty sampling event but lacks the corresponding technician comments that provide additional evidence that the work was not conducted.'
+      - code: empty_trap
+        definition: 'indicates that a trap was set and collected but that the trap did not contain any organisms'
+      - code: miscoded
+        definition: 'indicates that the technician comments suggests that the sample was not collected and or did not contain organisms but for which organisms are recorded'
+      - code: trap_not_collected
+        definition: 'indicates that the particular trap was not set or collected or otherwise not surveyed'
+  - attribute:
+      attributeName: immature
+      levels:
+      - code: 'FALSE'
+        definition: 'organism is an adult or othewise not an immature'
+      - code: 'TRUE'
+        definition: 'organism is an immature'
+  - attribute:
+      attributeName: winged
+      levels:
+      - code: 'FALSE'
+        definition: 'organism does not have wings'
+      - code: 'TRUE'
+        definition: 'organism does have wings'
+  - attribute:
+      attributeName: size
+      levels:
+      - code: between 2 and 5 mm
+        definition: 'the size of the organism is between 2 and 5 millimeters'
+      - code: between 5 and 10 mm
+        definition: 'the size of the organism is between 5 and 10 millimeters'
+      - code: greater than 10 mm
+        definition: 'the size of the organism is greater than 10 millimeters'
+      - code: less than 2 mm
+        definition: 'the size of the organism is less than 2 millimeters'
+      - code: not measured
+        definition: 'the size of the organism was not measured'

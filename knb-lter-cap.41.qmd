@@ -182,9 +182,7 @@ try({
 #| label: core-arthropod-sites
 #| eval: TRUE
 
-core_arthropods_sites_query <- glue::glue_sql(
-  conn      = pg,
-  statement = "
+core_arthropods_sites_query <- glue::glue_sql("
   SELECT
     site_code,
     num_traps,
@@ -202,8 +200,7 @@ core_arthropods_sites_query <- glue::glue_sql(
 core_arthropods_sites <- DBI::dbGetQuery(
   conn      = pg,
   statement = core_arthropods_sites_query 
-) |>
-  dplyr::mutate(site_type = as.factor(site_type))
+)
 
 try({capeml::write_attributes(core_arthropods_sites, overwrite = FALSE)})
 
@@ -304,35 +301,31 @@ coverage <- EML::set_coverage(
 
 ```
 
-## taxonomic coverage
+### taxonomic coverage
 
 ```{r}
 #| label: taxonomyCleanr
 #| eval: TRUE
 
-my_path <- getwd()
+# my_path <- getwd()
 
 taxa <- core_arthropods |>
   dplyr::mutate(display_name = gsub("^([A-Za-z]+) \\(.*\\)$", "\\1", display_name)) |>
   dplyr::distinct(display_name) |>
   as.data.frame()
 
-taxonomyCleanr::create_taxa_map(
-  path = my_path,
-  x    = taxa,
-  col  = "display_name"
+capeml::write_taxa_map(
+  taxa_df  = taxa,
+  taxa_col = display_name 
 )
 
-taxonomyCleanr::resolve_sci_taxa(
-  path         = my_path,
-  data.sources = c(3, 11)
-)
-
-taxaCoverage <- taxonomyCleanr::make_taxonomicCoverage(path = my_path)
+taxaCoverage <- capeml::create_taxonomicCoverage()
 
 coverage$taxonomicCoverage <- taxaCoverage
 
 ```
+
+## build
 
 ```{r}
 #| eval: TRUE
@@ -362,6 +355,8 @@ capeml::create_package(environment = "development")
 EDIutils::logout()
 
 ```
+
+## clean
 
 ```{r}
 #| eval: TRUE

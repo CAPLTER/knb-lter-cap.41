@@ -42,24 +42,6 @@
     valueLabel: ''
     columnClasses: character
     definition: ''
-  authority:
-    attributeName: authority
-    attributeDefinition: 'taxonomic reference'
-    propertyURI: ''
-    propertyLabel: ''
-    valueURI: ''
-    valueLabel: ''
-    columnClasses: character
-    definition: ''
-  authority_id:
-    attributeName: authority_id
-    attributeDefinition: 'identifier of this taxonomy in the taxonomic reference'
-    propertyURI: ''
-    propertyLabel: ''
-    valueURI: ''
-    valueLabel: ''
-    columnClasses: character
-    definition: ''
   count:
     attributeName: count
     attributeDefinition: 'total number of organisms of this type collected and processed in this trap'

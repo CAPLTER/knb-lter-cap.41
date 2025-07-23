@@ -1,0 +1,7 @@
+taxa_clean,taxonID,taxonRank,acceptedNameUsageID,taxonomicStatus,update_date,kingdom,phylum,class,order,family,genus,specificEpithet,infraspecificEpithet,vernacularName,duplicate
+Collembola,ITIS:914185,class,ITIS:914185,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,NA,TRUE
+Mantodea,ITIS:666589,suborder,ITIS:666589,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,NA,TRUE
+Siphonaptera,ITIS:152732,order,ITIS:152732,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,fleas,TRUE
+Diplotaxis,ITIS:926466,genus,ITIS:926466,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,NA,TRUE
+Archaeognatha,ITIS:624281,order,ITIS:624281,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,jumping bristletails,TRUE
+Melpomene,ITIS:897649,genus,ITIS:897649,accepted,2012-10-26,NA,NA,NA,NA,NA,NA,,,dwarf polypody,TRUE
