@@ -1,13 +1,13 @@
 - name: NUM
   valueLabel: Number
   valueURI: http://qudt.org/vocab/unit/NUM
-  references: 35ba7d776f7f6657a84e681713931cc1_14
+  references: 00c9c5f32b1f55dc5183d4386b7a945f_12
   propertyLabel: has unit
   propertyURI: http://qudt.org/schema/qudt/hasUnit
 - name: NUM
   valueLabel: Number
   valueURI: http://qudt.org/vocab/unit/NUM
-  references: 35ba7d776f7f6657a84e681713931cc1_8
+  references: 00c9c5f32b1f55dc5183d4386b7a945f_6
   propertyLabel: has unit
   propertyURI: http://qudt.org/schema/qudt/hasUnit
 - name: NUM

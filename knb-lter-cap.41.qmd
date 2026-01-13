@@ -48,8 +48,8 @@ core_arthropods_query <- glue::glue_sql("
     trap_sampling_events.comments,
     trap_sampling_events.flags,
     arthropod_taxonomy.display_name,
-    arthropod_taxonomy.authority,
-    arthropod_taxonomy.authority_id,
+    -- arthropod_taxonomy.authority,
+    -- arthropod_taxonomy.authority_id,
     trap_specimens.\"count\",
     trap_specimens.immature,
     trap_specimens.winged,
@@ -151,9 +151,9 @@ core_arthropods <- core_arthropods |>
     flags        = as.factor(flags),
     immature     = as.factor(immature),
     winged       = as.factor(winged),
-    size         = as.factor(size),
-    authority    = as.character(authority),
-    authority_id = as.character(authority_id)
+    size         = as.factor(size)
+    # authority    = as.character(authority),
+    # authority_id = as.character(authority_id)
   )
 
 ```
@@ -282,6 +282,56 @@ core_arthropods_locations_SV <- capemlGIS::create_vector(
 
 ```
 
+## taxonomy table
+
+@note `taxonomy_table` derived in taxonomy_workflow.R.
+@note that we are removing empty columns so the output could change if
+taxonomy_table is ever regenerated.
+
+```{r}
+#| label: taxonomy-table
+#| eval: TRUE
+
+arthropod_taxonomy <- taxonomy_table |>
+  dplyr::filter(display_name %in% core_arthropods$display_name) |>
+  janitor::remove_empty("cols") |>
+  dplyr::select(-rank) |>
+  dplyr::mutate(
+    authority    = as.factor(authority),
+    authority_id = as.character(authority_id)
+  )
+
+```
+
+```{r}
+#| label: confirm-taxa-coverage
+#| eval: TRUE
+
+core_names_df <- tibble::tibble(display_name = unique(na.omit(core_arthropods$display_name)))
+taxa_names_df <- tibble::tibble(display_name = unique(na.omit(arthropod_taxonomy$display_name)))
+
+missing_df <- dplyr::anti_join(core_names_df, taxa_names_df, by = "display_name")
+
+if (nrow(missing_df) == 0) {
+  message("All core_arthropods display_name values are represented in arthropod_taxonomy.")
+} else {
+  message(nrow(missing_df), " names missing from arthropod_taxonomy:")
+  print(missing_df$display_name)
+  # stop("Taxonomic coverage incomplete.")
+}
+
+```
+
+```{r}
+#| label: taxonomy-table-attrs-fcts
+#| eval: TRUE
+
+try({
+  capeml::write_attributes(arthropod_taxonomy, overwrite = FALSE)
+  capeml::write_factors(arthropod_taxonomy, overwrite = FALSE)
+})
+
+```
 
 ## coverages
 
@@ -306,8 +356,6 @@ coverage <- EML::set_coverage(
 ```{r}
 #| label: taxonomyCleanr
 #| eval: TRUE
-
-# my_path <- getwd()
 
 taxa <- core_arthropods |>
   dplyr::mutate(display_name = gsub("^([A-Za-z]+) \\(.*\\)$", "\\1", display_name)) |>
@@ -350,7 +398,7 @@ capeml::get_package_evaluation(full_report = FALSE)
 report <- capeml::get_package_evaluation(full_report = TRUE)
 xml2::write_xml(report, "/tmp/report.xml")
 
-capeml::create_package(environment = "production")
+# capeml::create_package(environment = "staging")
 
 EDIutils::logout()
 
@@ -364,6 +412,6 @@ EDIutils::logout()
 
 file.remove(c(list.files(pattern = "^41_")))
 capeml::eml_to_amz(list.files(pattern = "knb.+xml"))
-file.copy(list.files(pattern = "knb.+xml"), "/home/srearl/localRepos/cap-metadata/cap-data-eml/")
+# file.copy(list.files(pattern = "knb.+xml"), "/home/srearl/localRepos/cap-metadata/cap-data-eml/")
 
 ```

@@ -1,0 +1,216 @@
+|
+  display_name:
+    attributeName: display_name
+    attributeDefinition: 'organism classification for descriptive purposes typically the finest taxonomic resolution'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  authority:
+    attributeName: authority
+    attributeDefinition: 'taxonomic resource to which organism is referenced'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: factor
+  authority_id:
+    attributeName: authority_id
+    attributeDefinition: 'identifier within taxonomic resource to which organism is referenced'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  kingdom:
+    attributeName: kingdom
+    attributeDefinition: 'organism taxonomic kingdom'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  subkingdom:
+    attributeName: subkingdom
+    attributeDefinition: 'organism taxonomic subkingdom'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  infrakingdom:
+    attributeName: infrakingdom
+    attributeDefinition: 'organism taxonomic infrakingdom'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  superphylum:
+    attributeName: superphylum
+    attributeDefinition: 'organism taxonomic superphylum'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  phylum:
+    attributeName: phylum
+    attributeDefinition: 'organism taxonomic phylum'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  subphylum:
+    attributeName: subphylum
+    attributeDefinition: 'organism taxonomic subphylum'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  superclass:
+    attributeName: superclass
+    attributeDefinition: 'organism taxonomic superclass'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  class:
+    attributeName: class
+    attributeDefinition: 'organism taxonomic class'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  subclass:
+    attributeName: subclass
+    attributeDefinition: 'organism taxonomic subclass'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  infraclass:
+    attributeName: infraclass
+    attributeDefinition: 'organism taxonomic infraclass'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  superorder:
+    attributeName: superorder
+    attributeDefinition: 'organism taxonomic superorder'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  order:
+    attributeName: order
+    attributeDefinition: 'organism taxonomic order'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  suborder:
+    attributeName: suborder
+    attributeDefinition: 'organism taxonomic suborder'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  infraorder:
+    attributeName: infraorder
+    attributeDefinition: 'organism taxonomic infraorder'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  superfamily:
+    attributeName: superfamily
+    attributeDefinition: 'organism taxonomic superfamily'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  family:
+    attributeName: family
+    attributeDefinition: 'organism taxonomic family'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  subfamily:
+    attributeName: subfamily
+    attributeDefinition: 'organism taxonomic subfamily'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  tribe:
+    attributeName: tribe
+    attributeDefinition: 'organism taxonomic tribe'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  genus:
+    attributeName: genus
+    attributeDefinition: 'organism taxonomic genus'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  subgenus:
+    attributeName: subgenus
+    attributeDefinition: 'organism taxonomic subgenus'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  species:
+    attributeName: species
+    attributeDefinition: 'organism taxonomic species'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''

@@ -1,0 +1,16 @@
+|
+  - attribute:
+      attributeName: authority
+      levels:
+      - code: bugguide.net
+        definition: 'bugguide.net taxonomic resource'
+      - code: GBIF
+        definition: 'Global Biodiversity Information Facility'
+      - code: https://esc-sec.ca/wp/wp-content/uploads/2017/03/AAFC_hymenoptera_of_the_world.pdf
+        definition: 'Hymenoptera of the world: an identification guide to families edited by Henri Goulet and John T. Huber'
+      - code: https://www.antweb.org/description.do?genus=veromessor&species=pergandei&rank=species
+        definition: 'https://www.antweb.org taxonomic resource'
+      - code: https://zookeys.pensoft.net/articles.php?id=20602
+        definition: 'zookeys taxonomic resource'
+      - code: ITIS
+        definition: 'Integrated Taxonomic Information System'

@@ -2,6 +2,24 @@
 
 ## dataset publishing: core arthropod monitoring
 
+### knb-lter-cap.41.18 2026-01-13
+
+- Refreshes data through the first quarter of 2025 (most recent available).
+- Adds a taxonomy table that details the taxonomic hierarchy for all taxa based
+on the taxonomic resource (e.g., ITIS) and resource ID identified by the CAP
+LTER entomologist (DF). Note that the taxonomic details of an organism presented
+in the taxonomy table may differ from those from a query of the same organism in
+ITIS, GBIF, or other taxonomic resource based solely on the organism name as the
+taxonomic details presented here may not reflect the most up-to-date taxonomic
+revisions. Rather, the taxonomy table is intended to provide users with the
+taxonomic context for the organisms as identified by the CAP LTER entomologist
+at the time of identifiction.
+- Arthropod taxonomy is facilitated by the taxonomy_workflow added as of this
+release.
+- Data presented in this release are the last of those that are or will be
+identified by DF. Future releases, if any, will likely be at a much coarser
+taxonomic resolution. This project is effectively concluded.
+
 ### knb-lter-cap.41.17 2025-07-23
 
 - refreshes data through 2023 (most recent available)

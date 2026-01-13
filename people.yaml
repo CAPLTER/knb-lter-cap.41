@@ -12,6 +12,13 @@
   email: ~
   orcid: ~
   data_source: ~/Dropbox/floating/cap_authors.csv
+- last_name: ball
+  first_name: becky
+  middle_name: ~
+  role_type: creator
+  email: ~
+  orcid: ~
+  data_source: ~/Dropbox/floating/cap_authors.csv
 - last_name: earl
   first_name: stevan
   middle_name: ~

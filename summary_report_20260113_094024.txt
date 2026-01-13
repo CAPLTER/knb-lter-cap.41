@@ -1,0 +1,22 @@
+CAP LTER Arthropod Taxonomy Enrichment Report
+
+Processing Date: 2026-01-13 09:49:30
+
+SUMMARY STATISTICS:
+Total records processed: 778
+Successfully enriched: 778
+Failed matches: 0
+Success rate: 100 %
+Processing time: 8.74 minutes
+
+OUTPUT FILES:
+Main results: arthropod_taxonomy_enriched_20260113_094024.csv
+Summary report: summary_report_20260113_094024.txt
+
+TAXONOMIC COMPLETENESS:
+Kingdom complete: 100 %
+Phylum complete: 100 %
+Class complete: 99.9 %
+Order complete: 99 %
+Family complete: 94 %
+Genus complete: 62.5 %

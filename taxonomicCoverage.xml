@@ -1,0 +1,3205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="0c9cf785-7a98-4727-b245-7c976499e428" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <taxonomicClassification>
+    <taxonRankName>subclass</taxonRankName>
+    <taxonRankValue>Acari</taxonRankValue>
+    <commonName>arachnids</commonName>
+    <taxonId provider="https://itis.gov">733321</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Clubionidae</taxonRankValue>
+    <commonName>sac spiders</commonName>
+    <taxonId provider="https://itis.gov">871518</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Formicidae</taxonRankValue>
+    <commonName>ants</commonName>
+    <taxonId provider="https://itis.gov">154193</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Hymenoptera</taxonRankValue>
+    <commonName>wasps</commonName>
+    <taxonId provider="https://itis.gov">152741</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Isopoda</taxonRankValue>
+    <commonName>sowbugs</commonName>
+    <taxonId provider="https://itis.gov">92120</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Lepismatidae</taxonRankValue>
+    <commonName>silverfish</commonName>
+    <taxonId provider="https://itis.gov">99220</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Meinertellidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">685010</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Tenebrionidae</taxonRankValue>
+    <commonName>darkling beetles</commonName>
+    <taxonId provider="https://itis.gov">114419</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Carabidae</taxonRankValue>
+    <commonName>ground beetles</commonName>
+    <taxonId provider="https://itis.gov">109234</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Collembola</taxonRankValue>
+    <commonName>springtails</commonName>
+    <taxonId provider="https://itis.gov">99237</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>class</taxonRankName>
+    <taxonRankValue>Collembola</taxonRankValue>
+    <taxonId provider="https://itis.gov">914185</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Scarabaeidae</taxonRankValue>
+    <commonName>scarab beetles</commonName>
+    <taxonId provider="https://itis.gov">114493</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Staphylinidae</taxonRankValue>
+    <commonName>rove beetles</commonName>
+    <taxonId provider="https://itis.gov">113265</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Aphididae</taxonRankValue>
+    <commonName>plantlice</commonName>
+    <taxonId provider="https://itis.gov">109191</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>superfamily</taxonRankName>
+    <taxonRankValue>Chalcidoidea</taxonRankValue>
+    <commonName>chalcidoids</commonName>
+    <taxonId provider="https://itis.gov">153658</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>superfamily</taxonRankName>
+    <taxonRankValue>Coccoidea</taxonRankValue>
+    <commonName>scales</commonName>
+    <taxonId provider="https://itis.gov">109195</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Coleoptera</taxonRankValue>
+    <commonName>beetles</commonName>
+    <taxonId provider="https://itis.gov">109216</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Labiidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">102453</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Lycosa</taxonRankValue>
+    <taxonId provider="https://itis.gov">848690</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Miridae</taxonRankValue>
+    <commonName>plant bugs</commonName>
+    <taxonId provider="https://itis.gov">104419</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Pholcidae</taxonRankValue>
+    <commonName>daddylongleg spiders</commonName>
+    <taxonId provider="https://itis.gov">847751</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Salticidae</taxonRankValue>
+    <commonName>jumping spiders</commonName>
+    <taxonId provider="https://itis.gov">871537</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Theridiidae</taxonRankValue>
+    <commonName>cobweb weavers</commonName>
+    <taxonId provider="https://itis.gov">82740</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>class</taxonRankName>
+    <taxonRankValue>Chilopoda</taxonRankValue>
+    <commonName>centipeds</commonName>
+    <taxonId provider="https://itis.gov">154400</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Curculionidae</taxonRankValue>
+    <commonName>weevils</commonName>
+    <taxonId provider="https://itis.gov">114666</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Gryllidae</taxonRankValue>
+    <commonName>crickets</commonName>
+    <taxonId provider="https://itis.gov">102281</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Thysanoptera</taxonRankValue>
+    <commonName>thrips</commonName>
+    <taxonId provider="https://itis.gov">103348</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Tingidae</taxonRankValue>
+    <commonName>lace bugs</commonName>
+    <taxonId provider="https://itis.gov">104177</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Diptera</taxonRankValue>
+    <commonName>true flies</commonName>
+    <taxonId provider="https://itis.gov">118831</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Linyphiidae</taxonRankValue>
+    <commonName>sheetweb weavers</commonName>
+    <taxonId provider="https://itis.gov">82743</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Philodromidae</taxonRankValue>
+    <commonName>running crab spiders</commonName>
+    <taxonId provider="https://itis.gov">871533</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Psocodea</taxonRankValue>
+    <taxonId provider="https://itis.gov">998435</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Gnaphosidae</taxonRankValue>
+    <commonName>stealthy ground spiders</commonName>
+    <taxonId provider="https://itis.gov">185556</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Elateridae</taxonRankValue>
+    <commonName>click beetles</commonName>
+    <taxonId provider="https://itis.gov">113879</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Anthicidae</taxonRankValue>
+    <commonName>antlike flower beetles</commonName>
+    <taxonId provider="https://itis.gov">114405</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Labidura riparia</taxonRankValue>
+    <taxonId provider="https://itis.gov">186021</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Solenopsis xyloni</taxonRankValue>
+    <commonName>southern fire ant</commonName>
+    <taxonId provider="https://itis.gov">154242</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Corylophidae</taxonRankValue>
+    <commonName>minute hooded beetles</commonName>
+    <taxonId provider="https://itis.gov">114328</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cydnidae</taxonRankValue>
+    <commonName>burrower bugs</commonName>
+    <taxonId provider="https://itis.gov">108550</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Lepidoptera</taxonRankValue>
+    <commonName>moths</commonName>
+    <taxonId provider="https://itis.gov">117232</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Blapstinus</taxonRankValue>
+    <taxonId provider="https://itis.gov">187205</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Brachymyrmex</taxonRankValue>
+    <taxonId provider="https://itis.gov">573953</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Dipoena</taxonRankValue>
+    <taxonId provider="https://itis.gov">848239</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Ephemeroptera</taxonRankValue>
+    <commonName>mayflies</commonName>
+    <taxonId provider="https://itis.gov">100502</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Forelius</taxonRankValue>
+    <taxonId provider="https://itis.gov">573923</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pogonomyrmex</taxonRankValue>
+    <taxonId provider="https://itis.gov">154230</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subfamily</taxonRankName>
+    <taxonRankValue>Scolytinae</taxonRankValue>
+    <commonName>timber beetles</commonName>
+    <taxonId provider="https://itis.gov">678830</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Solenopsis</taxonRankValue>
+    <taxonId provider="https://itis.gov">154237</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Strumigenys</taxonRankValue>
+    <taxonId provider="https://itis.gov">574155</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Syntomus</taxonRankValue>
+    <taxonId provider="https://itis.gov">931473</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Pentatomidae</taxonRankValue>
+    <commonName>terrestrial turtle bugs</commonName>
+    <taxonId provider="https://itis.gov">108628</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Aleyrodidae</taxonRankValue>
+    <commonName>whiteflies</commonName>
+    <taxonId provider="https://itis.gov">109189</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Opiliones</taxonRankValue>
+    <commonName>Harvestmen</commonName>
+    <taxonId provider="https://itis.gov">82753</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Entomobryidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">99643</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Forelius mccooki</taxonRankValue>
+    <taxonId provider="https://itis.gov">574951</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Heleomyzidae</taxonRankValue>
+    <commonName>heleomyzid flies</commonName>
+    <taxonId provider="https://itis.gov">145445</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Hypogastruridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">99917</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Lygaeus</taxonRankValue>
+    <taxonId provider="https://itis.gov">107803</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Oligotomidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">102466</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Pteromalidae</taxonRankValue>
+    <commonName>pteromalids</commonName>
+    <taxonId provider="https://itis.gov">153974</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Sminthuridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">100258</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Steatoda</taxonRankValue>
+    <taxonId provider="https://itis.gov">849420</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Thripidae</taxonRankValue>
+    <commonName>common thrips</commonName>
+    <taxonId provider="https://itis.gov">103353</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Henicopidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">913858</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Spanagonicus</taxonRankValue>
+    <taxonId provider="https://itis.gov">106817</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Stator</taxonRankValue>
+    <taxonId provider="https://itis.gov">187758</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Syntomus americanus</taxonRankValue>
+    <taxonId provider="https://itis.gov">932569</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Apis mellifera</taxonRankValue>
+    <commonName>honey bee</commonName>
+    <taxonId provider="https://itis.gov">154396</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Oecobius</taxonRankValue>
+    <taxonId provider="https://itis.gov">848972</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pheidole</taxonRankValue>
+    <taxonId provider="https://itis.gov">154226</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pogonomyrmex rugosus</taxonRankValue>
+    <commonName>rough harvester ant</commonName>
+    <taxonId provider="https://itis.gov">154236</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Zelotes</taxonRankValue>
+    <taxonId provider="https://itis.gov">185597</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Aphodius</taxonRankValue>
+    <taxonId provider="https://itis.gov">114494</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Araneidae</taxonRankValue>
+    <commonName>orbweavers</commonName>
+    <taxonId provider="https://itis.gov">82737</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Chironomidae</taxonRankValue>
+    <commonName>midges</commonName>
+    <taxonId provider="https://itis.gov">127917</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Chrysomelidae</taxonRankValue>
+    <commonName>leaf beetles</commonName>
+    <taxonId provider="https://itis.gov">114509</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Embioptera</taxonRankValue>
+    <commonName>webspinners</commonName>
+    <taxonId provider="https://itis.gov">102463</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Foadia maculata</taxonRankValue>
+    <taxonId provider="https://itis.gov">779742</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Isotomidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">99245</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Liorhyssus</taxonRankValue>
+    <taxonId provider="https://itis.gov">108513</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Paratrechina</taxonRankValue>
+    <taxonId provider="https://itis.gov">154224</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Scelionidae</taxonRankValue>
+    <commonName>scelionids</commonName>
+    <taxonId provider="https://itis.gov">154068</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Agonum</taxonRankValue>
+    <taxonId provider="https://itis.gov">110242</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pardosa</taxonRankValue>
+    <commonName>thinlegged wolf spiders</commonName>
+    <taxonId provider="https://itis.gov">849078</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pterostichus</taxonRankValue>
+    <taxonId provider="https://itis.gov">110453</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Anthocoridae</taxonRankValue>
+    <commonName>minute pirate bugs</commonName>
+    <taxonId provider="https://itis.gov">106903</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cecidomyiidae</taxonRankValue>
+    <commonName>gall midges</commonName>
+    <taxonId provider="https://itis.gov">122975</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Eulophidae</taxonRankValue>
+    <commonName>eulophids</commonName>
+    <taxonId provider="https://itis.gov">153770</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Psyllidae</taxonRankValue>
+    <commonName>jumping plantlice</commonName>
+    <taxonId provider="https://itis.gov">109187</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Sciaridae</taxonRankValue>
+    <commonName>dark winged fungus gnats</commonName>
+    <taxonId provider="https://itis.gov">122702</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Termitidae</taxonRankValue>
+    <commonName>higher termites</commonName>
+    <taxonId provider="https://itis.gov">102443</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Selenophorus</taxonRankValue>
+    <taxonId provider="https://itis.gov">111314</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Tetragonoderus</taxonRankValue>
+    <taxonId provider="https://itis.gov">111536</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Dorymyrmex insanus</taxonRankValue>
+    <taxonId provider="https://itis.gov">574918</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Encyrtidae</taxonRankValue>
+    <commonName>encyrtids</commonName>
+    <taxonId provider="https://itis.gov">153945</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pheidole spadonia</taxonRankValue>
+    <taxonId provider="https://itis.gov">581232</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ataenius</taxonRankValue>
+    <taxonId provider="https://itis.gov">187489</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Geometridae</taxonRankValue>
+    <commonName>measuringworms</commonName>
+    <taxonId provider="https://itis.gov">117556</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Chaetocnema</taxonRankValue>
+    <taxonId provider="https://itis.gov">187766</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Corythucha</taxonRankValue>
+    <taxonId provider="https://itis.gov">104215</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Eretes</taxonRankValue>
+    <taxonId provider="https://itis.gov">112163</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Scatopsidae</taxonRankValue>
+    <commonName>hyperoscelidid gnats</commonName>
+    <taxonId provider="https://itis.gov">125618</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Cnemodus</taxonRankValue>
+    <taxonId provider="https://itis.gov">108042</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Hemiptera</taxonRankValue>
+    <commonName>true bugs</commonName>
+    <taxonId provider="https://itis.gov">103359</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Erigone</taxonRankValue>
+    <taxonId provider="https://itis.gov">848314</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Spirobolida</taxonRankValue>
+    <taxonId provider="https://itis.gov">154419</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Apis</taxonRankValue>
+    <taxonId provider="https://itis.gov">154395</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Blastophaga psenes</taxonRankValue>
+    <taxonId provider="https://itis.gov">153965</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Muscidae</taxonRankValue>
+    <commonName>face flies</commonName>
+    <taxonId provider="https://itis.gov">150025</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Monomorium</taxonRankValue>
+    <taxonId provider="https://itis.gov">154219</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pachybrachis</taxonRankValue>
+    <taxonId provider="https://itis.gov">719766</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Sclerogibbidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">154170</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Braconidae</taxonRankValue>
+    <commonName>braconids</commonName>
+    <taxonId provider="https://itis.gov">152867</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pheidole desertorum</taxonRankValue>
+    <taxonId provider="https://itis.gov">580924</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Cyclocephala</taxonRankValue>
+    <taxonId provider="https://itis.gov">926564</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Forelius pruinosus</taxonRankValue>
+    <taxonId provider="https://itis.gov">574954</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Baetidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">100755</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Odontomachus</taxonRankValue>
+    <taxonId provider="https://itis.gov">574200</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Aeolothripidae</taxonRankValue>
+    <commonName>broad winged thrips</commonName>
+    <taxonId provider="https://itis.gov">103350</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Hypoponera</taxonRankValue>
+    <taxonId provider="https://itis.gov">574195</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Habronattus</taxonRankValue>
+    <taxonId provider="https://itis.gov">872158</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Crematogaster</taxonRankValue>
+    <taxonId provider="https://itis.gov">574052</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Pyralidae</taxonRankValue>
+    <commonName>grass moths</commonName>
+    <taxonId provider="https://itis.gov">117641</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Mutillidae</taxonRankValue>
+    <commonName>velvet ants</commonName>
+    <taxonId provider="https://itis.gov">154181</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ptomaphagus</taxonRankValue>
+    <taxonId provider="https://itis.gov">933516</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Caeculidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">895681</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Chloropidae</taxonRankValue>
+    <commonName>chloropid flies</commonName>
+    <taxonId provider="https://itis.gov">147644</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Euetheola</taxonRankValue>
+    <taxonId provider="https://itis.gov">926589</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Phoridae</taxonRankValue>
+    <commonName>humpbacked flies</commonName>
+    <taxonId provider="https://itis.gov">138921</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Sitticus</taxonRankValue>
+    <taxonId provider="https://itis.gov">873040</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Bdellidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">82755</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cicadellidae</taxonRankValue>
+    <commonName>sharpshooters</commonName>
+    <taxonId provider="https://itis.gov">109171</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Anystidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">895683</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Ceratopogonidae</taxonRankValue>
+    <commonName>biting midges</commonName>
+    <taxonId provider="https://itis.gov">127076</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>suborder</taxonRankName>
+    <taxonRankValue>Oribatida</taxonRankValue>
+    <commonName>oribatid mites</commonName>
+    <taxonId provider="https://itis.gov">733326</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>superorder</taxonRankName>
+    <taxonRankValue>Acariformes</taxonRankValue>
+    <taxonId provider="https://itis.gov">690740</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Apocellus</taxonRankValue>
+    <taxonId provider="https://itis.gov">690997</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Allocosa</taxonRankValue>
+    <taxonId provider="https://itis.gov">847830</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>superfamily</taxonRankName>
+    <taxonRankValue>Anystoidea</taxonRankValue>
+    <taxonId provider="https://itis.gov">895631</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Ceraphronidae</taxonRankValue>
+    <commonName>ceraphronids</commonName>
+    <taxonId provider="https://itis.gov">154066</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ligyrocoris</taxonRankValue>
+    <taxonId provider="https://itis.gov">108065</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Orius</taxonRankValue>
+    <taxonId provider="https://itis.gov">106959</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Torymidae</taxonRankValue>
+    <commonName>torymids</commonName>
+    <taxonId provider="https://itis.gov">153968</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Brachymyrmex patagonicus</taxonRankValue>
+    <taxonId provider="https://itis.gov">575574</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Typhaea</taxonRankValue>
+    <taxonId provider="https://itis.gov">187103</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Erythraeidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">895691</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>superfamily</taxonRankName>
+    <taxonRankValue>Erythraeoidea</taxonRankValue>
+    <taxonId provider="https://itis.gov">895635</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Chrysopidae</taxonRankValue>
+    <commonName>green lacewings</commonName>
+    <taxonId provider="https://itis.gov">115081</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Dorymyrmex</taxonRankValue>
+    <taxonId provider="https://itis.gov">573919</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Drassyllus</taxonRankValue>
+    <taxonId provider="https://itis.gov">185620</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Noctuidae</taxonRankValue>
+    <commonName>underwings</commonName>
+    <taxonId provider="https://itis.gov">117318</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Acanthoscelides</taxonRankValue>
+    <taxonId provider="https://itis.gov">114505</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subfamily</taxonRankName>
+    <taxonRankValue>Bruchinae</taxonRankValue>
+    <taxonId provider="https://itis.gov">678800</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Gryllodes</taxonRankValue>
+    <taxonId provider="https://itis.gov">657817</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Paratrechina longicornis</taxonRankValue>
+    <commonName>crazy ant</commonName>
+    <taxonId provider="https://itis.gov">154225</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Mymaridae</taxonRankValue>
+    <commonName>fairyflies</commonName>
+    <taxonId provider="https://itis.gov">153659</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Bethylidae</taxonRankValue>
+    <commonName>bethylid wasps</commonName>
+    <taxonId provider="https://itis.gov">154164</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>class</taxonRankName>
+    <taxonRankValue>Gastropoda</taxonRankValue>
+    <commonName>snails</commonName>
+    <taxonId provider="https://itis.gov">69459</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Blattidae</taxonRankValue>
+    <commonName>oriental cockroaches</commonName>
+    <taxonId provider="https://itis.gov">102402</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Dictynidae</taxonRankValue>
+    <commonName>meshweavers</commonName>
+    <taxonId provider="https://itis.gov">871524</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Loxosceles</taxonRankValue>
+    <commonName>recluse spiders</commonName>
+    <taxonId provider="https://itis.gov">848684</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Cicindela nigrocoerulea</taxonRankValue>
+    <commonName>Black Sky Tiger Beetle</commonName>
+    <taxonId provider="https://itis.gov">697713</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Coccinellidae</taxonRankValue>
+    <commonName>ladybird beetles</commonName>
+    <taxonId provider="https://itis.gov">114329</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Leiodidae</taxonRankValue>
+    <commonName>round fungus beetles</commonName>
+    <taxonId provider="https://itis.gov">113817</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Lygaeidae</taxonRankValue>
+    <commonName>chinch bugs</commonName>
+    <taxonId provider="https://itis.gov">107674</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Nesticidae</taxonRankValue>
+    <commonName>cave cobweb spiders</commonName>
+    <taxonId provider="https://itis.gov">847742</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Dryinidae</taxonRankValue>
+    <commonName>dryinid wasps</commonName>
+    <taxonId provider="https://itis.gov">154167</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Neuroptera</taxonRankValue>
+    <commonName>spongillaflies</commonName>
+    <taxonId provider="https://itis.gov">114999</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pyramica membranifera</taxonRankValue>
+    <taxonId provider="https://itis.gov">581663</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Ptiliidae</taxonRankValue>
+    <commonName>feather winged beetles</commonName>
+    <taxonId provider="https://itis.gov">113805</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Bembidion</taxonRankValue>
+    <taxonId provider="https://itis.gov">109786</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Foadia</taxonRankValue>
+    <taxonId provider="https://itis.gov">779728</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Mycetophagidae</taxonRankValue>
+    <commonName>hairy fungus beetles</commonName>
+    <taxonId provider="https://itis.gov">114376</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Scarites</taxonRankValue>
+    <taxonId provider="https://itis.gov">109602</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Solenopsis amblychila</taxonRankValue>
+    <taxonId provider="https://itis.gov">581844</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Sphenophorus</taxonRankValue>
+    <taxonId provider="https://itis.gov">188084</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ceraticelus</taxonRankValue>
+    <taxonId provider="https://itis.gov">848077</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Geomysaprinus</taxonRankValue>
+    <taxonId provider="https://itis.gov">114962</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Strumigenys louisianae</taxonRankValue>
+    <taxonId provider="https://itis.gov">582182</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Arctosa</taxonRankValue>
+    <taxonId provider="https://itis.gov">847908</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Phlaeothripidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">103357</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Calliphoridae</taxonRankValue>
+    <commonName>blow flies</commonName>
+    <taxonId provider="https://itis.gov">151495</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Rhinacloa</taxonRankValue>
+    <taxonId provider="https://itis.gov">106803</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Aphelinidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">709300</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Hogna</taxonRankValue>
+    <taxonId provider="https://itis.gov">848506</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Dolichopodidae</taxonRankValue>
+    <commonName>longlegged flies</commonName>
+    <taxonId provider="https://itis.gov">136824</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Geocoris</taxonRankValue>
+    <taxonId provider="https://itis.gov">107737</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Leptacinus</taxonRankValue>
+    <taxonId provider="https://itis.gov">186462</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ozognathus</taxonRankValue>
+    <taxonId provider="https://itis.gov">696303</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pheidole floridana</taxonRankValue>
+    <taxonId provider="https://itis.gov">580963</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Eidmannella</taxonRankValue>
+    <taxonId provider="https://itis.gov">848279</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pheidole sciophila</taxonRankValue>
+    <taxonId provider="https://itis.gov">581209</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Hermetia</taxonRankValue>
+    <taxonId provider="https://itis.gov">130289</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Phyllotreta</taxonRankValue>
+    <taxonId provider="https://itis.gov">719700</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Platystethus</taxonRankValue>
+    <taxonId provider="https://itis.gov">186552</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Lycosidae</taxonRankValue>
+    <commonName>wolf spiders</commonName>
+    <taxonId provider="https://itis.gov">847731</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Mermessus</taxonRankValue>
+    <taxonId provider="https://itis.gov">848771</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Conoderus</taxonRankValue>
+    <taxonId provider="https://itis.gov">113885</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Lacon</taxonRankValue>
+    <taxonId provider="https://itis.gov">186663</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Vaejovidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">690791</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Aeolus</taxonRankValue>
+    <taxonId provider="https://itis.gov">186600</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Scytodes</taxonRankValue>
+    <taxonId provider="https://itis.gov">849322</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Ephydridae</taxonRankValue>
+    <commonName>brine flies</commonName>
+    <taxonId provider="https://itis.gov">146893</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Prytanes</taxonRankValue>
+    <taxonId provider="https://itis.gov">108102</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Anthicus</taxonRankValue>
+    <taxonId provider="https://itis.gov">187165</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Blattodea</taxonRankValue>
+    <commonName>termites</commonName>
+    <taxonId provider="https://itis.gov">914219</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Camponotus</taxonRankValue>
+    <taxonId provider="https://itis.gov">154194</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Formicilla</taxonRankValue>
+    <taxonId provider="https://itis.gov">685112</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Microporus</taxonRankValue>
+    <taxonId provider="https://itis.gov">108596</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Coccidophilus</taxonRankValue>
+    <taxonId provider="https://itis.gov">692171</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Delphacidae</taxonRankValue>
+    <commonName>delphacid planthoppers</commonName>
+    <taxonId provider="https://itis.gov">109175</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Mantodea</taxonRankValue>
+    <taxonId provider="https://itis.gov">914220</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>suborder</taxonRankName>
+    <taxonRankValue>Mantodea</taxonRankValue>
+    <taxonId provider="https://itis.gov">666589</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pangaeus</taxonRankValue>
+    <taxonId provider="https://itis.gov">108599</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Scaphytopius</taxonRankValue>
+    <taxonId provider="https://itis.gov">200129</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cicadidae</taxonRankValue>
+    <commonName>cicadas</commonName>
+    <taxonId provider="https://itis.gov">109169</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Notiophilus</taxonRankValue>
+    <taxonId provider="https://itis.gov">109532</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Fanniidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">151314</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Tipulidae</taxonRankValue>
+    <commonName>crane flies</commonName>
+    <taxonId provider="https://itis.gov">118840</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Eupelmidae</taxonRankValue>
+    <commonName>eupelmids</commonName>
+    <taxonId provider="https://itis.gov">153952</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Psilochorus</taxonRankValue>
+    <taxonId provider="https://itis.gov">849232</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Sphaeroceridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">145784</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Nothrus</taxonRankValue>
+    <taxonId provider="https://itis.gov">733690</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Agroeca</taxonRankValue>
+    <taxonId provider="https://itis.gov">871582</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Thyanta</taxonRankValue>
+    <taxonId provider="https://itis.gov">108971</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Acrididae</taxonRankValue>
+    <commonName>grasshoppers</commonName>
+    <taxonId provider="https://itis.gov">102195</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Culicidae</taxonRankValue>
+    <commonName>mosquitoes</commonName>
+    <taxonId provider="https://itis.gov">125930</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Dermaptera</taxonRankValue>
+    <commonName>earwigs</commonName>
+    <taxonId provider="https://itis.gov">102451</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Mecinus</taxonRankValue>
+    <taxonId provider="https://itis.gov">616914</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Sarcophagidae</taxonRankValue>
+    <commonName>flesh flies</commonName>
+    <taxonId provider="https://itis.gov">151815</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Aleochara</taxonRankValue>
+    <taxonId provider="https://itis.gov">186399</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Chalcididae</taxonRankValue>
+    <commonName>chalcidid wasps</commonName>
+    <taxonId provider="https://itis.gov">154021</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Periplaneta</taxonRankValue>
+    <taxonId provider="https://itis.gov">102405</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Periplaneta americana</taxonRankValue>
+    <commonName>American cockroach</commonName>
+    <taxonId provider="https://itis.gov">102406</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Scolopendridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">913862</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Sericoderus</taxonRankValue>
+    <taxonId provider="https://itis.gov">186943</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>tribe</taxonRankName>
+    <taxonRankValue>Alticini</taxonRankValue>
+    <taxonId provider="https://itis.gov">719593</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Mycetophilidae</taxonRankValue>
+    <commonName>fungus gnats</commonName>
+    <taxonId provider="https://itis.gov">121636</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Glenognatha</taxonRankValue>
+    <taxonId provider="https://itis.gov">848415</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Nothridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">733417</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pronotacantha</taxonRankValue>
+    <taxonId provider="https://itis.gov">107669</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Vacusus</taxonRankValue>
+    <taxonId provider="https://itis.gov">187177</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Halictidae</taxonRankValue>
+    <commonName>sweat bees</commonName>
+    <taxonId provider="https://itis.gov">154348</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Cardiocondyla</taxonRankValue>
+    <taxonId provider="https://itis.gov">574042</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Solenopsis aurea</taxonRankValue>
+    <taxonId provider="https://itis.gov">581848</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Sphecidae</taxonRankValue>
+    <commonName>sphecid wasps</commonName>
+    <taxonId provider="https://itis.gov">154310</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Labidura</taxonRankValue>
+    <taxonId provider="https://itis.gov">186020</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Tennesseellum</taxonRankValue>
+    <taxonId provider="https://itis.gov">849504</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Trichogrammatidae</taxonRankValue>
+    <commonName>trichogrammatids</commonName>
+    <taxonId provider="https://itis.gov">153728</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Hypera</taxonRankValue>
+    <taxonId provider="https://itis.gov">187908</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>phylum</taxonRankName>
+    <taxonRankValue>Nematoda</taxonRankValue>
+    <commonName>nematoide</commonName>
+    <taxonId provider="https://itis.gov">59490</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Dermestidae</taxonRankValue>
+    <commonName>skin beetles</commonName>
+    <taxonId provider="https://itis.gov">114976</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Buprestidae</taxonRankValue>
+    <commonName>metallic wood boring beetle</commonName>
+    <taxonId provider="https://itis.gov">114968</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Melanaethus</taxonRankValue>
+    <taxonId provider="https://itis.gov">108581</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Arenivaga</taxonRankValue>
+    <taxonId provider="https://itis.gov">102410</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Aphis</taxonRankValue>
+    <taxonId provider="https://itis.gov">200573</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cercopidae</taxonRankValue>
+    <commonName>spittlebugs</commonName>
+    <taxonId provider="https://itis.gov">109172</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Glyptina</taxonRankValue>
+    <taxonId provider="https://itis.gov">719703</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Tetragonoderus pallidus</taxonRankValue>
+    <taxonId provider="https://itis.gov">111540</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Hemerobiidae</taxonRankValue>
+    <commonName>brown lacewings</commonName>
+    <taxonId provider="https://itis.gov">115080</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Lebia</taxonRankValue>
+    <taxonId provider="https://itis.gov">111627</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Osorius</taxonRankValue>
+    <taxonId provider="https://itis.gov">186543</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Solifugae</taxonRankValue>
+    <commonName>wind scorpions</commonName>
+    <taxonId provider="https://itis.gov">690742</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Tiphiidae</taxonRankValue>
+    <commonName>tiphiid wasps</commonName>
+    <taxonId provider="https://itis.gov">154175</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Histeridae</taxonRankValue>
+    <commonName>hister beetles</commonName>
+    <taxonId provider="https://itis.gov">114959</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Caponiidae</taxonRankValue>
+    <commonName>caponiid spiders</commonName>
+    <taxonId provider="https://itis.gov">847712</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Oonopidae</taxonRankValue>
+    <commonName>dwarf sixeyed spiders</commonName>
+    <taxonId provider="https://itis.gov">847745</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Pseudoscorpiones</taxonRankValue>
+    <commonName>pseudoscorpions</commonName>
+    <taxonId provider="https://itis.gov">690741</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Scytodidae</taxonRankValue>
+    <commonName>spitting spiders</commonName>
+    <taxonId provider="https://itis.gov">847754</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Thomisidae</taxonRankValue>
+    <commonName>crab spiders</commonName>
+    <taxonId provider="https://itis.gov">871543</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Melyridae</taxonRankValue>
+    <commonName>solf winged flower beetles</commonName>
+    <taxonId provider="https://itis.gov">113869</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Micaria</taxonRankValue>
+    <taxonId provider="https://itis.gov">185557</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Tetramorium</taxonRankValue>
+    <taxonId provider="https://itis.gov">154245</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Nysius</taxonRankValue>
+    <taxonId provider="https://itis.gov">107868</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Oecobiidae</taxonRankValue>
+    <commonName>flatmesh weavers</commonName>
+    <taxonId provider="https://itis.gov">847744</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Nabis</taxonRankValue>
+    <taxonId provider="https://itis.gov">107115</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Tephritidae</taxonRankValue>
+    <commonName>fruit flies</commonName>
+    <taxonId provider="https://itis.gov">142604</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ctenisis</taxonRankValue>
+    <taxonId provider="https://itis.gov">690914</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Systelloderes</taxonRankValue>
+    <taxonId provider="https://itis.gov">104009</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>suborder</taxonRankName>
+    <taxonRankValue>Cyphophthalmi</taxonRankValue>
+    <commonName>mite harvestmen</commonName>
+    <taxonId provider="https://itis.gov">1012396</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Cryptophagus</taxonRankValue>
+    <taxonId provider="https://itis.gov">114315</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Andrenidae</taxonRankValue>
+    <commonName>andrenids</commonName>
+    <taxonId provider="https://itis.gov">154361</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Filistatoides</taxonRankValue>
+    <taxonId provider="https://itis.gov">848368</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Phytocoris</taxonRankValue>
+    <taxonId provider="https://itis.gov">105061</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ceratocapsus</taxonRankValue>
+    <taxonId provider="https://itis.gov">105622</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Diapriidae</taxonRankValue>
+    <commonName>diapriids</commonName>
+    <taxonId provider="https://itis.gov">154067</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Euryopis</taxonRankValue>
+    <taxonId provider="https://itis.gov">848342</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Axinopalpus</taxonRankValue>
+    <taxonId provider="https://itis.gov">111703</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pseudopsallus</taxonRankValue>
+    <taxonId provider="https://itis.gov">106160</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Corythaica</taxonRankValue>
+    <taxonId provider="https://itis.gov">104208</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Reduviidae</taxonRankValue>
+    <commonName>assassin bugs</commonName>
+    <taxonId provider="https://itis.gov">107202</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Ichneumonidae</taxonRankValue>
+    <commonName>ichneumon wasps</commonName>
+    <taxonId provider="https://itis.gov">153360</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Cymindis</taxonRankValue>
+    <taxonId provider="https://itis.gov">111544</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Exitianus</taxonRankValue>
+    <taxonId provider="https://itis.gov">200035</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Bibiodes</taxonRankValue>
+    <taxonId provider="https://itis.gov">121397</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Coniopterygidae</taxonRankValue>
+    <commonName>dusty wings</commonName>
+    <taxonId provider="https://itis.gov">115075</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Filistatidae</taxonRankValue>
+    <commonName>crevice weavers</commonName>
+    <taxonId provider="https://itis.gov">847722</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Xysticus</taxonRankValue>
+    <commonName>ground crab spiders</commonName>
+    <taxonId provider="https://itis.gov">873341</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Phalangiidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">1012454</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Platytomus</taxonRankValue>
+    <taxonId provider="https://itis.gov">926396</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Eremobatidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">690765</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Amara</taxonRankValue>
+    <taxonId provider="https://itis.gov">110847</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Nabidae</taxonRankValue>
+    <commonName>damsel bugs</commonName>
+    <taxonId provider="https://itis.gov">107084</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Pompilidae</taxonRankValue>
+    <commonName>spider wasp</commonName>
+    <taxonId provider="https://itis.gov">154286</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Simuliidae</taxonRankValue>
+    <commonName>black flies</commonName>
+    <taxonId provider="https://itis.gov">126640</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Poecilus</taxonRankValue>
+    <taxonId provider="https://itis.gov">931441</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pogonomyrmex californicus</taxonRankValue>
+    <commonName>California harvester ant</commonName>
+    <taxonId provider="https://itis.gov">154233</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Anthomyiidae</taxonRankValue>
+    <commonName>anthomyiid flies</commonName>
+    <taxonId provider="https://itis.gov">148685</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Asilidae</taxonRankValue>
+    <commonName>robber flies</commonName>
+    <taxonId provider="https://itis.gov">132394</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Chrysididae</taxonRankValue>
+    <commonName>cuckoo wasps</commonName>
+    <taxonId provider="https://itis.gov">154152</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Dorymyrmex bicolor</taxonRankValue>
+    <taxonId provider="https://itis.gov">574892</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Hippodamia</taxonRankValue>
+    <taxonId provider="https://itis.gov">114330</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Myrmecocystus</taxonRankValue>
+    <taxonId provider="https://itis.gov">573974</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Pyrgotidae</taxonRankValue>
+    <commonName>pyrgotid flies</commonName>
+    <taxonId provider="https://itis.gov">142577</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subfamily</taxonRankName>
+    <taxonRankValue>Arctiinae</taxonRankValue>
+    <taxonId provider="https://itis.gov">693997</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Stenolophus</taxonRankValue>
+    <taxonId provider="https://itis.gov">111038</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Rhopalidae</taxonRankValue>
+    <commonName>scentless plant bugs</commonName>
+    <taxonId provider="https://itis.gov">108477</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Argidae</taxonRankValue>
+    <commonName>argid sawflies</commonName>
+    <taxonId provider="https://itis.gov">152757</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Largus</taxonRankValue>
+    <taxonId provider="https://itis.gov">108213</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Acholla</taxonRankValue>
+    <taxonId provider="https://itis.gov">107301</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Aufeius</taxonRankValue>
+    <taxonId provider="https://itis.gov">108481</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Smicraulax</taxonRankValue>
+    <taxonId provider="https://itis.gov">617040</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Calosoma</taxonRankValue>
+    <taxonId provider="https://itis.gov">109378</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Dictyna</taxonRankValue>
+    <taxonId provider="https://itis.gov">872000</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Epuraea</taxonRankValue>
+    <taxonId provider="https://itis.gov">835489</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pholcus</taxonRankValue>
+    <taxonId provider="https://itis.gov">849119</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Agromyza</taxonRankValue>
+    <taxonId provider="https://itis.gov">143386</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Coccinella</taxonRankValue>
+    <taxonId provider="https://itis.gov">114346</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Philonthus</taxonRankValue>
+    <taxonId provider="https://itis.gov">113292</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Systena</taxonRankValue>
+    <taxonId provider="https://itis.gov">187786</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Niesthrea</taxonRankValue>
+    <taxonId provider="https://itis.gov">108508</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Agromyzidae</taxonRankValue>
+    <commonName>leafminer flies</commonName>
+    <taxonId provider="https://itis.gov">143384</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Notoxus</taxonRankValue>
+    <taxonId provider="https://itis.gov">114406</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pseudatomoscelis</taxonRankValue>
+    <taxonId provider="https://itis.gov">106775</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Megaspilidae</taxonRankValue>
+    <commonName>megaspilids</commonName>
+    <taxonId provider="https://itis.gov">610669</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Oxyopidae</taxonRankValue>
+    <commonName>lynx spiders</commonName>
+    <taxonId provider="https://itis.gov">871532</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Scorpiones</taxonRankValue>
+    <commonName>scorpions</commonName>
+    <taxonId provider="https://itis.gov">82713</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Aphaenogaster</taxonRankValue>
+    <taxonId provider="https://itis.gov">574031</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Meloidae</taxonRankValue>
+    <commonName>blister beetles</commonName>
+    <taxonId provider="https://itis.gov">114387</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Tarsonops</taxonRankValue>
+    <taxonId provider="https://itis.gov">849486</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Neivamyrmex</taxonRankValue>
+    <taxonId provider="https://itis.gov">573945</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Gryllacrididae</taxonRankValue>
+    <commonName>camel crickets</commonName>
+    <taxonId provider="https://itis.gov">102278</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Oxyopes</taxonRankValue>
+    <taxonId provider="https://itis.gov">872667</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Leptothorax</taxonRankValue>
+    <taxonId provider="https://itis.gov">574087</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Lytta</taxonRankValue>
+    <taxonId provider="https://itis.gov">114403</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Bombyliidae</taxonRankValue>
+    <commonName>bee flies</commonName>
+    <taxonId provider="https://itis.gov">134153</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Harmostes</taxonRankValue>
+    <taxonId provider="https://itis.gov">108483</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Liocranidae</taxonRankValue>
+    <commonName>liocranid spiders</commonName>
+    <taxonId provider="https://itis.gov">871529</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Phyllophaga</taxonRankValue>
+    <taxonId provider="https://itis.gov">926453</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Mogoplistidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">650506</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Psylliodes</taxonRankValue>
+    <taxonId provider="https://itis.gov">719738</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Apiomerus</taxonRankValue>
+    <taxonId provider="https://itis.gov">107203</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Apollophanes</taxonRankValue>
+    <taxonId provider="https://itis.gov">871656</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Eucyllus</taxonRankValue>
+    <taxonId provider="https://itis.gov">616858</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Derobrachus</taxonRankValue>
+    <taxonId provider="https://itis.gov">701822</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Syrphidae</taxonRankValue>
+    <commonName>syrphid flies</commonName>
+    <taxonId provider="https://itis.gov">139621</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Alopecosa</taxonRankValue>
+    <taxonId provider="https://itis.gov">847837</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pheidole xerophila</taxonRankValue>
+    <taxonId provider="https://itis.gov">581323</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Cheiracanthium</taxonRankValue>
+    <commonName>longlegged sac spiders</commonName>
+    <taxonId provider="https://itis.gov">871868</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subfamily</taxonRankName>
+    <taxonRankValue>Rhaphidophorinae</taxonRankValue>
+    <taxonId provider="https://itis.gov">657521</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>superfamily</taxonRankName>
+    <taxonRankValue>Trombidioidea</taxonRankValue>
+    <taxonId provider="https://itis.gov">895638</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Formica</taxonRankValue>
+    <taxonId provider="https://itis.gov">154211</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Dacoderus</taxonRankValue>
+    <taxonId provider="https://itis.gov">708219</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Dasymutilla</taxonRankValue>
+    <taxonId provider="https://itis.gov">154182</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Deltocephalus</taxonRankValue>
+    <taxonId provider="https://itis.gov">200027</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Discoderus</taxonRankValue>
+    <taxonId provider="https://itis.gov">111369</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Enoplognatha</taxonRankValue>
+    <taxonId provider="https://itis.gov">848292</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Ammotrechidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">690762</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Mantidae</taxonRankValue>
+    <commonName>mantids</commonName>
+    <taxonId provider="https://itis.gov">102396</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Sicariidae</taxonRankValue>
+    <commonName>sixeyed sicariid spiders</commonName>
+    <taxonId provider="https://itis.gov">847756</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Semium</taxonRankValue>
+    <taxonId provider="https://itis.gov">106814</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Yponomeutidae</taxonRankValue>
+    <commonName>ermine moths</commonName>
+    <taxonId provider="https://itis.gov">118716</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Hemiphileurus illatus</taxonRankValue>
+    <taxonId provider="https://itis.gov">929180</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Thinoxenus</taxonRankValue>
+    <taxonId provider="https://itis.gov">617061</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Tarsonops systematicus</taxonRankValue>
+    <taxonId provider="https://itis.gov">868060</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subfamily</taxonRankName>
+    <taxonRankValue>Apinae</taxonRankValue>
+    <taxonId provider="https://itis.gov">633913</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Messor</taxonRankValue>
+    <taxonId provider="https://itis.gov">574099</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subfamily</taxonRankName>
+    <taxonRankValue>Pselaphinae</taxonRankValue>
+    <taxonId provider="https://itis.gov">678464</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Myrmeleontidae</taxonRankValue>
+    <commonName>antlions</commonName>
+    <taxonId provider="https://itis.gov">115093</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Latridiidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">678391</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Apidae</taxonRankValue>
+    <commonName>stingless bees</commonName>
+    <taxonId provider="https://itis.gov">154394</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Fulvius</taxonRankValue>
+    <taxonId provider="https://itis.gov">104538</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Geocoris pallens</taxonRankValue>
+    <taxonId provider="https://itis.gov">107760</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pagasa</taxonRankValue>
+    <taxonId provider="https://itis.gov">107134</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Mimetus</taxonRankValue>
+    <taxonId provider="https://itis.gov">848823</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Lycaenidae</taxonRankValue>
+    <commonName>harvesters</commonName>
+    <taxonId provider="https://itis.gov">117236</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pheidole gilvescens</taxonRankValue>
+    <taxonId provider="https://itis.gov">580978</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Emblethis</taxonRankValue>
+    <taxonId provider="https://itis.gov">107983</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Amblypygi</taxonRankValue>
+    <commonName>whip spiders</commonName>
+    <taxonId provider="https://itis.gov">690744</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Sciopithes</taxonRankValue>
+    <taxonId provider="https://itis.gov">188065</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Clivina</taxonRankValue>
+    <taxonId provider="https://itis.gov">109609</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Misumenops</taxonRankValue>
+    <taxonId provider="https://itis.gov">872523</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Callilepis</taxonRankValue>
+    <taxonId provider="https://itis.gov">185706</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Synaphosus</taxonRankValue>
+    <taxonId provider="https://itis.gov">873104</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Syspira</taxonRankValue>
+    <taxonId provider="https://itis.gov">873111</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Linepithema humile</taxonRankValue>
+    <commonName>Argentine ant</commonName>
+    <taxonId provider="https://itis.gov">575041</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Saldidae</taxonRankValue>
+    <commonName>shore bugs</commonName>
+    <taxonId provider="https://itis.gov">104063</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Mimetidae</taxonRankValue>
+    <commonName>pirate spiders</commonName>
+    <taxonId provider="https://itis.gov">847738</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pheidole micula</taxonRankValue>
+    <taxonId provider="https://itis.gov">581083</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Trupanea</taxonRankValue>
+    <taxonId provider="https://itis.gov">143052</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Altica</taxonRankValue>
+    <taxonId provider="https://itis.gov">719709</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Elachistidae</taxonRankValue>
+    <commonName>grass leafminer moths</commonName>
+    <taxonId provider="https://itis.gov">118721</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Gnaphosa</taxonRankValue>
+    <taxonId provider="https://itis.gov">185673</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Tymnes</taxonRankValue>
+    <taxonId provider="https://itis.gov">719755</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Coleosoma</taxonRankValue>
+    <taxonId provider="https://itis.gov">848132</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Neoanagraphis</taxonRankValue>
+    <taxonId provider="https://itis.gov">872571</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Zabrotes</taxonRankValue>
+    <taxonId provider="https://itis.gov">187761</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Empididae</taxonRankValue>
+    <commonName>balloon flies</commonName>
+    <taxonId provider="https://itis.gov">135830</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Euptychodera corrugata</taxonRankValue>
+    <taxonId provider="https://itis.gov">109023</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Empoasca</taxonRankValue>
+    <taxonId provider="https://itis.gov">200032</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>superfamily</taxonRankName>
+    <taxonRankValue>Fulgoroidea</taxonRankValue>
+    <commonName>Planthoppers</commonName>
+    <taxonId provider="https://itis.gov">109173</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Scutigeridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">913657</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Iuridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">690784</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Plectreurys</taxonRankValue>
+    <taxonId provider="https://itis.gov">849154</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Lytta magister</taxonRankValue>
+    <taxonId provider="https://itis.gov">731730</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Crabronidae</taxonRankValue>
+    <commonName>sand wasps</commonName>
+    <taxonId provider="https://itis.gov">709291</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Eupompha</taxonRankValue>
+    <taxonId provider="https://itis.gov">731353</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Notiobia</taxonRankValue>
+    <taxonId provider="https://itis.gov">111139</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subfamily</taxonRankName>
+    <taxonRankValue>Myrmicinae</taxonRankValue>
+    <taxonId provider="https://itis.gov">573828</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Metaphidippus</taxonRankValue>
+    <taxonId provider="https://itis.gov">872498</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cleridae</taxonRankValue>
+    <commonName>checkered beetles</commonName>
+    <taxonId provider="https://itis.gov">113852</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Atta mexicana</taxonRankValue>
+    <taxonId provider="https://itis.gov">578538</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Orthoptera</taxonRankValue>
+    <commonName>locusts</commonName>
+    <taxonId provider="https://itis.gov">102160</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Xenomyrmex</taxonRankValue>
+    <taxonId provider="https://itis.gov">574167</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Membracidae</taxonRankValue>
+    <commonName>treehoppers</commonName>
+    <taxonId provider="https://itis.gov">109170</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Plectreuridae</taxonRankValue>
+    <commonName>plectreurid spiders</commonName>
+    <taxonId provider="https://itis.gov">847753</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Nitidulidae</taxonRankValue>
+    <commonName>sap beetles</commonName>
+    <taxonId provider="https://itis.gov">114290</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Enicocephalidae</taxonRankValue>
+    <commonName>gnat bugs</commonName>
+    <taxonId provider="https://itis.gov">103998</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Zygentoma</taxonRankValue>
+    <commonName>silverfish</commonName>
+    <taxonId provider="https://itis.gov">685008</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>class</taxonRankName>
+    <taxonRankValue>Clitellata</taxonRankValue>
+    <taxonId provider="https://itis.gov">568832</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Uloboridae</taxonRankValue>
+    <commonName>hackled orbweavers</commonName>
+    <taxonId provider="https://itis.gov">847767</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subclass</taxonRankName>
+    <taxonRankValue>Copepoda</taxonRankValue>
+    <commonName>copepods</commonName>
+    <taxonId provider="https://itis.gov">85257</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Thyreocoridae</taxonRankValue>
+    <commonName>black bugs</commonName>
+    <taxonId provider="https://itis.gov">109110</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Chlaenius</taxonRankValue>
+    <taxonId provider="https://itis.gov">111436</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Milichiidae</taxonRankValue>
+    <commonName>milichiid flies</commonName>
+    <taxonId provider="https://itis.gov">144487</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Oligota</taxonRankValue>
+    <taxonId provider="https://itis.gov">186509</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Phelister</taxonRankValue>
+    <taxonId provider="https://itis.gov">728591</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Tominotus</taxonRankValue>
+    <taxonId provider="https://itis.gov">108610</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Xylocoris</taxonRankValue>
+    <taxonId provider="https://itis.gov">107037</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cucujidae</taxonRankValue>
+    <commonName>flat bark beetles</commonName>
+    <taxonId provider="https://itis.gov">114303</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Eriosomatidae</taxonRankValue>
+    <commonName>woolly aphids</commonName>
+    <taxonId provider="https://itis.gov">109192</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Scoliidae</taxonRankValue>
+    <commonName>scoliid wasps</commonName>
+    <taxonId provider="https://itis.gov">154189</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Buthidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">82718</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cynipidae</taxonRankValue>
+    <commonName>gall wasps</commonName>
+    <taxonId provider="https://itis.gov">154031</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Liometopum</taxonRankValue>
+    <taxonId provider="https://itis.gov">573929</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Siphonaptera</taxonRankValue>
+    <taxonId provider="https://itis.gov">44848</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Siphonaptera</taxonRankValue>
+    <commonName>fleas</commonName>
+    <taxonId provider="https://itis.gov">152732</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Thanatus</taxonRankValue>
+    <taxonId provider="https://itis.gov">873177</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Linepithema</taxonRankValue>
+    <taxonId provider="https://itis.gov">573928</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Phthiria</taxonRankValue>
+    <taxonId provider="https://itis.gov">134828</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Cyphomyrmex</taxonRankValue>
+    <taxonId provider="https://itis.gov">573900</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Stratiomyidae</taxonRankValue>
+    <commonName>soldier flies</commonName>
+    <taxonId provider="https://itis.gov">130150</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Horistonotus</taxonRankValue>
+    <taxonId provider="https://itis.gov">113896</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Tetramorium hispidum</taxonRankValue>
+    <taxonId provider="https://itis.gov">582437</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>superfamily</taxonRankName>
+    <taxonRankValue>Lygaeoidea</taxonRankValue>
+    <taxonId provider="https://itis.gov">676847</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Cyphomyrmex wheeleri</taxonRankValue>
+    <taxonId provider="https://itis.gov">574394</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Probethylus schwarzi</taxonRankValue>
+    <taxonId provider="https://itis.gov">154172</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Sphingidae</taxonRankValue>
+    <commonName>sphinx moths</commonName>
+    <taxonId provider="https://itis.gov">117293</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Xiphydriidae</taxonRankValue>
+    <commonName>wood wasps</commonName>
+    <taxonId provider="https://itis.gov">152852</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Tachinidae</taxonRankValue>
+    <commonName>tachinid flies</commonName>
+    <taxonId provider="https://itis.gov">152643</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Vespidae</taxonRankValue>
+    <commonName>yellowjackets</commonName>
+    <taxonId provider="https://itis.gov">154249</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Scopoides</taxonRankValue>
+    <taxonId provider="https://itis.gov">872990</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pheidole californica</taxonRankValue>
+    <taxonId provider="https://itis.gov">580859</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Scaphiella</taxonRankValue>
+    <taxonId provider="https://itis.gov">849300</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Trachymyrmex</taxonRankValue>
+    <taxonId provider="https://itis.gov">574161</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Urozelotes</taxonRankValue>
+    <taxonId provider="https://itis.gov">185656</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Clubiona</taxonRankValue>
+    <commonName>leafcurling sac spiders</commonName>
+    <taxonId provider="https://itis.gov">871898</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Metepeira</taxonRankValue>
+    <taxonId provider="https://itis.gov">848788</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Sinea</taxonRankValue>
+    <taxonId provider="https://itis.gov">107354</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Zoropsidae</taxonRankValue>
+    <commonName>zoropsid spiders</commonName>
+    <taxonId provider="https://itis.gov">871550</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Escaphiella</taxonRankValue>
+    <taxonId provider="https://itis.gov">848325</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Stagmomantis</taxonRankValue>
+    <taxonId provider="https://itis.gov">102397</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Rhyparochromidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">676868</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Scymnus</taxonRankValue>
+    <taxonId provider="https://itis.gov">187044</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Iris oratoria</taxonRankValue>
+    <taxonId provider="https://itis.gov">666614</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Figitidae</taxonRankValue>
+    <commonName>figitids</commonName>
+    <taxonId provider="https://itis.gov">154028</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ebo</taxonRankValue>
+    <taxonId provider="https://itis.gov">872028</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Bradynobaenidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">709298</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Gelechiidae</taxonRankValue>
+    <commonName>gelechiid moths</commonName>
+    <taxonId provider="https://itis.gov">118700</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Eremosaprinus</taxonRankValue>
+    <taxonId provider="https://itis.gov">728618</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Phidippus</taxonRankValue>
+    <taxonId provider="https://itis.gov">872783</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Longitarsus</taxonRankValue>
+    <taxonId provider="https://itis.gov">719704</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Sapintus</taxonRankValue>
+    <taxonId provider="https://itis.gov">685118</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Orthoperus</taxonRankValue>
+    <taxonId provider="https://itis.gov">186939</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Plutellidae</taxonRankValue>
+    <commonName>diamondback moths</commonName>
+    <taxonId provider="https://itis.gov">118715</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pogonomyrmex maricopa</taxonRankValue>
+    <commonName>Maricopa harvester ant</commonName>
+    <taxonId provider="https://itis.gov">154234</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Atrazonotus</taxonRankValue>
+    <taxonId provider="https://itis.gov">107975</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Isodacrys</taxonRankValue>
+    <taxonId provider="https://itis.gov">616895</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Parasitidae</taxonRankValue>
+    <taxonId provider="https://itis.gov">1118088</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Ptinidae</taxonRankValue>
+    <commonName>spider beetles</commonName>
+    <taxonId provider="https://itis.gov">114472</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Ctenizidae</taxonRankValue>
+    <commonName>trapdoor spiders</commonName>
+    <taxonId provider="https://itis.gov">847713</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Algarobius</taxonRankValue>
+    <taxonId provider="https://itis.gov">187739</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cixiidae</taxonRankValue>
+    <commonName>cixid planthoppers</commonName>
+    <taxonId provider="https://itis.gov">109174</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Opsius</taxonRankValue>
+    <taxonId provider="https://itis.gov">200124</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pheidole tepicana</taxonRankValue>
+    <taxonId provider="https://itis.gov">581265</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Latrodectus</taxonRankValue>
+    <commonName>widow spiders</commonName>
+    <taxonId provider="https://itis.gov">848644</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Cryptolestes</taxonRankValue>
+    <taxonId provider="https://itis.gov">114308</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Ceratophyllidae</taxonRankValue>
+    <commonName>rodent fleas</commonName>
+    <taxonId provider="https://itis.gov">152740</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Dyscinetus</taxonRankValue>
+    <taxonId provider="https://itis.gov">926581</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Lycoriella</taxonRankValue>
+    <taxonId provider="https://itis.gov">122853</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ahasverus</taxonRankValue>
+    <taxonId provider="https://itis.gov">114304</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Lampyridae</taxonRankValue>
+    <commonName>lightningbugs</commonName>
+    <taxonId provider="https://itis.gov">113835</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Stenus</taxonRankValue>
+    <taxonId provider="https://itis.gov">113576</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subfamily</taxonRankName>
+    <taxonRankValue>Alysiinae</taxonRankValue>
+    <taxonId provider="https://itis.gov">1141999</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Drapetis</taxonRankValue>
+    <taxonId provider="https://itis.gov">136573</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Chamaemyiidae</taxonRankValue>
+    <commonName>aphid flies</commonName>
+    <taxonId provider="https://itis.gov">145348</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cryptophagidae</taxonRankValue>
+    <commonName>silken fungus beetles</commonName>
+    <taxonId provider="https://itis.gov">114314</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Geocoris punctipes</taxonRankValue>
+    <taxonId provider="https://itis.gov">107762</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Balclutha</taxonRankValue>
+    <taxonId provider="https://itis.gov">200002</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Listroderes</taxonRankValue>
+    <taxonId provider="https://itis.gov">187912</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Psychodidae</taxonRankValue>
+    <commonName>moth flies</commonName>
+    <taxonId provider="https://itis.gov">125351</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pyramica</taxonRankValue>
+    <taxonId provider="https://itis.gov">574138</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Brachymyrmex obscurior</taxonRankValue>
+    <taxonId provider="https://itis.gov">575572</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Coccotrypes</taxonRankValue>
+    <taxonId provider="https://itis.gov">188121</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Geophilomorpha</taxonRankValue>
+    <taxonId provider="https://itis.gov">154404</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Spilochroa</taxonRankValue>
+    <taxonId provider="https://itis.gov">145708</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Megalostomis</taxonRankValue>
+    <taxonId provider="https://itis.gov">719776</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Neacoryphus lateralis</taxonRankValue>
+    <taxonId provider="https://itis.gov">107838</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Aradidae</taxonRankValue>
+    <commonName>flat bugs</commonName>
+    <taxonId provider="https://itis.gov">107476</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Catorhintha</taxonRankValue>
+    <taxonId provider="https://itis.gov">108381</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Berytidae</taxonRankValue>
+    <commonName>stilt bugs</commonName>
+    <taxonId provider="https://itis.gov">107642</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Efferia</taxonRankValue>
+    <taxonId provider="https://itis.gov">133505</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Monotoma</taxonRankValue>
+    <taxonId provider="https://itis.gov">187163</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Tortricidae</taxonRankValue>
+    <commonName>leaf rollers</commonName>
+    <taxonId provider="https://itis.gov">117856</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Lygaeus kalmii</taxonRankValue>
+    <taxonId provider="https://itis.gov">107807</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Tetragnathidae</taxonRankValue>
+    <commonName>longjawed orbweavers</commonName>
+    <taxonId provider="https://itis.gov">847764</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Epicauta</taxonRankValue>
+    <taxonId provider="https://itis.gov">114390</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Psychoda</taxonRankValue>
+    <taxonId provider="https://itis.gov">125468</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>suborder</taxonRankName>
+    <taxonRankValue>Brachycera</taxonRankValue>
+    <commonName>short horned flies</commonName>
+    <taxonId provider="https://itis.gov">130052</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Meghyperus</taxonRankValue>
+    <taxonId provider="https://itis.gov">136821</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ophryastes</taxonRankValue>
+    <taxonId provider="https://itis.gov">616958</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Eupompha elegans</taxonRankValue>
+    <taxonId provider="https://itis.gov">731775</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Mecaphesa</taxonRankValue>
+    <taxonId provider="https://itis.gov">872471</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Rhaphidophoridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">650504</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Sonoma</taxonRankValue>
+    <taxonId provider="https://itis.gov">690840</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Carneocephala</taxonRankValue>
+    <taxonId provider="https://itis.gov">200023</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Hyperaspis</taxonRankValue>
+    <taxonId provider="https://itis.gov">114336</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Lygus</taxonRankValue>
+    <taxonId provider="https://itis.gov">104978</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Schizocosa</taxonRankValue>
+    <taxonId provider="https://itis.gov">849307</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Lathrobium</taxonRankValue>
+    <taxonId provider="https://itis.gov">186461</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Hydroptilidae</taxonRankValue>
+    <commonName>micro caddisflies</commonName>
+    <taxonId provider="https://itis.gov">115629</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Kinnaridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">109177</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ranoidea</taxonRankValue>
+    <taxonId provider="https://itis.gov">1094740</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Haplodrassus</taxonRankValue>
+    <taxonId provider="https://itis.gov">185731</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>superfamily</taxonRankName>
+    <taxonRankValue>Pentatomoidea</taxonRankValue>
+    <taxonId provider="https://itis.gov">676848</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Largidae</taxonRankValue>
+    <commonName>largid bugs</commonName>
+    <taxonId provider="https://itis.gov">108198</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subfamily</taxonRankName>
+    <taxonRankValue>Ectyphinae</taxonRankValue>
+    <commonName>opomyzid flies</commonName>
+    <taxonId provider="https://itis.gov">132209</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Tettigoniidae</taxonRankValue>
+    <commonName>long horned grasshoppers</commonName>
+    <taxonId provider="https://itis.gov">102232</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Melittidae</taxonRankValue>
+    <commonName>melittids</commonName>
+    <taxonId provider="https://itis.gov">154364</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>class</taxonRankName>
+    <taxonRankValue>Diplopoda</taxonRankValue>
+    <commonName>millipedes</commonName>
+    <taxonId provider="https://itis.gov">154409</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Trachyzelotes</taxonRankValue>
+    <taxonId provider="https://itis.gov">873243</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Agelenidae</taxonRankValue>
+    <commonName>funnel weavers</commonName>
+    <taxonId provider="https://itis.gov">871511</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Pegomya</taxonRankValue>
+    <commonName>beet leafminer</commonName>
+    <taxonId provider="https://itis.gov">148691</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Lyctocoris</taxonRankValue>
+    <taxonId provider="https://itis.gov">107008</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Heleomyza</taxonRankValue>
+    <taxonId provider="https://itis.gov">145595</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Margarinotus</taxonRankValue>
+    <taxonId provider="https://itis.gov">728598</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Mordella</taxonRankValue>
+    <taxonId provider="https://itis.gov">114384</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Cerambycidae</taxonRankValue>
+    <commonName>long horned beetles</commonName>
+    <taxonId provider="https://itis.gov">114497</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Megachilidae</taxonRankValue>
+    <commonName>leafcutting bees</commonName>
+    <taxonId provider="https://itis.gov">154365</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Peucetia</taxonRankValue>
+    <taxonId provider="https://itis.gov">872768</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Asteiidae</taxonRankValue>
+    <commonName>cryptochelid flies</commonName>
+    <taxonId provider="https://itis.gov">144450</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>subclass</taxonRankName>
+    <taxonRankValue>Archaeognatha</taxonRankValue>
+    <commonName>traca saltadora</commonName>
+    <taxonId provider="https://itis.gov">563887</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Archaeognatha</taxonRankValue>
+    <commonName>jumping bristletails</commonName>
+    <taxonId provider="https://itis.gov">624281</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Carpophilus</taxonRankValue>
+    <taxonId provider="https://itis.gov">114293</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Melanalia</taxonRankValue>
+    <taxonId provider="https://itis.gov">724590</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Desmometopa</taxonRankValue>
+    <taxonId provider="https://itis.gov">144520</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Probethylus</taxonRankValue>
+    <taxonId provider="https://itis.gov">154171</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Kalotermitidae</taxonRankValue>
+    <commonName>drywood termites</commonName>
+    <taxonId provider="https://itis.gov">102431</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Oligotoma nigra</taxonRankValue>
+    <taxonId provider="https://itis.gov">666828</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Tidarren</taxonRankValue>
+    <taxonId provider="https://itis.gov">849545</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Drosophilidae</taxonRankValue>
+    <commonName>pomace flies</commonName>
+    <taxonId provider="https://itis.gov">146185</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Ptilinus</taxonRankValue>
+    <taxonId provider="https://itis.gov">696375</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Oryzaephilus</taxonRankValue>
+    <taxonId provider="https://itis.gov">114311</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Blastophaga</taxonRankValue>
+    <taxonId provider="https://itis.gov">153964</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Hemiphileurus</taxonRankValue>
+    <taxonId provider="https://itis.gov">926610</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Omorgus</taxonRankValue>
+    <taxonId provider="https://itis.gov">929706</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Derobrachus geminatus</taxonRankValue>
+    <taxonId provider="https://itis.gov">702666</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Hyporhagus</taxonRankValue>
+    <taxonId provider="https://itis.gov">706171</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Peckhamia</taxonRankValue>
+    <taxonId provider="https://itis.gov">872750</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Mythicomyia</taxonRankValue>
+    <taxonId provider="https://itis.gov">134157</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Zopheridae</taxonRankValue>
+    <taxonId provider="https://itis.gov">678369</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Scenopinus</taxonRankValue>
+    <taxonId provider="https://itis.gov">132143</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Brachymyrmex depilis</taxonRankValue>
+    <taxonId provider="https://itis.gov">575553</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Cyphomyrmex flavidus</taxonRankValue>
+    <taxonId provider="https://itis.gov">574369</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Pogonomyrmex pima</taxonRankValue>
+    <taxonId provider="https://itis.gov">581452</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Scydmaenidae</taxonRankValue>
+    <commonName>antlike stone beetles</commonName>
+    <taxonId provider="https://itis.gov">113823</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Melpomene</taxonRankValue>
+    <taxonId provider="https://itis.gov">872483</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Melpomene</taxonRankValue>
+    <commonName>dwarf polypody</commonName>
+    <taxonId provider="https://itis.gov">897649</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Heteroceridae</taxonRankValue>
+    <commonName>variegated mud loving beetles</commonName>
+    <taxonId provider="https://itis.gov">114262</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>species</taxonRankName>
+    <taxonRankValue>Sceliphron caementarium</taxonRankValue>
+    <taxonId provider="https://itis.gov">769860</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Agallia</taxonRankValue>
+    <taxonId provider="https://itis.gov">199997</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Euphorticus</taxonRankValue>
+    <taxonId provider="https://itis.gov">110444</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>genus</taxonRankName>
+    <taxonRankValue>Gryllus</taxonRankValue>
+    <taxonId provider="https://itis.gov">657701</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>family</taxonRankName>
+    <taxonRankValue>Platygastridae</taxonRankValue>
+    <commonName>platygastrids</commonName>
+    <taxonId provider="https://itis.gov">709288</taxonId>
+  </taxonomicClassification>
+  <taxonomicClassification>
+    <taxonRankName>order</taxonRankName>
+    <taxonRankValue>Lithobiomorpha</taxonRankValue>
+    <taxonId provider="https://itis.gov">553110</taxonId>
+  </taxonomicClassification>
+</eml:eml>

@@ -275,6 +275,10 @@ Arenivaga,ITIS:102410,genus,ITIS:102410,accepted,2005-03-09,NA,NA,NA,NA,NA,NA,,,
 Aphis,ITIS:200573,genus,ITIS:200573,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,NA
 Cercopidae,ITIS:109172,family,ITIS:109172,accepted,2015-03-02,NA,NA,NA,NA,NA,NA,,,spittlebugs
 Glyptina,ITIS:719703,genus,ITIS:719703,accepted,2007-04-10,NA,NA,NA,NA,NA,NA,,,NA
+Tetragonoderus pallidus,ITIS:111540,species,ITIS:111540,accepted,2013-12-23,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Tetragonoderus,pallidus,,NA
+Hemerobiidae,ITIS:115080,family,ITIS:115080,accepted,2014-04-02,NA,NA,NA,NA,NA,NA,,,brown lacewings
+Lebia,ITIS:111627,genus,ITIS:111627,accepted,2013-12-23,NA,NA,NA,NA,NA,NA,,,NA
+Osorius,ITIS:186543,genus,ITIS:186543,accepted,2005-11-23,NA,NA,NA,NA,NA,NA,,,NA
 Solifugae,ITIS:690742,order,ITIS:690742,accepted,2020-02-25,NA,NA,NA,NA,NA,NA,,,wind scorpions
 Tiphiidae,ITIS:154175,family,ITIS:154175,accepted,2006-11-28,NA,NA,NA,NA,NA,NA,,,tiphiid wasps
 Histeridae,ITIS:114959,family,ITIS:114959,accepted,2010-12-15,NA,NA,NA,NA,NA,NA,,,hister beetles
@@ -282,9 +286,8 @@ Caponiidae,ITIS:847712,family,ITIS:847712,accepted,2014-04-29,NA,NA,NA,NA,NA,NA,
 Oonopidae,ITIS:847745,family,ITIS:847745,accepted,2014-04-29,NA,NA,NA,NA,NA,NA,,,dwarf sixeyed spiders
 Pseudoscorpiones,ITIS:690741,order,ITIS:690741,accepted,2020-07-26,NA,NA,NA,NA,NA,NA,,,pseudoscorpions
 Scytodidae,ITIS:847754,family,ITIS:847754,accepted,2014-04-29,NA,NA,NA,NA,NA,NA,,,spitting spiders
-Polyphagidae,ITIS:102409,family,ITIS:102409,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,sand cockroaches
+Corydiidae,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Thomisidae,ITIS:871543,family,ITIS:871543,accepted,2014-04-29,NA,NA,NA,NA,NA,NA,,,crab spiders
-Lebia,ITIS:111627,genus,ITIS:111627,accepted,2013-12-23,NA,NA,NA,NA,NA,NA,,,NA
 Melyridae,ITIS:113869,family,ITIS:113869,accepted,2005-06-27,NA,NA,NA,NA,NA,NA,,,solf winged flower beetles
 Micaria,ITIS:185557,genus,ITIS:185557,accepted,2020-02-25,NA,NA,NA,NA,NA,NA,,,NA
 Tetramorium,ITIS:154245,genus,ITIS:154245,accepted,2001-03-13,NA,NA,NA,NA,NA,NA,,,NA
@@ -414,10 +417,10 @@ Yponomeutidae,ITIS:118716,family,ITIS:118716,accepted,2005-12-13,NA,NA,NA,NA,NA,
 Hemiphileurus illatus,ITIS:929180,species,ITIS:929180,accepted,2013-11-04,Animalia,Arthropoda,Insecta,Coleoptera,Scarabaeidae,Hemiphileurus,illatus,,NA
 Paravaejovis spinigerus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Sphaeropthalma,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Tetragonoderus pallidus,ITIS:111540,species,ITIS:111540,accepted,2013-12-23,Animalia,Arthropoda,Insecta,Coleoptera,Carabidae,Tetragonoderus,pallidus,,NA
 Thinoxenus,ITIS:617061,genus,ITIS:617061,accepted,2003-03-25,NA,NA,NA,NA,NA,NA,,,NA
+Tarsonops systematicus,ITIS:868060,species,ITIS:868060,accepted,2012-04-26,Animalia,Arthropoda,Euchelicerata,Araneae,Caponiidae,Tarsonops,systematicus,,NA
+Cononotus bryanti,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Apinae,ITIS:633913,subfamily,ITIS:633913,accepted,2020-08-28,NA,NA,NA,NA,NA,NA,,,NA
-Hemerobiidae,ITIS:115080,family,ITIS:115080,accepted,2014-04-02,NA,NA,NA,NA,NA,NA,,,brown lacewings
 Messor,ITIS:574099,genus,ITIS:574099,accepted,2001-03-13,NA,NA,NA,NA,NA,NA,,,NA
 Pselaphinae,ITIS:678464,subfamily,ITIS:678464,accepted,2005-11-23,NA,NA,NA,NA,NA,NA,,,NA
 Myrmeleontidae,ITIS:115093,family,ITIS:115093,accepted,2015-06-25,NA,NA,NA,NA,NA,NA,,,antlions
@@ -471,8 +474,10 @@ Deltocephalinae,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Notiobia,ITIS:111139,genus,ITIS:111139,accepted,2013-12-23,NA,NA,NA,NA,NA,NA,,,NA
 Myrmicinae,ITIS:573828,subfamily,ITIS:573828,accepted,2001-03-13,NA,NA,NA,NA,NA,NA,,,NA
 Metaphidippus,ITIS:872498,genus,ITIS:872498,accepted,2019-11-22,NA,NA,NA,NA,NA,NA,,,NA
-Cononotus bryanti,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Veromessor pergandei,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Cleridae,ITIS:113852,family,ITIS:113852,accepted,2016-04-01,NA,NA,NA,NA,NA,NA,,,checkered beetles
+Atta mexicana,ITIS:578538,species,ITIS:578538,accepted,2001-03-13,Animalia,Arthropoda,Insecta,Hymenoptera,Formicidae,Atta,mexicana,,NA
+Myrmosula,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Orthoptera,ITIS:102160,order,ITIS:102160,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,locusts
 Xenomyrmex,ITIS:574167,genus,ITIS:574167,accepted,2001-03-13,NA,NA,NA,NA,NA,NA,,,NA
 Membracidae,ITIS:109170,family,ITIS:109170,accepted,2011-04-25,NA,NA,NA,NA,NA,NA,,,treehoppers
@@ -513,7 +518,6 @@ Tetramorium hispidum,ITIS:582437,species,ITIS:582437,accepted,2001-03-13,Animali
 Lygaeoidea,ITIS:676847,superfamily,ITIS:676847,accepted,2007-04-10,NA,NA,NA,NA,NA,NA,,,NA
 Cyphomyrmex wheeleri,ITIS:574394,species,ITIS:574394,accepted,2001-03-13,Animalia,Arthropoda,Insecta,Hymenoptera,Formicidae,Cyphomyrmex,wheeleri,,NA
 Probethylus schwarzi,ITIS:154172,species,ITIS:154172,accepted,1996-06-24,Animalia,Arthropoda,Insecta,Hymenoptera,Sclerogibbidae,Probethylus,schwarzi,,NA
-Myrmosula,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Stenomorpha wickhami,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Araeoschizus sulcicollis,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Sphingidae,ITIS:117293,family,ITIS:117293,accepted,2014-04-29,NA,NA,NA,NA,NA,NA,,,sphinx moths
@@ -571,14 +575,12 @@ Ceratophyllidae,ITIS:152740,family,ITIS:152740,accepted,1996-06-24,NA,NA,NA,NA,N
 Dyscinetus,ITIS:926581,genus,ITIS:926581,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,NA
 Lycoriella,ITIS:122853,genus,ITIS:122853,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,NA
 Ahasverus,ITIS:114304,genus,ITIS:114304,accepted,2006-05-09,NA,NA,NA,NA,NA,NA,,,NA
-Anobiidae,ITIS:114459,family,ITIS:114459,accepted,2006-01-10,NA,NA,NA,NA,NA,NA,,,death watch beetles
 Lampyridae,ITIS:113835,family,ITIS:113835,accepted,2021-08-26,NA,NA,NA,NA,NA,NA,,,lightningbugs
-Osorius,ITIS:186543,genus,ITIS:186543,accepted,2005-11-23,NA,NA,NA,NA,NA,NA,,,NA
 Stenus,ITIS:113576,genus,ITIS:113576,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,NA
 Alysiinae,ITIS:1141999,subfamily,ITIS:1141999,accepted,2020-12-18,NA,NA,NA,NA,NA,NA,,,NA
 Drapetis,ITIS:136573,genus,ITIS:136573,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,NA
 Chamaemyiidae,ITIS:145348,family,ITIS:145348,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,aphid flies
-Acalophaena,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Dacnochilus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Coproporus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Cryptophagidae,ITIS:114314,family,ITIS:114314,accepted,2016-04-01,NA,NA,NA,NA,NA,NA,,,silken fungus beetles
 Geocoris punctipes,ITIS:107762,species,ITIS:107762,accepted,2007-02-09,Animalia,Arthropoda,Insecta,Hemiptera,Geocoridae,Geocoris,punctipes,,NA
@@ -611,7 +613,9 @@ Brachycera,ITIS:130052,suborder,ITIS:130052,accepted,2013-11-04,NA,NA,NA,NA,NA,N
 Meghyperus,ITIS:136821,genus,ITIS:136821,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,NA
 Ophryastes,ITIS:616958,genus,ITIS:616958,accepted,2003-03-25,NA,NA,NA,NA,NA,NA,,,NA
 Eupompha elegans,ITIS:731775,species,ITIS:731775,accepted,2007-10-11,Animalia,Arthropoda,Insecta,Coleoptera,Meloidae,Eupompha,elegans,,NA
+Mecaphesa,ITIS:872471,genus,ITIS:872471,accepted,2012-04-26,NA,NA,NA,NA,NA,NA,,,NA
 Pepsis,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Rhaphidophoridae,ITIS:650504,family,ITIS:650504,accepted,2005-01-06,NA,NA,NA,NA,NA,NA,,,NA
 Sonoma,ITIS:690840,genus,ITIS:690840,accepted,2005-11-23,NA,NA,NA,NA,NA,NA,,,NA
 Carneocephala,ITIS:200023,genus,ITIS:200023,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,NA
 Hyperaspis,ITIS:114336,genus,ITIS:114336,accepted,2005-12-02,NA,NA,NA,NA,NA,NA,,,NA
@@ -633,6 +637,7 @@ Diplopoda,ITIS:154409,class,ITIS:154409,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,
 Trachyzelotes,ITIS:873243,genus,ITIS:873243,accepted,2020-02-25,NA,NA,NA,NA,NA,NA,,,NA
 Zophobas,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Agelenidae,ITIS:871511,family,ITIS:871511,accepted,2019-12-17,NA,NA,NA,NA,NA,NA,,,funnel weavers
+Pegomya,ITIS:148691,genus,ITIS:148691,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,beet leafminer
 Lyctocoris,ITIS:107008,genus,ITIS:107008,accepted,2007-02-09,NA,NA,NA,NA,NA,NA,,,NA
 Heleomyza,ITIS:145595,genus,ITIS:145595,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,NA
 Margarinotus,ITIS:728598,genus,ITIS:728598,accepted,2010-12-15,NA,NA,NA,NA,NA,NA,,,NA
@@ -640,8 +645,6 @@ Mordella,ITIS:114384,genus,ITIS:114384,accepted,2007-05-10,NA,NA,NA,NA,NA,NA,,,N
 Polemiotus submetallicus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Homalodisca,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Cerambycidae,ITIS:114497,family,ITIS:114497,accepted,2006-04-06,NA,NA,NA,NA,NA,NA,,,long horned beetles
-Diplotaxis,ITIS:23116,genus,ITIS:23116,accepted,2011-08-30,NA,NA,NA,NA,NA,NA,,,wallrocket
-Diplotaxis,ITIS:926466,genus,ITIS:926466,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,NA
 Megachilidae,ITIS:154365,family,ITIS:154365,accepted,2021-11-30,NA,NA,NA,NA,NA,NA,,,leafcutting bees
 Peucetia,ITIS:872768,genus,ITIS:872768,accepted,2012-04-26,NA,NA,NA,NA,NA,NA,,,NA
 Asteiidae,ITIS:144450,family,ITIS:144450,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,cryptochelid flies
@@ -652,6 +655,8 @@ Melanalia,ITIS:724590,genus,ITIS:724590,accepted,2007-07-17,NA,NA,NA,NA,NA,NA,,,
 Desmometopa,ITIS:144520,genus,ITIS:144520,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,NA
 Probethylus,ITIS:154171,genus,ITIS:154171,accepted,2006-11-28,NA,NA,NA,NA,NA,NA,,,NA
 Kalotermitidae,ITIS:102431,family,ITIS:102431,accepted,2013-11-04,NA,NA,NA,NA,NA,NA,,,drywood termites
+Oligotoma nigra,ITIS:666828,species,ITIS:666828,accepted,2005-03-11,Animalia,Arthropoda,Insecta,Embioptera,Oligotomidae,Oligotoma,nigra,,NA
+Tidarren,ITIS:849545,genus,ITIS:849545,accepted,2019-11-22,NA,NA,NA,NA,NA,NA,,,NA
 Drosophilidae,ITIS:146185,family,ITIS:146185,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,pomace flies
 Ptilinus,ITIS:696375,genus,ITIS:696375,accepted,2006-01-10,NA,NA,NA,NA,NA,NA,,,NA
 Oryzaephilus,ITIS:114311,genus,ITIS:114311,accepted,2006-05-09,NA,NA,NA,NA,NA,NA,,,NA
@@ -674,7 +679,6 @@ Heteronemiidae,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Melpomene,ITIS:872483,genus,ITIS:872483,accepted,2019-12-17,NA,NA,NA,NA,NA,NA,,,NA
 Melpomene,ITIS:897649,genus,ITIS:897649,accepted,2012-10-26,NA,NA,NA,NA,NA,NA,,,dwarf polypody
 Heteroceridae,ITIS:114262,family,ITIS:114262,accepted,2007-12-14,NA,NA,NA,NA,NA,NA,,,variegated mud loving beetles
-Tidarren,ITIS:849545,genus,ITIS:849545,accepted,2019-11-22,NA,NA,NA,NA,NA,NA,,,NA
 Sceliphron caementarium,ITIS:769860,species,ITIS:769860,accepted,2019-05-28,Animalia,Arthropoda,Insecta,Hymenoptera,Sphecidae,Sceliphron,caementarium,,NA
 Agallia,ITIS:199997,genus,ITIS:199997,accepted,1996-06-24,NA,NA,NA,NA,NA,NA,,,NA
 Euphorticus,ITIS:110444,genus,ITIS:110444,accepted,2013-12-23,NA,NA,NA,NA,NA,NA,,,NA

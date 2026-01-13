@@ -37,5 +37,5 @@ rsconnect/
 .Rproj.user
 
 # project specific
-knb-lter-cap\.41\.\d\.xml
-^41_.*
+knb-lter-cap.41.[0-9]*.xml
+41_*

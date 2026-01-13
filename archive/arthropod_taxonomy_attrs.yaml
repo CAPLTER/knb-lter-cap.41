@@ -1,0 +1,99 @@
+|
+  display_name:
+    attributeName: display_name
+    attributeDefinition: 'organism classification for descriptive purposes typically the finest taxonomic resolution'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  authority:
+    attributeName: authority
+    attributeDefinition: 'taxonomic reference'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: factor
+  authority_id:
+    attributeName: authority_id
+    attributeDefinition: 'identifier of this taxonomy in the taxonomic reference'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  rank:
+    attributeName: rank
+    attributeDefinition: 'taxonomic rank of an organism with this display_name'
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  kingdom:
+    attributeName: kingdom
+    attributeDefinition: 'taxonomic kingdom of an organism with this display_name' 
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  phylum:
+    attributeName: phylum
+    attributeDefinition: 'taxonomic phylum of an organism with this display_name' 
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  class:
+    attributeName: class
+    attributeDefinition: 'taxonomic class of an organism with this display_name' 
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  order:
+    attributeName: order
+    attributeDefinition: 'taxonomic order of an organism with this display_name' 
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  family:
+    attributeName: family
+    attributeDefinition: 'taxonomic family of an organism with this display_name' 
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  genus:
+    attributeName: genus
+    attributeDefinition: 'taxonomic genus of an organism with this display_name' 
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''
+  species:
+    attributeName: species
+    attributeDefinition: 'taxonomic species of an organism with this display_name' 
+    propertyURI: ''
+    propertyLabel: ''
+    valueURI: ''
+    valueLabel: ''
+    columnClasses: character
+    definition: ''

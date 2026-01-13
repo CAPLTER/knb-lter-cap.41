@@ -1,0 +1,8 @@
+|
+  - attribute:
+      attributeName: authority
+      levels:
+      - code: GBIF
+        definition: 'Global Biodiversity Information Facility (https://www.gbif.org/)'
+      - code: ITIS
+        definition: 'Integrated Taxonomic Information System (https://www.itis.gov/)'

@@ -2,6 +2,6 @@ scope: knb-lter-cap
 identifier: 41
 baseURL: https://gios-data.s3.us-west-2.amazonaws.com/datasets/cap/
 project: lter
-title: 'Long-term monitoring of ground-dwelling arthropods in the greater Phoenix metropolitan area of central Arizona, USA, ongoing since 2012'
-maintenance: regular
+title: 'Long-term monitoring of ground-dwelling arthropods in the greater Phoenix metropolitan area of central Arizona, USA (1998-2025)'
+maintenance: none
 geographic_description: 'CAP LTER study area: greater Phoenix, Arizona (USA) metropolitan area and surrounding Sonoran desert region'

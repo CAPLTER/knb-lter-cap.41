@@ -16,4 +16,13 @@ core_arthropods_sites:
   projectNaming: TRUE
   missingValueCode: ~
   additional_information: ~
+arthropod_taxonomy:
+  type: table
+  dfname: arthropod_taxonomy
+  description: "Tabular file of the taxonomic details of the arthropods identified in this study. Note that the taxonomic details of an organism presented in the taxonomy table may differ from those from a query of the same organism in ITIS, GBIF, or other taxonomic resource based solely on the organism name as the taxonomic details presented here may not reflect the most up-to-date taxonomic revisions. Rather, the taxonomy table is intended to provide users with the taxonomic context for the organisms as identified by the CAP LTER entomologist at the time of data entry."
+  dateRangeField: "~"
+  overwrite: TRUE
+  projectNaming: TRUE
+  missingValueCode: ~
+  additional_information: ~
 
